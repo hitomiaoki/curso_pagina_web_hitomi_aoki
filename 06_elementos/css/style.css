@@ -1,5 +1,5 @@
 body{
-margin: 0; 
+margin:0; 
 }
 
 .content{
@@ -28,3 +28,10 @@ margin: 0;
        padding: 1rem;      
    }
    
+   .imagen_wrapper{
+    text-align: center;  
+   }
+   
+   img{
+   max-width: 100;    
+   }
