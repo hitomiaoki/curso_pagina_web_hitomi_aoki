@@ -1,0 +1,30 @@
+body{
+margin: 0; 
+}
+
+.content{
+    margin:1rem;
+}
+
+
+.main_header {
+     background-color:rgb(red, green, blue);
+     color:rgb(red, green, blue);
+     padding: 1rem 0rem 2rem 0rem;
+   }
+   
+   .main_header p {
+       font-size: 1.33rem;
+       font-weight: bold;
+       margin-top: -1rem; 
+       
+      }
+      
+   
+   .main_footer {
+       background-color:rgb(red, green, blue);
+       color:rgb(red, green, blue);
+       text-align: center;
+       padding: 1rem;      
+   }
+   
