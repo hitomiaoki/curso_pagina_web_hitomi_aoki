@@ -10,9 +10,25 @@ strong {
     */
 }
 
+/*
+LOS ID NO SE USAN EN CSS
+#A001{
+color:rgb(red, green, blue);
+}*/
+
+.destacado{
+ color: rgb(red, green, blue);   
+}
+
 
 h1 {
     text-align:center;
 }
 
+img{
+ text-align: center;   
+}
 
+pre{
+ text-align: center;   
+}
