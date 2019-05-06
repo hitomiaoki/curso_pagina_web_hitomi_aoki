@@ -19,7 +19,24 @@ margin:0;
        margin-top: -1rem; 
        
       }
-      
+
+ /* h1{
+      font-size: 3rem;
+      font-weight: normal;
+      SOLO AFECTA A H1
+  } */
+
+
+
+
+ /*     
+pre{
+font-family: inherit;
+PARA CAMBIARLE EL FORMATO (LETRA) A PRE.
+SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
+
+}*/
+
    
    .main_footer {
        background-color:aqua;
