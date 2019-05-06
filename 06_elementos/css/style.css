@@ -8,9 +8,9 @@ margin:0;
 
 
 .main_header {
-     background-color:rgb(red, green, blue);
-     color:rgb(red, green, blue);
-     padding: 1rem 0rem 2rem 0rem;
+     background-color: red;
+     color:navajowhite;
+     padding: 0.8rem 0rem 0.5rem 1rem;
    }
    
    .main_header p {
@@ -22,8 +22,8 @@ margin:0;
       
    
    .main_footer {
-       background-color:rgb(red, green, blue);
-       color:rgb(red, green, blue);
+       background-color:aqua;
+       color:green;
        text-align: center;
        padding: 1rem;      
    }
