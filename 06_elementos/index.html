@@ -15,25 +15,28 @@
  </header>
 
  <div class="content">
- <p> El estándar diferencia 3 tipos diferentes: Section,Gruping content y Text-level semantics.</p>
+ <p> El estándar HTML diferencia 3 tipos diferentes: Section,Gruping content y Text-level semantics.</p>
   <section id="section">
 
-  </section>
-
+  
   <header>
    
   <h2>Section</h2>
   <p> Esto trata de elementos de secciones,que se reflejan en el esquema o (outline) en la página.</p> 
   <p> Inicialmente los elementos incluyen body y los encabezado (h1-h6). </p>
   <p>HTML 5 se añaden los elementos semanticos: 
-   <ul>header</ul> 
-   <ul>footer</ul> 
-   <ul>nav</ul> 
-   <ul>section</ul>
-   <ul>article</ul> 
-   <ul>aside</ul>
+    <ul>
+    <li>header</li>
+    <li> footer </li>
+    <li>nav</li>
+    <li>section</li>
+    <li>article</li>
+    <li>aside </li>    
+  </ul>
    </p> 
   </header>
+
+</section>
   <section>
   <header>
  <h3> Etiqueta section</h3>
@@ -150,19 +153,16 @@ Estas secciones son a menudo representadas como barras laterales o como insercio
    let z = x + y
 
  </pre>
-</section>
-   <section id="text-level">
- <h2>Text-level semantics</h2>
- </section>
- <section>
+
+<section>
  <h3> Listas  </h3>
  <p>  Existen 3 tipos de listas </p>
   <dt class="dt">ul</dt>  <dd class="dd" >Listas desordenas</dd>         
-  <dt class="dt">ol</dt>   <dd class="dd">Listas ordenadas  </dd>     
+  <dt class="dt">ol</dt>   <dd class="dd">Listas ordenadas </dd>     
   <dt class="dt" >dl</dt>  <dd class="dd" >Listas definiciones </dd>  
-
+ 
  <div  class="clearfix"></div>
- <p> Ejemplo listas ordenadas</p>  
+ <p> Ejemplo listas ordenadas:  </p>  
 
 <ol>
 <li> Lunes</li> 
@@ -170,7 +170,7 @@ Estas secciones son a menudo representadas como barras laterales o como insercio
 <li>Miércoles </li>   
 <li>Jueves</li>  
 <li> Viernes</li>   
-<li> Sabado</li>  
+<li> Sábado</li>  
  <li>Domingo</li> 
 </ol>
 <p>Ejemplo de lista de definiciones largas</p>  
@@ -180,10 +180,183 @@ Estas secciones son a menudo representadas como barras laterales o como insercio
 </dl>
  </section>
 </div>
+
+ <p>hay unos atributos especificos de las listas</p>
  
+ <ol class="start" >
+
+<li>1item</li>
+
+<li>1item</li>
+</ol>
+<ol reversed>
+<li>1item</li>
+<li>2item</li>
+<li>3item</li>
+<li>4item</li>
+<li>5item</li>
+
+
+</ol>
+</section>
+<section>
+ <h3>Nuevos bloques de Html 5 </h3>
+ 
+     <ul>
+     <li>address</li> 
+     <li> main </li>
+     <li> figure </li>
+     </ul>
+   <p>según aparece en el web, <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/address"></a>
+    en el html address aporta informacion de contacto</p> 
+
+
+<blockquote>
+
+    El elemento HTML <main> representa el contenido principal del <body> de un documento o aplicación. 
+      El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. 
+      Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor,
+       logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).
+
+
+</blockquote>
+
+ <p> El elemento figure es un contenedor de imagenes de que hablaremos a referencia a esas imagenes</p> 
+
+</section>
+
+<section>
+
+<h3>    </h3>
+
+<p>No tiene valor semántico esta unida en el css y es el elemento de mi sitio web</p> 
+   
+  </section>   
+  
+  
+<header>
+   <section id="text-level">
+ <h2>Text-level semantics</h2>
+ </header>
+  <section>
+  <h3>Hiperlances</h3>  
+
+
+<p>4 tipos url</p>
+<ul>
+<li>absuluta</li>
+
+<li>al origen </li>
+
+<li>relativas al documentos</li>
+
+<li>internas</li>
+
+</ul>
+  </section> 
+ </section>
+
+<section>
+
+<h3>Elementos en línea neutro</h3>
+
+ <p>Etiqueta span no tiene valor semanticos</p> 
+
+<p>Quiero la palabra <span class="verde">verde</span> que salga color verde</p> 
+</section>
+<section>
+
+<h3>Elementos claramente semanticos</h3>
+<ul>
+<li>strong</li>
+<li> em(emphasis) </li>
+<li> sup</li>
+<li> sub </li>
+<li> small </li>
+</ul>
+<p> superindices y subindices de uso generalizado y   </p>
+
+<p> h<sub> 2</sub></p>
+
+<p> <sup></sup>   </p>
+
+<p>la etiquete introduce informacion legal o similar o suele llamarse  "lista"  </p>
+
+
+
+</section>
+<section>
+<h3>  Elementos con valor semanticos </h3>
+<ul>
+<li> ( bold ) </li>
+<li> (italics) </li>
+<li>  ( underline ) </li>
+<li> ( strike)  </li>
+
+</ul>
+<p>b: destacado con fines utilitarios </p>
+<p>fragmento de texto del que se llama la atención con fines utilitarios sin concederle ninguna importancia extra y sin que implique ningún cambio de tono o de estado de ánimo. </p>  
+<p> E.g. palabras clave en el resumen de un documento, nombres de producto, palabras procesables en el software interactivo orientado a texto… </p>  
+<p>i: calidad diferente de texto, incluyendo  </p>
+
+<p>cambio de tono o de estado de ánimo;  </p>
+<p>fragmento de texto que implique un cambio de tono o de estado de ánimo, o cualquier otra desviación de la  prosa normal que en cualquier manera indique una calidad diferente de texto., </p>
+<p>E.g. una designación taxonómica, un término técnico, una frase idiomática en otro lenguaje, un pensamiento  o un nombre de barco. </p>
+<p>u: texto escrito de forma incorrecta; nombres propios chinos </p>
+<p>s: elemento que ya no es correcto o relevante</p>
+</section>
+<section>
+
+<h3> Elementos de tipo técnico </h3>
+<ul>
+<li>samp (sample) </li>   
+<li>code (code)</li>
+<li>kbd (keyboard) </li>
+<li>var (variebles) </li>
+<li>dfn (definition) </li>
+<li>abbr (abbr) </li>
+</ul>
+
+</section>
+<section>
+<h3>Uso de referencias y citas </h3>
+<ul>
+<li>q (quote) </li>
+<li>cite (cite o referencia) </li>
+
+<p>Pelicula <cite> Señor de los Anillos</cite></p>
+</ul>
+
+</section>
+<section>
+<h3>Otras etiquetas semánticas de HTML5 </h3>
+<ul>
+<li>time, e.g.  <time datetime="2019.12.6"> día de la constitución de este año </time> </li> 
+<li> mark marcado  <mark > interactivo</mark> </li>
+
+</ul>
+</section>
+<section>
+
+<h3> Edits</h3> 
+<ul>
+<li>Ins</li>
+<li>Del</li>
+
+<p>Muestran el contenido que se ha insertado (Instead)en lugar de otro, que por tanto se elimina (Deleted).</p>  
+  
+</ul>
+
+<p>Estoy lo que tacho</p>
+
+<p></p>
+</section>
+
  <footer class="main_footer">
+  <address>
  <p>Patricia-Tajamar</p> 
  <a href="mailto://hitomiyuki97@hotmail.com">correo</a>
+</address>
  </footer>
 </body>
 </html>
