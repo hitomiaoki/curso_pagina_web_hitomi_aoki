@@ -8,17 +8,46 @@ margin:0;
 
 
 .main_header {
-     background-color: red;
+     background-color: peru;
      color:navajowhite;
      padding: 0.8rem 0rem 0.5rem 1rem;
    }
-   
+
+
    .main_header p {
        font-size: 1.33rem;
        font-weight: bold;
        margin-top: -1rem; 
        
       }
+
+   .main_header nav{
+
+  margin-left:1rem;
+
+   }
+
+    .main_header nav ul{
+    
+     list-style-type: none;   
+    }
+
+   .main_header  li {
+
+   display: inline-block;
+   }
+
+   .main_header  nav a{
+
+   color:inherit;
+
+
+
+   display:block;
+     
+
+   }
+
 
  /* h1{
       font-size: 3rem;
@@ -36,7 +65,7 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
 
    
    .main_footer {
-       background-color:aqua;
+       background-color:blue;
        color:green;
        text-align: center;
        padding: 1rem;      
@@ -86,3 +115,7 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
     color: greenyellow;
 
    }
+
+
+
+
