@@ -25,47 +25,99 @@
        <main>
       <div class=" content_wrapper">
 
-    
          <section id="multimedia">
         <header>
         <h1>Multimedia</h1>
         </header>
-       <p> Elementos embebidos y multimedia   Veremos como utilizar:   </p>
-        <ul>
-      <li>Imágenes</li>                     
+       <p> Elementos embebidos y multimedia 
+           Veremos como utilizar:   </p>
+     <li>
+      Imágenes                     
       <ul>
 
       <li>jpg</li>
       <li>git</li>
       <li>png</li>
-      <li> webm </li>
+      <li>web(p)</li>
       <li>svg</li>
      </ul>
-    
-     <ul>
-    <li> Video y Audio</li>
-     <ul>
+    </li>
 
+     <li> 
+    Video y Audio
+     <ul>
      <li> mp4 </li>
      <li>ogg  </li>
+     <li>webm </li>
      </ul>
+    </li>
+
       <ul>
+
      <li>  Elementos de navegación gráficos </li>
      </ul>
      <section>
     <h3> Imagenes </h3>
-     </section>
+    <div  class="section_imagenes" >
 
-    <img src="./assets/komodo.jpg" alt="Komodo">
+  
+    
+    <img src="./assets/varanococodrilo1.png" alt=" verano cocodrilo">
+    <img src="./assets/ardilla.gif" alt="ardilla">
 
-      </section>
+     <img srcset="./assets/3boats.webp" src="./assets/3boats.jpg" alt="barcas">
+
+      </div>
+
+    <div class="clearfix"></div>
+    
+     <p>Uso de imagenes responsivas html</p>
+    <div>
+
+
+     <img  srcset="./assets/komodo.300.jpg 300w,
+                   ./assets/komodo.400.jpg 400w,
+                   ./assets/komodo.500.jpg 500w"
+                  
+     sizes="(max-width:300px) 300px, 
+            (max-width:400px) 400px,
+            (max-width:500px) 500px"
+     
+     src="./assets/komodo.jpg" alt="komodo">
+                            
+    </div>
+   <div>
+     <p>Etiqueta picture</p>
+    <picture>
+   
+   <source media="(min-width:300px )" srcset="./assets/japanese_cherry_300.jpg">
+   <source media="(min-width:400px )" srcset="./assets/japanese_cherry_400.jpg">
+   <source media="(min-width:500px )" srcset="./assets/japanese_cherry_500.jpg">
+  <img src="japanese_cherry_04.jpg" alt="cherry">
+    </picture>
+  </div>
+     <div class="clearfix"></div>
+
+    </section>
+    
+   <section>
+
+  <h3> Video y Audio </h3>
+
+   </section>
+    <section>
+
+  <h3> Elementos de navegación gráficos</h3>
+
+    </section>
+
       <aside>
             <h2>Publicidad</h2>
             <p>  Aquí iría de la publicidad </p>
-           </aside>
-        </div>
-       </main>
-
+           </aside> 
+           </div>
+         </main>
+  
     <footer class="main_footer">
         <address>
           <p>Patricia</p>

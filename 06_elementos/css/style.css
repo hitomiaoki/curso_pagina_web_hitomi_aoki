@@ -63,7 +63,11 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
 
 }*/
 
-   
+   .clearfix{
+       clear:both;
+   }
+
+
    .main_footer {
        background-color:peru;
        color:green;
@@ -76,8 +80,36 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
    }
    
    img{
-   max-width: 100;    
+   max-width: 100%; 
+  display: inline-block;
+   
    }
+
+.section_imagenes img{
+    max-width: 25%;
+
+    margin-left:-4px;
+    
+    float: left;
+}
+
+
+.imagen_wrapper_50{
+
+    width: 50%;
+}
+
+
+.imagen_wrapper_25{
+width:25%;
+
+}
+
+.imagen_wrapper_75{
+
+    width:75%;
+}
+
 
    blockquote {
 
