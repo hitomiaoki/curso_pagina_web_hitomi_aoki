@@ -87,10 +87,9 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
 
 .section_imagenes img{
     max-width: 25%;
-
-    margin-left:-4px;
-    
-    float: left;
+   float: left;
+   display: block;
+ background-color: antiquewhite;
 }
 
 
@@ -151,3 +150,26 @@ width:25%;
 
 
 
+.web-externa{
+width: 50%;
+height:50vh;
+}
+
+
+.embed-container {
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video{
+    max-width: 100%;
+}
