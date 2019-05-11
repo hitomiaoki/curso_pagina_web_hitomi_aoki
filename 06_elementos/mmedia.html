@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Elemento de la Web</title>
+                <link rel="stylesheet" href="./css/style.css">
+              </head>
+          <body id="inicio">
+        <header class="main_header">
+      
+          <h1>Etiquetas de HTML</h1>
+          <P> Clasificación de las Etiquetas según el estándar HTML 5.2.</P>
+        <nav>
+          <ul>
+      
+            <li> <a rel="tag" href="#section">Section</a></li>
+            <li> <a rel="tag" href="#grouping">Grouping </a></li>
+            <li> <a rel="tag" href="#text-level">Text-level</a></li>
+             <li> <a href="./mmedia.html">  Multimedia </a>  </li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class=" content_wrapper">
+        <main>
+         <section id="multimedia">
+        <header>
+        <h1>Multimedia</h1>
+        </header>
+       <p> Elementos embebidos y multimedia 
+           Veremos como utilizar:   </p>
+     <ul>
+    <li>  Imágenes                     
+      <ul>
+
+      <li>jpg</li>
+      <li>git</li>
+      <li>png</li>
+      <li>web(p)</li>
+      <li>svg</li>
+     </ul>
+    </li>
+  
+      <li> Video y Audio
+     <ul>
+     <li> mp4 </li>
+     <li>ogg  </li>
+     <li>webm </li>
+     </ul>
+    </li>
+     <li>  Elementos de navegación gráficos </li>
+     </ul>
+     <section>
+    <h3> Imagenes </h3>
+    <div  class="section_imagenes" >
+    <img src="./assets/varanococodrilo1.png" alt=" verano cocodrilo">
+    <img src="./assets/ardilla.gif" alt="ardilla">
+
+     <img srcset="./assets/3boats.webp" src="./assets/3boats.jpg" alt="barcas">
+     <img src="./assets/005.gif" alt="git">
+     <img src="./assets/WoodElf.png" alt="elf">
+     <img src="./assets/logo.svg" alt="logo">
+
+     </div>
+
+    <div class="clearfix"></div>
+    
+     <p>Uso de imagenes responsivas html</p>
+    <div>
+
+ 
+     <img  srcset="./assets/komodo.300.jpg 300w,
+                   ./assets/komodo.400.jpg 400w,
+                   ./assets/komodo.500.jpg 500w"
+                  
+     size="(max-width:300px) 300px, 
+            (max-width:400px) 400px,
+            (max-width:500px) 500px"
+     
+     src="./assets/komodo.jpg" alt="komodo">
+     </div>                       
+    
+   <p>Etiqueta picture</p>
+
+   <picture>
+   <source media="(min-width:300px )" srcset="./assets/japanese_cherry_300.jpg">
+   <source media="(min-width:400px )" srcset="./assets/japanese_cherry_400.jpg">
+   <source media="(min-width:500px )" srcset="./assets/japanese_cherry_500.jpg">
+  <img src="japanese_cherry_04.jpg" alt="cherry">
+    </picture>
+    <p>La etiqueta picture y los formatos alternativos de imagenes</p>
+    <picture>
+   
+   <source srcset="./assets/tropical-sunrise.webp" type="image/webp"> 
+   <img src="./assets/tropical-sunrise.jpg" alt="tropical">
+   </picture>
+
+  <picture>
+<source srcset="./assets/logo.svg" type="image/sgv+xml">
+ <img src="./assets/logo.gif" alt="logo">
+
+  </picture>
+
+ <p> Etiqueta figure </p>
+
+
+   <section>
+
+  <h3> Video y Audio </h3>
+   <p>   Es posible incluir un video desde una fuente externa  </p>
+   <div class="embed-container">
+   <iframe  src="https://www.youtube.com/embed/UQpRzyNXDBg"  
+   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+ <p> Otra opción es reproducir video</p> 
+
+   <video controls>
+   <source src="./assets/Ghost_in_the_Shell_Opening.webm" type="video/webm">
+    <source src="./assets/Ghost_in_the_Shell_Opening.mp4" type="video/mp4">
+   </video>
+  
+    <audio  controls src="./assets/day6.mp3"></audio>
+   </section>
+    <section>
+<aside>
+  <h3> Elementos de navegación gráficos</h3>
+  <p>La etiqueta iframe permite acceder a otra web desde la nuestra </p>
+  <iframe class ="web-externa" src="https://www.tajamar.es/"></iframe>  
+</aside>
+    </section>
+   
+      <aside>
+            <h2>Publicidad</h2>
+            <p>  Aquí iría de la publicidad </p>
+           </aside> 
+           </div>
+         </main>
+  
+    <footer class="main_footer">
+        <address>
+          <p>Patricia</p>
+          <a href="mailto://hitomiyuki97@hotmail.com">correo</a>
+        <p> <small> © Tajamar </small> </p> 
+        </address>
+      </footer>
+</body>
+</html>
