@@ -5,12 +5,15 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <title>Elemento de la Web</title>
+                <link href="https://fonts.googleapis.com/css?family=Comfortaa Noto+Sans" rel="stylesheet">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
                 <link rel="stylesheet" href="./css/style.css">
+                
               </head>
           <body id="inicio">
         <header class="main_header">
       
-          <h1>Etiquetas de HTML</h1>
+          <h1>Etiquetas de HTML <i class="fab fa-html5"></i> </h1>
           <P> Clasificación de las Etiquetas según el estándar HTML 5.2.</P>
         <nav>
           <ul>
@@ -18,7 +21,10 @@
             <li> <a rel="tag" href="#section">Section</a></li>
             <li> <a rel="tag" href="#grouping">Grouping </a></li>
             <li> <a rel="tag" href="#text-level">Text-level</a></li>
-             <li> <a href="./mmedia.html">  Multimedia </a>  </li>
+             <li> <a href="#">  Multimedia </a>  </li>
+             <li>  <a href=""> Tablas </a>   </li>
+             <li>  <a href=""></a> Formularios </li>
+             <li></li>
           </ul>
         </nav>
       </header>
@@ -75,7 +81,7 @@
                    ./assets/komodo.400.jpg 400w,
                    ./assets/komodo.500.jpg 500w"
                   
-     size="(max-width:300px) 300px, 
+     sizes="(max-width:300px) 300px, 
             (max-width:400px) 400px,
             (max-width:500px) 500px"
      
@@ -127,8 +133,20 @@
     <section>
 <aside>
   <h3> Elementos de navegación gráficos</h3>
+   <p>En  html antiguo se usaba la etiqueta map para definir   </p>
+   <p>Html 5 se pueden conseguir este efecto usando sgv</p>  
+
+   <embed src="./assets/logo.svg" type="image/sgv+xml"> 
+  <p>relación la navegación gráfico también usos de iconos en los usos de los menus</p> 
   <p>La etiqueta iframe permite acceder a otra web desde la nuestra </p>
   <iframe class ="web-externa" src="https://www.tajamar.es/"></iframe>  
+  <p>Otras formas de insertar contenido externa object y embed</p>
+
+  <p>Object </p>  
+  <object data="https://www.tajamar.es/" ></object>
+   <p> embed  </p>
+ <embed src="https://www.tajamar.es/">
+
 </aside>
     </section>
    
@@ -137,14 +155,8 @@
             <p>  Aquí iría de la publicidad </p>
            </aside> 
            </div>
+           <iframe  class="inframe_footer" src="./_footer.html"></iframe>
          </main>
-  
-    <footer class="main_footer">
-        <address>
-          <p>Patricia</p>
-          <a href="mailto://hitomiyuki97@hotmail.com">correo</a>
-        <p> <small> © Tajamar </small> </p> 
-        </address>
-      </footer>
+    
 </body>
 </html>

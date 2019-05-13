@@ -1,5 +1,6 @@
 body{
-margin:0; 
+margin:0;
+font-family: 'Noto Sans', sans-serif; 
 }
 
 .content{
@@ -11,6 +12,7 @@ margin:0;
      background-color: peru;
      color:navajowhite;
      padding: 0.8rem 0rem 0.5rem 1rem;
+     font-family: 'Comfortaa', cursive;
    }
 
 
@@ -66,7 +68,12 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
    .clearfix{
        clear:both;
    }
-
+   
+   .inframe_footer{
+    width:100%;
+    border: none;
+     
+   }
 
    .main_footer {
        background-color:peru;
@@ -75,6 +82,36 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
        padding: 1rem;      
    }
    
+   
+   .main_footer p {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-top: -1rem; 
+    
+   }
+   .main_footer aside ul{
+    
+    list-style-type: none;  
+    margin: 0;
+    padding: 0;
+   }
+
+  .main_footer aside li {
+
+  display: inline-block;
+  }
+
+  .main_footer aside a{
+
+  color:inherit;
+  text-decoration: none;
+  display:block;
+  padding:0.8rem;  
+
+  }
+
+  
+
    .imagen_wrapper{
     text-align: center;  
    }
@@ -148,8 +185,6 @@ width:25%;
    }
 
 
-
-
 .web-externa{
 width: 50%;
 height:50vh;
@@ -170,6 +205,11 @@ height:50vh;
     height: 100%;
 }
 
-.video{
+video{
     max-width: 100%;
+}
+
+ embed{
+
+ max-width: 100%;   
 }
