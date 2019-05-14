@@ -18,12 +18,12 @@
         <nav>
           <ul>
       
-            <li> <a rel="tag" href="#section">Section</a></li>
-            <li> <a rel="tag" href="#grouping">Grouping </a></li>
-            <li> <a rel="tag" href="#text-level">Text-level</a></li>
+            <li> <a rel="tag" href="./index.html#section">Section</a></li>
+            <li> <a rel="tag" href="./index.html#grouping">Grouping </a></li>
+            <li> <a rel="tag" href="./index.html#text_level">Text-level</a></li>
              <li> <a href="#">  Multimedia </a>  </li>
-             <li>  <a href=""> Tablas </a>   </li>
-             <li>  <a href=""></a> Formularios </li>
+             <li>  <a href="./datos.html"> Tablas </a>   </li>
+             <li>  <a href="./datos.html"></a> Formularios </li>
              <li></li>
           </ul>
         </nav>
@@ -36,7 +36,7 @@
         <h1>Multimedia</h1>
         </header>
        <p> Elementos embebidos y multimedia 
-           Veremos como utilizar:   </p>
+           , veremos como utilizar:   </p>
      <ul>
     <li>  Imágenes                     
       <ul>
@@ -59,7 +59,7 @@
      <li>  Elementos de navegación gráficos </li>
      </ul>
      <section>
-    <h3> Imagenes </h3>
+    <h3> Imágenes </h3>
     <div  class="section_imagenes" >
     <img src="./assets/varanococodrilo1.png" alt=" verano cocodrilo">
     <img src="./assets/ardilla.gif" alt="ardilla">
@@ -67,13 +67,12 @@
      <img srcset="./assets/3boats.webp" src="./assets/3boats.jpg" alt="barcas">
      <img src="./assets/005.gif" alt="git">
      <img src="./assets/WoodElf.png" alt="elf">
-     <img src="./assets/logo.svg" alt="logo">
-
+    <img srcset="./assets/logo.svg"src="./assets/logo.gif" alt="logo">>
      </div>
 
     <div class="clearfix"></div>
     
-     <p>Uso de imagenes responsivas html</p>
+     <p>Uso de imágenes responsivas HTML</p>
     <div>
 
  
@@ -94,7 +93,8 @@
    <source media="(min-width:300px )" srcset="./assets/japanese_cherry_300.jpg">
    <source media="(min-width:400px )" srcset="./assets/japanese_cherry_400.jpg">
    <source media="(min-width:500px )" srcset="./assets/japanese_cherry_500.jpg">
-  <img src="japanese_cherry_04.jpg" alt="cherry">
+    <source srcset="./assets/japanese_cherry_04.jpg" type="image/jpg">
+  <img src="japenese_cherry_500.jpg" alt="cherry">
     </picture>
     <p>La etiqueta picture y los formatos alternativos de imagenes</p>
     <picture>
@@ -110,15 +110,20 @@
   </picture>
 
  <p> Etiqueta figure </p>
-
-
+ 
+ <figure>
+   <img src="./assets/komodo.jpg" alt="">
+   <figcaption>Varano de komodo</figcaption>
+ </figure>
+</section>
    <section>
 
   <h3> Video y Audio </h3>
    <p>   Es posible incluir un video desde una fuente externa  </p>
    <div class="embed-container">
    <iframe  src="https://www.youtube.com/embed/UQpRzyNXDBg"  
-   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+   allowfullscreen></iframe>
 </div>
 
  <p> Otra opción es reproducir video</p> 
@@ -131,25 +136,26 @@
     <audio  controls src="./assets/day6.mp3"></audio>
    </section>
     <section>
-<aside>
+   
   <h3> Elementos de navegación gráficos</h3>
-   <p>En  html antiguo se usaba la etiqueta map para definir   </p>
-   <p>Html 5 se pueden conseguir este efecto usando sgv</p>  
-
+   <p>En  HTML antiguo se usaba la etiqueta map para definir un hotspot </p>
+   <p>En HTML 5 se pueden conseguir este efecto usando sgv</p>
    <embed src="./assets/logo.svg" type="image/sgv+xml"> 
-  <p>relación la navegación gráfico también usos de iconos en los usos de los menus</p> 
+   <p> También relacionado con la navegación gráfico estaría el uso de iconos en HTML</p>  
+ </section>
+  <aside>
+  <h3> Elementos embebidos no multimedia</h3>  
   <p>La etiqueta iframe permite acceder a otra web desde la nuestra </p>
   <iframe class ="web-externa" src="https://www.tajamar.es/"></iframe>  
   <p>Otras formas de insertar contenido externa object y embed</p>
-
   <p>Object </p>  
-  <object data="https://www.tajamar.es/" ></object>
+  <object data="https://www.tajamar.es/" type="text/html" ></object>
    <p> embed  </p>
- <embed src="https://www.tajamar.es/">
+ <embed src="https://www.tajamar.es/"   type="text/html"  >
 
 </aside>
     </section>
-   
+    </main>
       <aside>
             <h2>Publicidad</h2>
             <p>  Aquí iría de la publicidad </p>
