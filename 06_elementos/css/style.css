@@ -113,12 +113,13 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
   
 
    .imagen_wrapper{
+    margin: 0;
     text-align: center;  
    }
    
    img{
    max-width: 100%; 
-  display: inline-block;
+   display: inline-block;
    
    }
 
@@ -178,6 +179,16 @@ width:25%;
 
    }
 
+  .dt{
+   float:left;
+   clear:left;   
+  }
+
+   .dd{
+  float: left;
+  clear:right;
+
+   }
 
    .verde{
     color: greenyellow;
@@ -193,7 +204,7 @@ height:50vh;
 
 .embed-container {
     position: relative;
-    padding-bottom: 50%;
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
@@ -212,4 +223,10 @@ video{
  embed{
 
  max-width: 100%;   
+}
+
+.main_inicio_foter{
+text-align: right;
+color: aliceblue;
+font-size: 1.1rem;
 }
