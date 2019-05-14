@@ -26,20 +26,23 @@
         <li> <a rel="tag" href="#grouping">Grouping </a></li>
         <li> <a rel="tag" href="#text-level">Text-level</a></li>
         <li> <a href="./mmedia.html"> Multimedia </a> </li>
-        <li> <a href="./datos.html"></a> Tablas </li>
-        <li> <a href="./datos.html"></a>Formularios</li>
+        <li> <a href="./datos.html">Tablas</a></li>
+        <li> <a href="./datos.html">Formularios</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <div class="content">
+    <div class="content_wrapper">
+
+      <main>
       <p> El estándar HTML diferencia 3 tipos diferentes: Section,Grouping content y Text-level semantics.</p>
       <section id="section">
-
-        <h2>Section</h2>
-        <p> Esto trata de elementos de secciones,que se reflejan en el esquema o (outline) en la página.</p>
+        <header>
+        <h2 lang="en">Section</h2>
+      </header>
+        <p> Esto trata de elementos de secciones,que se reflejan en el  <strong> esquema</strong>  o 
+         <span lang="en"> (outline)</span> en la página.</p>
         <p> Inicialmente los elementos incluyen body y los encabezado (h1-h6). </p>
-        <p>HTML 5 se añaden los elementos semanticos:
+        <p>HTML 5 se añaden los elementos semanticos: </p>
           <ul>
             <li>header</li>
             <li> footer </li>
@@ -48,11 +51,8 @@
             <li>article</li>
             <li>aside </li>
           </ul>
-        </p>
-    </div>
-    </section>
-    <section>
-      <header>
+
+    <section id="etiqueta_section" >
         <h3> Etiqueta section</h3>
         <blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section">
           <p> El elemento de HTML section (&lt;section&gt;) representa una sección genérica de un documento.Sirve para
@@ -68,11 +68,11 @@
             <cite>
 
              
-               <a   href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/section</a>
+               <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/section</a>
             </cite>
           </footer>
         </blockquote>
-      </header>
+      </section>
       <section id="header">
         <header>
           <h3>Header</h3>
@@ -100,8 +100,6 @@
           <footer>
             <cite>
 
-            
-
                 <a  href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/footer">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/footer</a>
             </cite>
           </footer>
@@ -116,8 +114,8 @@
           Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.
           <footer>
             <cite>
-              <a rel="nofollow"
-                href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/nav">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/nav</a>
+             
+              <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/nav">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/nav</a>
             </cite>
           </footer>
         </blockquote>
@@ -170,35 +168,37 @@
         </figcaption>
       </figure>
       <footer class="main_inicio_footer">
-        <a href="inicio">inicio</a><i class="fas fa-home"></i>
+        <a href="#inicio" rel="tag" title="inicio"></a><i class="fas fa-home"></i>
 
       </footer>
     </section>
     <section id="grouping">
       <header>
         <h2> Grouping content</h2>
-
+     </header>
         <p> Son etiquetas que por defecto tienen un display bloque,pero no contribuyen al <strong>esquemas</strong>
           (outline) de la página </p>
         <section>
           <h3> Párrafos</h3>
           <p>Se pueden crear párrafos con las etiquetas:p,pre y blockquote</p>
           <p>Ejemplo de un párrafo preformateado</p>
-
           <pre>
-  Esto está dentro
-  de la etiqueta pre
-</pre>
+        Esto está dentro
+       de la etiqueta pre
+     </pre>
           <p>Se puede usar para fragmento de código</p>
           <!--SERIA PARA SOLO CAMBIAR EL ESTILO A UN PRE <pre class="mono-space">-->
 
           <pre>
-   let x = 25
-   let y = 24
-   let z = x + y
+       let x = 25
+       let y = 24
+       let z = x + y
 
- </pre>
-
+     </pre>
+         <p>La etiqueta  (&lt;blockquote &gt;) se utltiza para crear citas literales en bloque, tal como hemos 
+          hecho  anteriormente 
+         </p>
+        </section>
           <section>
             <h3> Listas </h3>
             <p> Existen 3 tipos de listas </p>
@@ -237,20 +237,10 @@
 
           <p>hay unos atributos especificos de las listas</p>
 
-          <ol class="start">
+          <ol start="5">
 
             <li>1item</li>
-
             <li>1item</li>
-          </ol>
-          <ol reversed>
-            <li>1item</li>
-            <li>2item</li>
-            <li>3item</li>
-            <li>4item</li>
-            <li>5item</li>
-
-
           </ol>
         </section>
         <section>
