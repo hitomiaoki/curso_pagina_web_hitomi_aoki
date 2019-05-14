@@ -225,8 +225,18 @@ video{
  max-width: 100%;   
 }
 
-.main_inicio_foter{
+.main_inicio_footer{
 text-align: right;
 color: aliceblue;
 font-size: 1.1rem;
+}
+
+.main_table{
+ weight:100%;
+}
+.main_table tbody tr:nth-of-type(even){
+    background-color: gainsboro;
+}
+.main_table tbody tr:nth-of-type(odd){
+    background-color:grey;
 }
