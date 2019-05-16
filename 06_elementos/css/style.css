@@ -284,3 +284,43 @@ background-color: darkblue;
  width: 100%;
  text-align: center;
 }
+select:select{
+    color: aquamarine;
+
+}
+
+.placeholder{
+    color: brown;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }
+
+.form_control{
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+.form_label{
+    display: block;
+    margin-top: 1rem;
+}
+
+fieldset{
+margin-bottom: 0.7rem;
+border-color: bisque;
+
+}

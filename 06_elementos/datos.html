@@ -5,7 +5,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <title>Elemento de la Web</title>
-                <link rel="stylesheet" href="./assets/favicon.ico">
+                <link rel="stylesheet" href="./favicon.ico">
                 <link href="https://fonts.googleapis.com/css?family=Comfortaa/Noto+Sans" rel="stylesheet">
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
                 <link rel="stylesheet" href="./css/style.css">
@@ -151,9 +151,9 @@
     </tr>
 
     <tr>
-    <td scope="col">   caribe    </td> 
-    <td scope="col" >   europa   </td>
-    <td scope="col">  oriente  </td>
+    <td scope="col">   Caribe    </td> 
+    <td scope="col" >   Europa   </td>
+    <td scope="col">  Oriente  </td>
      </tr>
         <tr>
       <th rowspan="3" scope="rowgroup" >Rango de edad</th>
@@ -199,11 +199,78 @@
     <li>method</li>
 
      </ul> 
-  <form action="https://jsonplaceholder.typicode.com/users" method="POST"  > 
+     <h3>Formulario minimo</h3>
+   <p>Ejemplo de los elementos minimos de un formulario</p> 
+   <p>  Y uso de los distintos metodos de GET Y POST</p>  
+   <h4>Uso de GET</h4>
+  <form action= method="GET"  > 
+    <input type="text"  name="userName"  placeholder="Dime tu nombre"  >  
+    <input type="password"  name="userPassword"  placeholder="Dime tu password"  >  
+    <button type="submit">Enviar </button>
+   </form>
+
+   <h4>Uso de POST</h4>
+  <form action=  "https://jsonplaceholder.typicode.com/users"  name="user-POST" method="POST"  > 
    <input type="text"  name="userName"  placeholder="Dime tu nombre"  >  
    <input type="password"  name="userPassword"  placeholder="Dime tu password"  >  
    <button type="submit">Enviar </button>
   </form>
+
+   <h3>Formulario mas completo</h3>
+  <p>usamos un mismo formulario de los principales controles</p>
+  <form action=  "https://jsonplaceholder.typicode.com/users"  name="complete-POST" method="POST"  >
+    <fieldset>  
+    <legend> Datos personales</legend> 
+    <label for="userName"  class="form_label">Nombre de Usuario</label>
+    <input class="form_control" type="text"  name="userName"  placeholder="Escribe tu nombre y apellido"  > 
+    
+    <label for="userPassword"  class="form_label">Contraseña</label>
+    <input class="form_control" type="password"  name="userPassword"  placeholder="Dime tu password"  >
+
+    <label for="email"  name="email" id="email"  class="form_label" >Correo</label>
+    <input class="form_control"  type="text"  name="correo"   placeholder="Dime tu correo"  >
+    
+    <textarea name="info" id="info"  rows="5" class="form_label"  placeholder="mas información"></textarea>
+   </fieldset>
+   <fieldset>
+     <legend>Condiciones</legend>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ullam earum doloribus nostrum ducimus in?
+        Repudiandae laudantium tempore alias, quia consequatur autem, quod repellat et nihil ab repellendus voluptas dolore.
+        Atque et possimus, ut officia tenetur rem est perferendis quia aperiam error, ipsam veniam accusantium ducimus ad eaque
+         hic optio dolorum iure fuga fugit aliquid sunt inventore cum! Incidunt, sunt.</p>
+     
+     <input type="checkbox"  name="isOk" id="isOk" > 
+     <label for="isOk">Estoy acuerdo con las condiciones</label>   
+   </fieldset>
+
+   <fieldset>
+     <legend>Datos del curso</legend>
+     <label for="curso" class="form_label">Cursos</label>
+     <!--<select name="curso" id="curso" class="form_control"  multiple size="8" >-->
+     <select name="curso" id="curso" class="form_control" >
+       <option value="" >Elige un valor</option>
+       <optgroup label="Desarrollo Front">
+       <option value="HTML5_01">HTML 5</option>
+       <option value="CSS_02">CSS</option>
+       <option value="JS_03" > Java Scripts </option>
+      </optgroup>
+      <optgroup label=" Programación Back">
+        <option value="NODE_04">Node JS</option>
+        <option value="PHP_05">PHP</option>
+      </optgroup>
+      </select>
+      <p>Ubicaciones</p>
+      <input type="radio" name="sitio" id="Madrid">
+      <label for="madrid">Madrid</label>
+      <input type="radio" name="sitio" id="Sevilla">
+      <label for="sevilla">Sevilla</label>
+      <input type="radio" name="sitio" id="Barcelona">
+      <label for="barcelona">Barcelona</label>
+
+   </fieldset>
+   <button type="submit">Enviar </button>  
+   </form> 
+
      </section>
               </main>
                     <aside>
