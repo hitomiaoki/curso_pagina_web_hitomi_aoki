@@ -166,7 +166,7 @@ SI QUIERO QUE SOLO SEA UN PRE,CREO UNA CLASE.
    }
    
     footer a{
-     color: antiquewhite;   
+     color: rgb(202, 185, 163);   
     }
 
    .main_footer p {
@@ -234,7 +234,7 @@ video{
 
 .main_inicio_footer{
 text-align: right;
-color: aliceblue;
+color: rgb(166, 196, 223);
 font-size: 1.1rem;
 }
 .sin-border{
@@ -277,20 +277,42 @@ background-color: bisque;
 }
 
 .main_table_2 tr:nth-of-type(odd) td{
-background-color: darkblue;
+background-color: rgb(40, 40, 148);
 }
 
 .main_table_2{
  width: 100%;
  text-align: center;
 }
-select:select{
-    color: aquamarine;
 
+
+.form_control{
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
+.radio_wrapper{
+padding-top: 0.7rem;
+padding-bottom: 0.3rem;
+margin-bottom: 1rem;
+}
+
+
+/*select:selected{
+    color: aquamarine;}
+select:hover{
+font-size: 4rem;
+}*/
 
 .placeholder{
     color: brown;
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: red;
@@ -305,15 +327,7 @@ select:select{
     color: red;
   }
 
-.form_control{
-    display: block;
-    width: 100%;
-    border:none;
-    border-bottom: 1px solid gray;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 
-}
 .form_label{
     display: block;
     margin-top: 1rem;
@@ -321,6 +335,8 @@ select:select{
 
 fieldset{
 margin-bottom: 0.7rem;
-border-color: bisque;
+border-color: rgb(189, 151, 105);
+width: 60%;
+
 
 }

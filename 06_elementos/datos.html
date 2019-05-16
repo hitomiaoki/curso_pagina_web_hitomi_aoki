@@ -33,9 +33,7 @@
   </header>
 
   <div class=" content_wrapper">
-
     <main>
-
       <section id="tablas">
         <header>
           <h2> Tablas</h2>
@@ -47,9 +45,9 @@
           <tr>
 
             <th></th>
-            <td scope="col">2017</td>
-            <td scope="col">2018</td>
-            <td scope="col">2019</td>
+            <td>2017</td>
+            <td>2018</td>
+            <td>2019</td>
           </tr>
           <tr>
 
@@ -154,9 +152,9 @@
           </tr>
 
           <tr>
-            <td scope="col"> Caribe </td>
-            <td scope="col"> Europa </td>
-            <td scope="col"> Oriente </td>
+            <th scope="col"> Caribe </th>
+            <th scope="col"> Europa </th>
+            <th scope="col"> Oriente </th>
           </tr>
           <tr>
             <th rowspan="3" scope="rowgroup">Rango de edad</th>
@@ -174,7 +172,7 @@
           </tr>
           <tr>
 
-            <th>Mayores de 30</th>
+            <th scope="row">Mayores de 30</th>
             <td>30%</td>
             <td>38%</td>
             <td>32%</td>
@@ -204,46 +202,50 @@
         </ul>
         <h3>Formulario minimo</h3>
         <p>Ejemplo de los elementos minimos de un formulario</p>
-        <p> Y uso de los distintos metodos de GET Y POST</p>
+        <p> Y uso de los distintos métodos: GET Y POST</p>
         <h4>Uso de GET</h4>
-        <form action=method="GET">
+        <form name="basic-get" method="GET">
           <input type="text" name="userName" placeholder="Dime tu nombre">
           <input type="password" name="userPassword" placeholder="Dime tu password">
           <button type="submit">Enviar </button>
         </form>
 
         <h4>Uso de POST</h4>
-        <form action="https://jsonplaceholder.typicode.com/users" name="basic-POST" method="POST">
+        <form action="https://jsonplaceholder.typicode.com/users" name="basic-post" method="POST">
           <input type="text" name="userName" placeholder="Dime tu nombre">
           <input type="password" name="userPassword" placeholder="Dime tu password">
           <button type="submit">Enviar </button>
         </form>
 
-        <h3>Formulario mas completo</h3>
+        <h3>Formulario más completo</h3>
         <p>usamos un mismo formulario de los principales controles</p>
-        <form action="https://jsonplaceholder.typicode.com/users" name="complete-POST" method="POST">
+        <form action="https://jsonplaceholder.typicode.com/users" name="complete-post" method="POST">
           <fieldset id="datos personales">
+            <!--label es una etiqueta que se ponía en vez de placeholder.Este era usado antes del HTML5 cuando aparecio´esta nueva etiqueta-->
             <legend> Datos personales</legend>
-            <label for="userName" class="form_label">Nombre de Usuario</label>
-            <input class="form_control" type="text" name="userName" placeholder="Escribe tu nombre y apellido" required>
+            <label for="userName" class="form_label">Nombre de usuario</label>
+            <input type="text" name="userName" id="userName" requied class="form_control"  placeholder="Escribe tu nombre y apellidos">
 
             <label for="userPassword" class="form_label">Contraseña</label>
-            <input class="form_control" type="password" name="userPassword"     placeholder="Dime tu password" required >
+            <!--para una expresión irregular-pattern (contraseña con numeros,letras,signos,etc)-->
+            <input type="password" name="userPassword"  id="userPassword"  requied minlength="8"  class="form_control"   placeholder="Dime tu password">
 
             <label for="email" class="form_label">Correo</label>
             <input type="email" name="email" id="email" class="form_control"
-              placeholder="Escribe un correo electrónico">
+              placeholder="Escribe un correo electrónico válido" value="@tajamar">
 
-            <label for="cs" class="form_label"> Formación</label>
-            <input type="text" name="cs" id="cs" list="Formación" class="form_control"
+            <label for="cv"> Formación</label>
+            <input type="text" name="cv" id="cv " class="form_control" list="Formación" class="form_control"
               placeholder="Selecciona o indica tus estudios">
             <datalist id="formación">
               <option >Graduado</option>
               <option >Licenciado</option>
-              <option ></option>
+              <option >Doctor</option>
             </datalist>
-
-            <textarea name="info" id="info" rows="5" class="form_label" placeholder="mas información"></textarea>
+         <label for="birthdate"  class="form_label">Fecha de nacimiento</label>
+         <input type="date" name="birthdate" id="birthdate" class="form_control">
+           <label for="info" class="form_label">Más información</label>
+          <textarea name="info" id="info" rows="5"  placeholder="Más información" class="form_label"></textarea>
           </fieldset>
           <fieldset id="condiciones">
             <legend>Condiciones</legend>
@@ -259,10 +261,11 @@
             <label for="isOk">Estoy acuerdo con las condiciones</label>
           </fieldset>
 
-          <fieldset id="datos cursos">
+          <fieldset id="datos curso">
             <legend>Datos del curso</legend>
             <label for="curso" class="form_label">Cursos</label>
-            <!--<select name="curso" id="curso" class="form_control"  multiple size="8" >-->
+            <!--Se puede utilizar size en select:4 u 8, o depende de lo que sea,también se puede agregar la palabra multiple y luego size
+               <select name="curso" id="curso" class="form_control"  multiple size="8" >-->
             <select name="curso" id="curso" class="form_control" required>
               <option value="">Elige un valor</option>
               <optgroup label="Desarrollo Front">
@@ -275,19 +278,23 @@
                 <option value="PHP_05">PHP</option>
               </optgroup>
             </select>
+            <!--<p>Ubicación<p> también se puede p en vez de label y div-->
             <label for="form_label">Ubicaciones</label>
-            <div class="wrapper_radio">
-              <input type="radio" name="sitio" id="Madrid" value="md" required>
+            <div class="radio_wrapper">
+              <input type="radio" name="sitio" id="Madrid" value="MAD" required>
               <label for="madrid">Madrid</label>
-              <input type="radio" name="sitio" id="Sevilla" value="sv">
+              <input type="radio" name="sitio" id="Sevilla" value="SEV">
               <label for="sevilla">Sevilla</label>
-              <input type="radio" name="sitio" id="Barcelona" value="bn">
+              <input type="radio" name="sitio" id="Barcelona" value="BRC">
               <label for="barcelona">Barcelona</label>
             </div>
           </fieldset>
-          <!--<input type="submit" value="Enviar"></input> -->
-          <button type="submit">Enviar </button>
-
+          <!--<input type="submit" value="Enviar"></input> También podemos optar por está opción,pero la de abajo es mejor-->
+          <button type="submit">Enviar <i class=fas fa-paper-plane></i></button>
+         <input type="reset" value="Borrar">
+        <button type="reset">Borrar<i class="fas fa-paper-plane"></i></button>
+        <!--esta etiqueta solo sirve con la ayuda de javascript-->
+        <button type="button">SIN USO</button>
         </form>
         <p>Existen otros controles de formulario</p>
         <dl>
