@@ -1,0 +1,27 @@
+{
+  "name": "curso_pagina_web_hitomi_aoki",
+  "version": "1.0.0",
+  "description": "curso web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hitomiaoki/curso_pagina_web_hitomi_aoki.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "Javascript"
+  ],
+  "author": "Hitomi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hitomiaoki/curso_pagina_web_hitomi_aoki/issues"
+  },
+  "homepage": "https://github.com/hitomiaoki/curso_pagina_web_hitomi_aoki#readme",
+  "dependencies": {
+    "dialog-polyfill": "^0.5.0"
+  }
+}

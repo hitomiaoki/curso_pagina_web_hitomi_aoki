@@ -7,10 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Elementos de la Web-Datos</title>
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa/Noto+Sans" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Comfortaa/Noto+Sans" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="../node_modules/dialog-polyfill/dist/dialog-polyfill.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./Js/app.js" type="module"></script>
 
 </head>
 
@@ -200,8 +202,8 @@
           <li>method</li>
 
         </ul>
-        <h3>Formulario minimo</h3>
-        <p>Ejemplo de los elementos minimos de un formulario</p>
+        <h3>Formulario mínimo</h3>
+        <p>Ejemplo de los elementos mínimos de un formulario</p>
         <p> Y uso de los distintos métodos: GET Y POST</p>
         <h4>Uso de GET</h4>
         <form name="basic-get" method="GET">
@@ -221,15 +223,18 @@
         <p>usamos un mismo formulario de los principales controles</p>
         <form action="https://jsonplaceholder.typicode.com/users" name="complete-post" method="POST">
           <fieldset id="datos personales">
-            <!--label es una etiqueta que se ponía en vez de placeholder.Este era usado antes del HTML5 cuando aparecio´esta nueva etiqueta-->
+            <!--label es una etiqueta que se ponía en vez de placeholder.Este era usado antes del HTML5 cuando apareció esta nueva etiqueta-->
             <legend> Datos personales</legend>
             <label for="userName" class="form_label">Nombre de usuario</label>
             <input type="text" name="userName" id="userName" requied class="form_control"  placeholder="Escribe tu nombre y apellidos">
 
-            <label for="userPassword" class="form_label">Contraseña</label>
+            <label for="userPassword" class="form_label">Contraseña ver formato</label> 
+            <p>THE Complex Password Filter Matching 3 of 4 Character catagories: 1.) 
+              at least 1 upper case character 2.) at least 1 lower case character 3.) 
+              at least 1 numerical character 4.)</p>
             <!--para una expresión irregular-pattern (contraseña con numeros,letras,signos,etc)-->
-            <input type="password" name="userPassword"  id="userPassword"  requied minlength="8"  class="form_control"   placeholder="Dime tu password">
-
+            <input type="password" name="userPassword"  id="userPassword"  requied minlength="8"  class="form_control"   placeholder="Dime tu password"   Pattern Title=(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*  >
+            
             <label for="email" class="form_label">Correo</label>
             <input type="email" name="email" id="email" class="form_control"
               placeholder="Escribe un correo electrónico válido" value="@tajamar">
@@ -315,10 +320,83 @@
         </dl>
         <div class="clearfix"></div>
       </section>
+      <section id="interactivoS">
+        <header>
+        <h2>Elementos interactivos</h2>
+      </header>
+     <p>Son elementos novedosos incluidos en las modificaiones HTML 5</p> 
+     <ul>
+      <li>details-HTML 5.2</li>
+      <li>dialog-HTML 5.2</li>
+      <h3>Etiqueta de details</h3>
+     <p>Permite crear un bloque con información extra que se muestra opcionalmente</p> 
+     </ul>
+   <details>
+    <h4>Novedades html 5.1</h4>
+    <blockquote cite="https://www.imaginanet.com/html5-novedades.html">
+    </details> 
+    <details>
+    <summary> Definir múltiples imágenes para el diseño responsive</summary>    
+     <p>Definir múltiples imágenes para el diseño responsive
+        Esta versión nos ofrece la posibilidad de utilizar el tag picture, junto con el atributo srcset para poder definir múltiples imágenes para el diseño responsivo.
+        Podríamos definir este tag como un contenedor de imágenes donde los diseñadores podrán declarar varias, que se utilizarán dependiendo del tamaño de pantalla, píxeles u otros parámetros.
+        Por sí solo este tag no muestra nada, y para que funcione deberíamos establecer una imagen por defecto utilizando la etiqueta img habitual. Las imágenes alternativas se ubicarían 
+        dentro de los atributos srcset de los elementos img y source. Este código nos mostrará la imagen por defecto mientras que el tamaño de la pantalla sea superior a los 960 px.
+        Cuando sea menor, se mostrará large.jpg, y si es inferior a 360 px se verá "mobile.jpg".</p>
+     </details>
+     <details>
+     <summary>Mostrar o esconder información extra</summary>
+     <p>En este caso utilizaremos las nuevas etiquetas details y summary.
+        Mediante su uso podemos añadir información extra a cualquier contenido. 
+        Su principal característica es que la información no se muestra por defecto, pero si el usuario está interesado tendrá la opción de consultarla. 
+        Para utilizarla debes colocar el tag summary dentro de details. En el interior de summary será donde pondremos la información visible, 
+        que tendrá un icono a su izquierda para mostrar la información oculta.</p>
+     </details>
+      <details>
+     <summary>Añadir funciones al menú contextual del navegador</summary>
+      <p>Esta versión de HTML 5 permite añadir nuevas funciones al menú contextual del navegador. Para ello hay que utilizar el tag menuitem y su atributo type=context. Para 
+         su uso hay que asignar esa etiqueta como elemento hijo del tag menu, al que habrá que definir el atributo id, que tendrá así el mismo valor que el atributo contextmenu del elemento que queremos añadir al menú contextual. El tag menuitem puede ser de tres tipos diferentes: checkbox, command y radio.
+         Si se ejecuta el código anterior, aparecerá un botón. Si sobre él se pulsa con el botón derecho, aparece la nueva opción en el menú.</p>
+      </details>
+       <details>
+       <summary>Anidar headers y footers</summary>
+     <p>HTML 5.1 ofrece la posibilidad de anidar varios headers y footers, siempre y cuando cada nivel esté dentro del contenido de la sección. Útil para crear cabeceras elaboradas.</p>
+       </details>
+       <details>
+       <summary>Utilizar imágenes con un ancho de 0 píxeles</summary>
+       <p>Otra de las novedades que incluye esta nueva versión es la posibilidad de utilizar imágenes que tengan un valor de 0 píxeles de ancho. 
+         Esto es muy útil a la hora de incluir fotografías que no queremos que sean vistas por los usuarios, como pueden ser archivos de trackeo. 
+         Lo que sí se recomienda es que se utilice el atributo alt vacío.</p>
+       </details>
+       <details>
+       <summary>Crear opciones vacías</summary>
+       <p>Otra de las cosas que no se podía utilizar hasta la fecha era crear un elemento option vacío.
+          Este elemento suele ser utilizado conjuntamente con otras etiquetas como select, optgroup o datalist.
+           Puede ser útil en aquellos casos en los que no queremos sugerir qué opción deben seleccionar los usuarios.</p>
+       </details>
+      </blockquote>  
+      </section>
+      <h3> Etiqueta diálogo</h3>
+      <p>La etiqueta dialog,novedad html 5.2,corresponde a lo que se conoce como una ventana modal o simplemente modal</p>
+      <blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/dialog" >Este elemento incluye los atributos globales. El atributo tabindex no debe utilizarse en el elemento.
+       open Indica que el diálogo está activo y disponible para interactuar. Cuando el atributo open no está asignado, no debe mostrarse al usuario.
+      </blockquote>
+      <dialog id="dlg-sample"> 
+      <p>Información que se mostrara cuando aparezca el modal</p>
+      <button type="button" id="btn-cerrar">Cerrar</button>   
+    </dialog>
+      <button type="button" id="btn-info">Mostrar información</button>
     </main>
     <aside>
+      
       <h2>Publicidad</h2>
       <p> Aquí iría de la publicidad </p>
+     <template id="publicidad-extra">
+     <p> podemos incluir cualquier html</p> 
+     </template> 
+     <canvas id="cnv-sample"  class="canvas">
+
+     </canvas>
     </aside>
     <iframe class="inframe_footer" src="./footer.html"></iframe>
     </section>
