@@ -228,12 +228,10 @@
             <label for="userName" class="form_label">Nombre de usuario</label>
             <input type="text" name="userName" id="userName" requied class="form_control"  placeholder="Escribe tu nombre y apellidos">
 
-            <label for="userPassword" class="form_label">Contraseña ver formato</label> 
-            <p>THE Complex Password Filter Matching 3 of 4 Character catagories: 1.) 
-              at least 1 upper case character 2.) at least 1 lower case character 3.) 
-              at least 1 numerical character 4.)</p>
+            <label for="userPassword" class="form_label">contraseña <span title=" 1.)  at least 1 upper case character 2.) at least 1 lower case character 3.) 
+              at least 1 numerical character 4.)"></span>Ver formato</label> 
             <!--para una expresión irregular-pattern (contraseña con numeros,letras,signos,etc)-->
-            <input type="password" name="userPassword"  id="userPassword"  requied minlength="8"  class="form_control"   placeholder="Dime tu password"   Pattern Title=(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*  >
+            <input type="password" name="userPassword"  id="userPassword"  requied minlength="8"  Pattern Title=(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.* class="form_control" placeholder="Dime tu password"  >
             
             <label for="email" class="form_label">Correo</label>
             <input type="email" name="email" id="email" class="form_control"
@@ -372,10 +370,14 @@
        <summary>Crear opciones vacías</summary>
        <p>Otra de las cosas que no se podía utilizar hasta la fecha era crear un elemento option vacío.
           Este elemento suele ser utilizado conjuntamente con otras etiquetas como select, optgroup o datalist.
-           Puede ser útil en aquellos casos en los que no queremos sugerir qué opción deben seleccionar los usuarios.</p>
-       </details>
+          Puede ser útil en aquellos casos en los que no queremos sugerir qué opción deben seleccionar los usuarios.</p>
+      </details>
+       <footer> 
+       <cite>
+       <a href="https://www.imaginanet.com/html5-novedades.html" rel="external"  target="_blank">https://www.imaginanet.com/html5-novedades.html</a>
+       </cite>
+       </footer>
       </blockquote>  
-      </section>
       <h3> Etiqueta diálogo</h3>
       <p>La etiqueta dialog,novedad html 5.2,corresponde a lo que se conoce como una ventana modal o simplemente modal</p>
       <blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/dialog" >Este elemento incluye los atributos globales. El atributo tabindex no debe utilizarse en el elemento.
@@ -383,9 +385,9 @@
       </blockquote>
       <dialog id="dlg-sample"> 
       <p>Información que se mostrara cuando aparezca el modal</p>
-      <button type="button" id="btn-cerrar">Cerrar</button>   
-    </dialog>
-      <button type="button" id="btn-info">Mostrar información</button>
+      <button type="button" id="btn-cerrar">Cerrar</button>  
+     </dialog>
+     <button type="button" id="btn-info">Mostrar información</button>
     </main>
     <aside>
       
