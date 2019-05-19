@@ -3,8 +3,8 @@ import dialogPolyfill from '../../node_modules/dialog-polyfill/index.js'
 
 function main() {
 
-    document.querySelector('#bts-info').addEventListener('click', mostrar)
-    document.querySelector('#bts-cerrar').addEventListener('click', cerrar)
+    document.querySelector('#btn-info').addEventListener('click', mostrar)
+    document.querySelector('#btn-cerrar').addEventListener('click', cerrar)
 
 
 
