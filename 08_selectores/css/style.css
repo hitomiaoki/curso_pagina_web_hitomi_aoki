@@ -1,0 +1,137 @@
+
+
+
+header{
+    background-color: grey;
+    color:bisque;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    text-align:center;
+}
+
+ header h1{
+margin-bottom:2;
+margin-top: 2;
+
+
+ }
+
+
+
+ header p{
+     margin-top: 0;
+     margin-bottom: 0;
+     font-size: 1.3rem;
+     font-weight: bold;
+ }
+
+  
+
+
+
+
+
+
+/*selector combinados() antes selectores contextuales */
+
+
+ /*selector descendientes( descendent )símbolo espacio*/
+
+ .combinadores p{
+    background-color: coral;
+}
+
+
+ /*selector de hijo(child)  símbolo es el mayor >*/
+
+.combinadores>p{
+background-color: aquamarine;
+}
+
+
+
+
+ /*selector de hermanos(sibilings)*  simbolo ~ */
+
+.combinadores div ~p{
+background-color: blanchedalmond;
+
+}
+
+
+ /*selector de hermanos ayacentes(adyacent sibilings)*   símbolo + */
+
+.combinadores div+p{
+
+background-color: brown;
+}
+
+
+ /* selector de atributo    símbolo los []  */
+
+ [title] {
+  color: rosybrown;
+  
+ }
+
+
+/* Atributo igual a */
+
+ [title="Extra"] {
+ 
+    color: rgb(169, 214, 102);
+ }
+
+ /*  Atributo empieza por */
+
+ [title^="Párrafo"] {
+   
+  color: blue;  
+ }
+
+/* Atributo continua por */
+
+ [title*="rrafo"] {
+   
+    color: rgb(91, 91, 126);  
+   }
+
+/* Atributo termina por */
+
+[title$="1"] {
+   
+    color:rgb(26, 103, 155);  
+   }
+
+
+
+
+/*******************************
+
+     ESTILO  DE FOOTER
+
+********************************/
+
+
+footer{
+
+background-color: grey;
+color:bisque;
+margin-bottom: 1rem;
+margin-top:1rem;
+text-align: center;
+
+}
+
+
+footer address{
+font-style: normal;
+
+}
+
+footer p{
+margin-top:0;
+margin-bottom: 0;
+
+}
