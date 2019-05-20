@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/hitomiaoki/curso_pagina_web_hitomi_aoki#readme",
   "dependencies": {
-    "dialog-polyfill": "^0.5.0"
+    "dialog-polyfill": "^0.5.0",
+    "normalize.css": "^8.0.1"
   }
 }

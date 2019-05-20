@@ -1,0 +1,36 @@
+/* @charset 'UTF-8';
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./header.css) screen and (max-device-width:500px)
+Ejemplo de input sin condiciones
+otras directivas son:
+@font-face
+@keyframes
+@namespace
+@page
+@supports
+*/
+
+
+body{
+    background-color: blanchedalmond;
+}
+/* selector de clases*/
+.sample{
+    color:green;
+}
+ 
+ /* selector de id:no se usa por buenas prácticas*/
+  
+ #verde {
+ color: green;
+ }
+
+     /*forma mas habituales de usar media Queries*/
+     
+@media screen and (max-device-width:500px) {
+body {
+  background-color: aliceblue; 
+
+    }
+}
