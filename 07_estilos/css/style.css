@@ -26,6 +26,16 @@ body{
  color: green;
  }
 
+  /* selectores agrupados*/
+
+ p, blockquote{ font-size:1.1rem};
+ 
+ /*Es lo mismo que esto
+p{ font-size: 1.1rem};
+blockquote{font-size: 1.1rem}; */
+
+
+
      /*forma mas habituales de usar media Queries*/
      
 @media screen and (max-device-width:500px) {
