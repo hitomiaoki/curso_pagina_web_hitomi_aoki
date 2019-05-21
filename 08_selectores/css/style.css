@@ -1,7 +1,7 @@
 
 
 
-header{
+body>header{
     background-color: grey;
     color:bisque;
     margin-bottom: 2rem;
@@ -10,25 +10,25 @@ header{
     text-align:center;
 }
 
- header h1{
-margin-bottom:2;
-margin-top: 2;
+ body>header h1{
+ margin-bottom:2;
+ margin-top: 2;
 
 
  }
 
 
 
- header p{
+ body>header p{
      margin-top: 0;
      margin-bottom: 0;
      font-size: 1.3rem;
      font-weight: bold;
  }
 
-  
-
-
+  /***************************************************
+        Estilos  de la selection.combinadores
+  ***************************************************/
 
 
 
@@ -68,9 +68,17 @@ background-color: brown;
 }
 
 
+
+  /***************************************************
+        Estilos  de la selection.atributo
+  ***************************************************/
+
+
+
+
  /* selector de atributo    símbolo los []  */
 
- [title] {
+  .atributo  [title] {
   color: rosybrown;
   
  }
@@ -78,43 +86,223 @@ background-color: brown;
 
 /* Atributo igual a */
 
- [title="Extra"] {
+  .atributo [title="Extra"] {
  
     color: rgb(169, 214, 102);
  }
 
  /*  Atributo empieza por */
 
- [title^="Párrafo"] {
+  .atributo [title^="Párrafo"] {
    
   color: blue;  
  }
 
 /* Atributo continua por */
 
- [title*="rrafo"] {
+  .atributo [title*="rrafo"] {
    
     color: rgb(91, 91, 126);  
    }
 
 /* Atributo termina por */
 
-[title$="1"] {
+  .atributo  [title$="1"] {
    
     color:rgb(26, 103, 155);  
    }
 
 
 
+/****************************************
+
+ ESTILOS  de las secciones.pseudo-elementos
+
+*****************************************/
+
+
+.pseudo-elementos p::first-letter{
+font-size: 3rem;
+font-family: fantasy;
+color:blue;
+}
+
+.pseudo-elementos p::first-line{
+font-style: italic;
+font-weight: bold;
+
+}
+
+.pseudo-elementos .medio {
+color: brown;
+}
+
+.pseudo-elementos .medio-pro::before,
+.pseudo-elementos .medio-pro::after {
+content:url(../../favicon.ico) url(../../favicon.ico)   "Fantástico"  url(../../favicon.ico) url(../../favicon.ico);
+display: block;
+background-color:coral;
+width: 100%;
+color:beige;
+padding: 1rem;
+margin-top: 0.8rem;
+text-align: center;
+}
+
+.banda{
+background-color: brown;
+padding: 1rem;
+margin-top: 0.8rem;
+}
+
+body{
+counter-reset: párrafos;
+}
+
+
+  /***************************************************
+        Estilos  de la selection.atributo
+  ***************************************************/
+
+
+.numerados p:before {
+counter-increment: párrafos;
+content:counter(párrafos,b) "$_$";
+font-weight: bold;
+}
+
+
+  /***************************************************
+        Estilos  de las secciones .comillas
+  ***************************************************/
+
+
+
+
+/*quotes: '/00AB' '/00BB'*/ 
+.comillas{
+quotes: "«" "»" ;
+}
+
+
+.comillas p:before {
+ content:open-quote;  
+}
+
+.comillas p:after {
+content: close-quote;
+}
+
+
+  /***************************************************
+        Estilos  de las secciones .pseudo-clases
+  ***************************************************/
+
+
+  .pseudo-clases header {
+    background-color: rgb(223, 197, 197);  
+    padding-bottom: 1rem;
+  }
+
+  .pseudo-clases header  {
+      margin-bottom: 0.2rem;
+  }
+
+
+
+  .pseudo-clases header P{
+      display: none;
+     
+  }
+
+  .pseudo-clases header:hover p{
+   display: inherit;
+   padding: 1rem;
+    
+  }
+
+  
+  .pseudo-clases header div  {
+    display: none;
+  }
+
+
+   
+  .pseudo-clases header:hover div{
+    display: inherit;
+    padding: 1rem;
+     
+   }
+
+
+  .pseudo-clases a:link {
+    color:chocolate;
+  }
+
+  .pseudo-clases a:visited {
+    color:crimson;
+  }
+
+
+ 
+  /***************************************************
+        Estilos  de las secciones .pseudo-numéricas
+  ***************************************************/
+
+
+
+
+ .pseudo-numéricas p:nth-child(2)   {
+     text-decoration: underline;
+ }
+
+ .pseudo-numéricas p:nth-of-type(2)   {
+   font-style: italic;
+}
+
+ /* También es igual  par (even es 2n) y impar (odd es lo mismo 2n+1)*/
+
+ .pseudo-numéricas li:nth-of-type(2n) {
+
+  background-color: antiquewhite;
+  
+  }
+
+   .pseudo-numéricas li:nth-of-type(2n+1) {
+
+    background-color: rgb(190, 145, 86);
+     }
+
+
+    /*.pseudo-numéricas li:last-of-type  {
+     padding-right: 1.5rem;
+    }*/
+
+   .pseudo-numéricas li {
+    font-family: monospace;
+    width: 4rem;
+    
+
+   }
+
+
+
+   
+
+
+  
+
+
 
 /*******************************
 
-     ESTILO  DE FOOTER
+     ESTILOS  DE FOOTER
 
 ********************************/
 
 
-footer{
+
+body>footer{
 
 background-color: grey;
 color:bisque;
@@ -125,12 +313,12 @@ text-align: center;
 }
 
 
-footer address{
+body>footer address{
 font-style: normal;
 
 }
 
-footer p{
+body>footer p{
 margin-top:0;
 margin-bottom: 0;
 
