@@ -1,4 +1,7 @@
 
+  /********************************
+           ESTILOS  DE  HEADER
+  *********************************/
 
 
 body>header{
@@ -27,42 +30,37 @@ body>header{
  }
 
   /***************************************************
-        Estilos  de la selection.combinadores
+        Estilos  de la section.combinadores
   ***************************************************/
-
-
 
 
 /*selector combinados() antes selectores contextuales */
 
-
  /*selector descendientes( descendent )símbolo espacio*/
 
- .combinadores p{
+ section.combinadores p{
     background-color: coral;
 }
 
 
  /*selector de hijo(child)  símbolo es el mayor >*/
 
-.combinadores>p{
+section.combinadores>p{
 background-color: aquamarine;
 }
 
 
-
-
  /*selector de hermanos(sibilings)*  simbolo ~ */
 
-.combinadores div ~p{
+section.combinadores div~p{
 background-color: blanchedalmond;
 
 }
 
 
- /*selector de hermanos ayacentes(adyacent sibilings)*   símbolo + */
+ /*selector de hermanos ayacentes(adyacent sibilings) el símbolo + */
 
-.combinadores div+p{
+section.combinadores div+p{
 
 background-color: brown;
 }
@@ -70,15 +68,16 @@ background-color: brown;
 
 
   /***************************************************
-        Estilos  de la selection.atributo
+        Estilos  de la seccion atributos
   ***************************************************/
 
 
 
 
- /* selector de atributo    símbolo los []  */
+ /* selector de atributo  símbolo los []  */
 
-  .atributo  [title] {
+   
+  .atributos p[title] {
   color: rosybrown;
   
  }
@@ -86,39 +85,41 @@ background-color: brown;
 
 /* Atributo igual a */
 
-  .atributo [title="Extra"] {
+  .atributos [title="Extra"] {
  
     color: rgb(169, 214, 102);
  }
 
+ /*!Importante: es muy importante para ponerlo en cualquier circunstancias, va dentro del punto y coma ";"*/
+
  /*  Atributo empieza por */
 
-  .atributo [title^="Párrafo"] {
+  .atributos [title^="Párrafo"] {
    
   color: blue;  
  }
 
 /* Atributo continua por */
 
-  .atributo [title*="rrafo"] {
+  .atributos [title*="rrafo"] {
    
     color: rgb(91, 91, 126);  
    }
 
 /* Atributo termina por */
 
-  .atributo  [title$="1"] {
+  .atributos  [title$="1"] {
    
     color:rgb(26, 103, 155);  
    }
 
 
 
-/****************************************
+/*****************************************************************
 
- ESTILOS  de las secciones.pseudo-elementos
+ ESTILOS  de las secciones.pseudo-elementos,.numerados y .comillas
 
-*****************************************/
+*****************************************************************/
 
 
 .pseudo-elementos p::first-letter{
@@ -160,23 +161,12 @@ counter-reset: párrafos;
 }
 
 
-  /***************************************************
-        Estilos  de la selection.atributo
-  ***************************************************/
-
 
 .numerados p:before {
 counter-increment: párrafos;
-content:counter(párrafos,b) "$_$";
+content:counter(párrafos) "$_$";
 font-weight: bold;
 }
-
-
-  /***************************************************
-        Estilos  de las secciones .comillas
-  ***************************************************/
-
-
 
 
 /*quotes: '/00AB' '/00BB'*/ 
@@ -207,7 +197,6 @@ content: close-quote;
   .pseudo-clases header  {
       margin-bottom: 0.2rem;
   }
-
 
 
   .pseudo-clases header P{
@@ -251,7 +240,6 @@ content: close-quote;
 
 
 
-
  .pseudo-numéricas p:nth-child(2)   {
      text-decoration: underline;
  }
@@ -260,13 +248,24 @@ content: close-quote;
    font-style: italic;
 }
 
- /* También es igual  par (even es 2n) y impar (odd es lo mismo 2n+1)*/
+ /* También podemos utilizarlo con la palabra en inglés
+ .pseudo-numéricas li:nth-of-type(even) {
+  background-color: antiquewhite;
+  }
+*/
 
  .pseudo-numéricas li:nth-of-type(2n) {
 
   background-color: antiquewhite;
   
   }
+
+
+ /* También podemos utilizarlo con la palabra en inglés
+ .pseudo-numéricas li:nth-of-type(odd) {
+  background-color: antiquewhite;
+  }
+*/
 
    .pseudo-numéricas li:nth-of-type(2n+1) {
 
@@ -286,12 +285,22 @@ content: close-quote;
    }
 
 
+    /* De tres en tres
+   .pseudo-numéricas li:nth-of-type(3n) {
 
+    background-color: rgb(190, 145, 86);
+     }
    
+   .pseudo-numéricas li:nth-of-type(3n+1) {
 
+     background-color: rgb(190, 145, 86);
+     }
+     
+   .pseudo-numéricas li:nth-of-type(3n+2) {
 
+    background-color: rgb(190, 145, 86);
+     }*/
   
-
 
 
 /*******************************
@@ -309,6 +318,7 @@ color:bisque;
 margin-bottom: 1rem;
 margin-top:1rem;
 text-align: center;
+margin-top: 1rem;
 
 }
 
