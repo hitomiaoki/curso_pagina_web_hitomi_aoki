@@ -11,10 +11,11 @@ otras directivas son:
 @supports
 */
 
-
+/*selector de etiqueta*/
 body{
     background-color: blanchedalmond;
 }
+
 /* selector de clases*/
 .sample{
     color:green;
@@ -22,7 +23,7 @@ body{
  
  /* selector de id:no se usa por buenas prácticas*/
   
- #verde {
+ .verde {
  color: green;
  }
 
@@ -35,8 +36,7 @@ p{ font-size: 1.1rem};
 blockquote{font-size: 1.1rem}; */
 
 
-
-     /*forma mas habituales de usar media Queries*/
+/*forma mas habituales de usar media Queries*/
      
 @media screen and (max-device-width:500px) {
 body {
