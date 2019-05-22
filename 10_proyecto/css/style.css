@@ -1,0 +1,132 @@
+ :root{
+ --color-letra:rgb(223, 182, 132);
+ --color-fondo:brown;
+ --font-family: 'Noto Sans KR', sans-serif;
+ --font-family: 'Noto Sans KR', sans-serif;
+ --font-family: 'Archivo Narrow', sans-serif;
+ --size-title:2rem;
+ -size-title:cal(var(--size-small) *1 );
+ --size-subtitle:cal(var(--size-small) *2);
+ --size-base:1rem;
+ --size-base:cal(14rem/16);
+ --size-base:cal(12rem/16);
+ --margin-vertical:1rem;
+ --margin-lateral:2rem;
+  
+ 
+ }
+
+
+  /********************************
+           ESTILOS  DE  HEADER
+  *********************************/
+
+  body{
+  font-family: v
+  }
+
+
+
+.header{
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    text-align:center;
+}
+
+ .header-h1{
+ margin-bottom:2;
+ margin-top: 2;
+ 
+
+ }
+
+
+
+ .header p{
+     margin-top: 0;
+     margin-bottom: 0;
+     font-size: 1.3rem;
+     font-weight: bold;
+ }
+
+
+
+
+
+/*******************************
+
+     ESTILOS  DE FOOTER
+
+********************************/
+
+
+ 
+ .footer{
+
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    margin-bottom: 1rem;
+    margin-top:1rem;
+    text-align: center;
+    margin-top: 1rem;
+    
+    }
+    
+    
+    .footer address{
+    font-style: normal;
+    
+    }
+    
+    .footer p{
+    margin-top:0;
+    margin-bottom: 0;
+    
+    }
+
+    .footer a {
+    color:inherit;
+    }
+
+
+    
+
+/************************
+
+     ESTILOS  DEl MAIN
+
+************************/
+
+
+main {
+    margin:var(--margin-vertical);
+    
+}
+
+main h2 {
+    font-size: var(--size-title-section);
+    margin-bottom:var(var(variable));
+
+}
+
+
+main p{
+    margin-bottom: 0rem;
+}
+
+
+/***********************************
+
+  ESTILOS  DE lAS SECCIONES  MAIN
+
+***********************************/
+
+section{
+    width:45%;
+    display:inline-block ;
+    vertical-align: top;
+    padding: 1rem;
+}
