@@ -21,9 +21,9 @@ Ejemplo de lista
 -Dos
 -Tres
 
-![cherry](../6_elementos/assets/japanese_500.jpg)
+![cherry](../06_elementos/assets/japanese_cherry_300.jpg)
 
-[Git](../6_elementos/assets/005.git)
+[Gif](../06_elementos/assets/005.gif)
 
 [Youtube](https://www.youtube.com)
 
