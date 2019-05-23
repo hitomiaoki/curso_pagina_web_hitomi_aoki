@@ -30,3 +30,8 @@ let precio = 45.60 //number
 let producto ='Gafas' //string
 
 //precio = producto //error de tipos
+
+function sumarConTipos (a:number, b: number):number{
+return a + b
+}
+
