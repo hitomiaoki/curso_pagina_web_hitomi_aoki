@@ -8,11 +8,11 @@
  --font-family: 'Noto Sans KR', sans-serif;
  --font-family: 'Noto Sans KR', sans-serif;
  --font-family: 'Archivo Narrow', sans-serif;
- --size-title:cal(var(--size-small) *3 );
- --size-subtitle:cal(var(--size-small) *2);
+ --size-title:calc(var(--size-small) * 3);
+ --size-subtitle:calc(var(--size-small) * 2);
  --size-title-section:1.2rem;
- --size-base:cal(14rem/16);
- --size-small:cal(12rem/16);
+ --size-base:calc(14rem/16);
+ --size-small:calc(12rem/16);
  --margin-vertical:1.5rem;
  --margin-lateral:2rem;
  --margin-párrafo:1rem;
@@ -33,66 +33,58 @@
 
 
 
-
-
-
+  body {
+  font-family: var(--font-family);
+  line-height:1;
+  font-size:var(--size-base);
+  }
 
 
   /********************************
            ESTILOS  DE  HEADER
   *********************************/
 
-  body {
-  font-family: var(--font-family)
-  }
-
-
 
 .header {
     background-color: var(--color-fondo);
     color: var(--color-letra);
+    font-family:var(--font-family);
+    font-weight:bold;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    padding-left: 2rem;
+    padding-left: 5rem;
     text-align:center;
 }
 
  .header-h1 {
- margin-bottom:2;
- margin-top: 2;
+ margin-bottom:1rem;
+ margin-top: 1rem;
+ font-size:var(--size-title)
  
-
  }
-
 
 
  .header p {
-     margin-top: 0;
-     margin-bottom: 0;
-     font-size: 1.3rem;
-     font-weight: bold;
+  font-size: var(--size-subtitle); 
  }
-
-
 
 
 
 /*******************************
-
      ESTILOS  DE FOOTER
-
 ********************************/
 
 
- 
  .footer {
 
     background-color: var(--color-fondo);
     color: var(--color-letra);
+    font-size:var(--size-small);
     margin-bottom: 1rem;
     margin-top:1rem;
     text-align: center;
     margin-top: 1rem;
+    padding:2rem;
     
     }
     
@@ -102,77 +94,62 @@
     
     }
     
-    .footer p {
-    margin-top:0;
-    margin-bottom: 0;
-    
-    }
-
     .footer a {
     color:inherit;
     }
 
+    .footer p {
+    font-size:var(--size-main);
+    }
 
-    
 
 /************************
-
      ESTILOS  DEl MAIN
-
 ************************/
 
 
 main {
-    margin:var(--margin-vertical);
+    margin:var(--margin-vertical)  var(--margin-lateral) ;
     
 }
 
 main h2 {
     font-size: var(--size-title-section);
-    margin-bottom:var(var(variable));
-
+    margin-bottom:calc(var(--margin-vertical)/2);
+    margin-top:calc(var(--margin-vertical)/2);
 }
 
 
 main p {
-    margin-bottom: 0rem;
+    margin-bottom:var(--margin-párrafo);
+    margin-top:var(--margin-párrafo);
 }
 
 
 /******************************************
-Estilos de las secciones inline-block main
-
+Estilos de las secciones .inline-block 
 ******************************************/
 section {
     margin-top:var(--margin-vertical);
+    margin-bottom:var(--margin-vertical);
 }
 
-
+section article{
+ width: 50%;/*se refiere al elemento, contexto */ 
+ padding:1rem;
+ background-color:var(--color-aquamarine-fondo);
+ border:1px solid var(--color-gray-border);   
+}
 
 
 section.inline-block article {
-   box-sizing: content-box;
-   box-sizing: border-box;
-
-    width:50%;
     display:inline-block ;
-    vertical-align: top;
-   /* padding: 1rem;*/
-    background-color: var(--color-aquamarine-fondo);
-    border: var(--color-gray-border);
+    vertical-align: top; 
 }
 
 
-section.inline-block article { 
-     display:inline-block ;
-     vertical-align: top;
-    
- }
- 
-
-
 section.inline-block article:nth-of-type(2) {
-    margin-left: -4px;
+  margin-left: -4px;
 
 }
 
@@ -197,7 +174,7 @@ display: table-cell;
 }
 
 section.flex {
-display: flex;
-/*align-items: flex-start;*/
-/*align-items: flex-end;*/
+display: flex; /*para que se pongan uno al lado del otro */
+/*align-items: flex-start;  respetar el espacio de abajo */
+/*align-items: flex-end;   respetar el espacio de arriba */
 }
