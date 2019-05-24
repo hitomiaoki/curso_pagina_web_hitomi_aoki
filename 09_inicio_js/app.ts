@@ -28,10 +28,18 @@ b =3
 
 let precio = 45.60 //number
 let producto ='Gafas' //string
-
 //precio = producto //error de tipos
 
 function sumarConTipos (a:number, b: number):number{
 return a + b
 }
 
+/*
+function sumarConTipos (a:number, b: number):string{
+let c = a + b
+return 'El resultado es'+ c
+}*/
+
+suma(12,25)
+/*No lo aprueba porque es tipado
+suma(12,'Pepe')*/
