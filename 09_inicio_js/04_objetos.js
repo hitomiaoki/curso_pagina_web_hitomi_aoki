@@ -1,13 +1,13 @@
+'user strict'
 
-
-function sample () {
+function ejemplo () {
 
 let v = 160
 let a = 4
 let modelo = 'RAV'
 let marca = 'Toyota'
 
-let coche ={
+let coche ={ //colecciones de propiedades con nombres --> object
 v :160,
 a :4,
 modelo:'RAV',
@@ -15,15 +15,16 @@ marca:'Toyota',
 usuarios:['Pepe','Elena','Rosa']
 }
 
-let aDatos = [2,4,6,7,37]
+//array [], lista, arreglo
+let aDatos = [2,4,6,7,37] //arrive
+
 console.log(coche)
-console.log(coche,marca)
+console.log(coche.marca)
 }
 
 
-
-//Objecto JSON o literal
 ejemplo ()
+//Objecto JSON o literal
 
 let persona = {
  fullNombre : {
