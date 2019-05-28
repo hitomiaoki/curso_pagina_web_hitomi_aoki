@@ -11,7 +11,7 @@ console.log(a)
 //ES6
 //const solo para un valor, no añade mas.
 const b = 6
-
+//ERROR b = 22
 
 //así este dentro de otro bloque, la constante solo hay una.
 /*if (true) { //ESTO NO ESTA DEFINIDO
@@ -43,10 +43,21 @@ const persona = {nombre:'Pepe' , edad:'22'}
 datos[datos.length] =63
 datos.push(43)
 
+// datos = 6
+// datos = []
+// datos [22,10,36,63,43]
+
+
 persona.altura = 178
 persona.edad = 23
+//persona.nombre = '' //Solo aparecería nombre, no valor
+//delete persona.nombre //Borrar nombre y el valor
+
+
 
 // persona = 178 ERROR
+//persona = {}
+//persona = {nombre:'Pepe', edad:22}
 
 // console.log(datos[0]) // los datos (números) se cuentan desde 0
 console.log(datos)

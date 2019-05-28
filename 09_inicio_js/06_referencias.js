@@ -9,19 +9,20 @@ let b = a//asignación de valor
 console.log('al crear b',a,b)
 b = b * b
 a = a / 2
-console.log('valor de',b)//4
-console.log('valor de',a)//2
+console.log('valor de',b) //4
+console.log('valor de',a) //1
 
 b = a
 console.log('valor de b',b)
 
-//valores referenciados
+// valores referenciados
+// objects (array)
  
 let p1 = {nombre :'Pepe', edad : 34}
-let p2 = p1 //(asignación de referencia)
+let p2 = p1 // Asignación de referencia
 p1.nombre = 'Juan'
-console.log(p1)
-console.log(p2)
+console.log(p1) // Juan  // un objeto en 2 referencias
+console.log(p2) // Juan
 
 
 let  a1 = {nombre :'Raquel', edad : 34}
@@ -36,7 +37,7 @@ function inscribirmal(){
 
 function inscribirEnJS(alumno){
   if (alumno){
-   a1.curso  = 'JS'     
+      alumno.curso  = 'JS'     
   }
  
 }
