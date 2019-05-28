@@ -1,0 +1,27 @@
+
+main {
+ margin:5%;
+}
+
+
+.img-wrapper left{
+    width: 50%;
+    float: left;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+ }
+
+
+
+.img-wrapper :right{
+   width: 50%;
+   float: right;
+   padding-right: 2rem;
+   padding-bottom: 0.5rem;
+}
+
+
+
+img {
+max-width: 100%;
+}
