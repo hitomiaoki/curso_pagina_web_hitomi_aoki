@@ -45,6 +45,18 @@ function sumar (a = 0, b = 0) {
     return a + b 
     } 
 
+function isvalidNumber(n){
+    r = true
+    if (isNaN(n) || typeof n == 'boolean'    
+    || array.isarr(n) ) {
+     r = false
+    }
+    return true   
+}
+
+
+
+
 
 
 function sumar (a = 0, b = 0) {  // una opcíon sería añadir el valor 0 en a y b
