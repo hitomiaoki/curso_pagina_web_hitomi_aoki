@@ -26,7 +26,9 @@
 
     
 body {
-font-family: 'source_sans_proregular' ;
+font-family: 'source_sans_proregular';
+margin:0;
+padding:0;
 }
 
 
@@ -57,39 +59,36 @@ section.centrada p{
 
 
   .espacios  {
-   
-
     margin: 2rem  1rem;
     background-color: coral;
+    padding-bottom:2.5%;
   
    }
 
 
-
 .espacios h2 {
  padding: 1rem;
+ margin:0;
 }
 
-
 .espacios p {
-  width: 30%;
   padding: 1rem;
   background-color: blanchedalmond;
+  margin-left:2.5%;
+  margin-right:2.5%;
  }
  
 
- 
  .flex {
    
   margin: 2rem 1rem;
   background-color: coral;
+  padding-bottom:3%;
  }
-
-
  
 .flex h2 {
   padding: 1rem;
-  flex: 1 0 100%;
+  margin:0;
  }
 
 
@@ -97,13 +96,12 @@ section.centrada p{
 .flex p {
   padding: 1rem;
   background-color: blanchedalmond;
-  /*width: 30%;*/
+  margin-left:5%;
+  margin-right:5%;
  }
 
  
   @media screen and (min-width:690px) {
-
-  
 
     .espacios::after {
       content: '';
@@ -140,7 +138,7 @@ section.centrada p{
        }
    
  .flex p:not(:last-of-type) {
-  margin-right:5%;
+  margin-right:0%;
   }
 
 
