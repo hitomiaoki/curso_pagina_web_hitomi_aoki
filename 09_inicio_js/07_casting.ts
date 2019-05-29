@@ -1,18 +1,23 @@
 
-function sumarTiped (a:number,b:number) {
+function sumarTiped (a:number = 0,b:number = 0) {
     return a + b
    }
 
 
-console.log(sumar())
+console.log(sumarTiped())
 console.log(sumar(undefined,undefined))
+console.log(sumarTiped(4))
+console.log(sumarTiped(2,2))
+console.log(sumarTiped(2,0))
+console.log(sumarTiped(0,2))
+/*console.log(sumarTiped(2,'5')) 
+console.log(sumarTiped('2','5'))
+console.log(sumarTiped(2,'Pepe')) 
+console.log(sumarTiped('Juan','Pepe')) 
+console.log(sumarTiped(2,true)) 
+console.log(sumarTiped(2,false)) 
+console.log(sumarTiped(true,false))
+console.log(sumarTiped({},{}))
+console.log(sumarTiped([23,56],[5,6]))
+console.log(sumarTiped([],[]))*/
 
-console.log(sumar(2,2))
-console.log(sumar(2,0))
-console.log(sumar(0,2))
-console.log(sumar(2,5))
-/*console.log(sumar(2,Pepe))
-console.log(sumar(Juan,Pepe))
-console.log(sumar(2,true))
-console.log(sumar(2,false))
-console.log(sumar(true,false))*/

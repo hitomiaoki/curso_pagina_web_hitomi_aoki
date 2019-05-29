@@ -33,23 +33,49 @@ console.log(w,typeof w)
 
 
 /**
+ * Símbolos lógicos de JS
  * Not !
  * Or ||
  * And &&
+ * == es una comparación
  */
 
-
+  
 function sumar (a = 0, b = 0) {
+    return a + b 
+    } 
+
+
+
+function sumar (a = 0, b = 0) {  // una opcíon sería añadir el valor 0 en a y b
     /*if (typeof a != 'number'|| typeof b != 'number')
     return  'No se puede sumar' 
     } */ 
-    if (isNaN (a)  || isNaN (b) 
+    if (isNaN(a)  || isNaN(b) 
     || typeof a == 'boolean' || typeof b =='boolean'
     || typeof a == 'object'  || Array.isArray(b)) {
     return  'No se puede sumar' 
     }
-    //let r = Number (a)+ Number (b)
-    //let r = parseFloat(a) + parseFloat (b)
-    let r = Number +a + +b
+    //let r = Number (a)+ Number (b)          // Una manera para forzar el casting
+    //let r = parseFloat(a) + parseFloat (b) // Segunda forma de hacerlo
+    let r = Number +a + +b                  // Tercera formar de forzarlo
     return  'La suma es' + r
 }
+
+
+  console.log( sumar())
+  console.log( sumar(undefined,undefined))
+  console.log( sumar(4))
+  console.log( sumar(2,2))
+  console.log( sumar(2,0))
+  console.log( sumar(0,2))
+  console.log( sumar(2,'5')) // No se puede sumar porque '5' es un string
+  console.log( sumar('2','5'))
+  console.log( sumar(2,'Pepe')) //Nam
+  console.log( sumar('Juan','Pepe')) //Nam
+  console.log( sumar(2,true)) //Un true(boolean) se convierte a 1 (en casting)
+  console.log( sumar(2,false)) //false(boolean) se convierte a 0 (en casting)
+  console.log( sumar(true,false))
+  console.log( sumar({},{}))
+  console.log( sumar([23,56],[5,6]))
+  console.log( sumar([],[]))
