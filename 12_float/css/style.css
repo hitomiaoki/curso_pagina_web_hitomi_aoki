@@ -1,19 +1,28 @@
 
 main {
- margin:5%;
+ margin:3%;
 }
 
 
-.img-wrapper left{
+section.reptiles::after {
+content:'';
+display:block;
+clear:both;
+}
+
+.img_wrapper_left{
     width: 50%;
     float: left;
     padding-right: 2rem;
     padding-bottom: 0.5rem;
  }
 
+img {
+max-width: 100%;
+}
 
 
-.img-wrapper :right{
+.img_wrapper_right{
    width: 50%;
    float: right;
    padding-right: 2rem;
@@ -22,6 +31,3 @@ main {
 
 
 
-img {
-max-width: 100%;
-}
