@@ -1,0 +1,31 @@
+
+body{
+margin:0;    
+}
+
+.main-header {
+background-color:brown;
+padding:0.8rem;
+}
+
+
+.main-header nav {
+margin-left: 1rem;
+}
+
+.main-header nav ul {
+list-style-type: none;
+margin:0;
+padding:0;
+}
+
+.main-header nav li {
+ display:inline-block;   
+}
+
+
+.main-footer {
+ background-color: brown;
+ text-align:center;
+ padding: 1rem;   
+}
