@@ -1,0 +1,38 @@
+
+body {
+margin:0;
+}
+
+
+
+
+
+header {
+
+min-height: 100vh;
+background-color: coral;
+
+
+display: flex;
+justify-content: center; /*horizontal*/
+align-items: center; /*vertical*/
+/*background-image: url(../assets/img-noise-32x32.png;*/
+
+background-image: url(../assets/3boats.jpg);
+background-repeat:no-repeat ;
+background-position:center;
+/*background-size: contain;*/
+background-size: cover;
+/*background-blend-mode: lighten;*/
+background-blend-mode: multiply;
+background-blend-mode: luminosity;
+background-blend-mode: difference;
+background-blend-mode: darken;
+
+
+}
+
+
+h1 {
+color:rgb(184, 135, 11);
+}
