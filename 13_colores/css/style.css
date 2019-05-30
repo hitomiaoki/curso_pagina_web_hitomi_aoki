@@ -1,0 +1,92 @@
+
+
+.gama{
+    display: flex;
+}
+
+ .gama div {
+        color:rgb(214, 175, 75);
+        height:10rem;
+        width:10rem;     
+    }
+
+
+  .gama  div:nth-last-of-type(1) {
+    background-color: #A3FDFF;
+    }
+   
+   .gama div:nth-last-of-type(2) {
+    background-color: #57FCFF;
+    }
+
+   .gama div:nth-last-of-type(3) {
+    background-color: #45CACC;
+    }
+
+    
+   .gama div:nth-last-of-type(4) {
+    background-color: #2C7E80;
+    }
+
+    
+    .gama div:nth-last-of-type(5) {
+    background-color: #527F80;
+    }
+    
+    .trans {
+     margin:1rem;
+     border:1px solid;
+     padding:1rem;
+     width: 90%;
+     height:30vh ;
+     background-color:aliceblue;
+    }
+
+    .trans div  {
+        height:10rem;
+        width:10rem; 
+        background-color: rgb(55, 128, 129);
+    }
+
+    .trans div:nth-last-of-type(1) {
+        background-color: rgb(90, 198, 202);  
+    }
+
+    .trans p {
+    font-size:5rem;
+    font-weight:bold; 
+    color:brown;
+    }
+
+   .opacity {
+     margin-top:2rem; 
+     opacity: 0.5rem;
+    }
+
+
+    .opacity:hover {
+      opacity: 1;
+       }
+
+
+       .fondo {
+       /* background-color: rgb(50, 50, 83);*/
+       opacity: 0.3;
+       background-image: url(../assets/3boats.jpg);    
+       }
+
+       .fondo h2 {
+        opacity: initial;
+       }
+
+
+       .gradiente {
+        background:linear-gradient(
+        to-left, 
+        
+        rgb(214, 175, 75),
+        rgb(156, 125, 47),
+        rgb(92, 73, 27)
+      
+        );
+       }
