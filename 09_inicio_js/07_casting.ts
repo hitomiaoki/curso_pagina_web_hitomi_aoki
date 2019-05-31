@@ -5,7 +5,7 @@ function sumarTiped (a:number = 0,b:number = 0) {
 
 
 console.log(sumarTiped())
-console.log(sumar(undefined,undefined))
+console.log(sumarTiped(undefined,undefined))
 console.log(sumarTiped(4))
 console.log(sumarTiped(2,2))
 console.log(sumarTiped(2,0))
