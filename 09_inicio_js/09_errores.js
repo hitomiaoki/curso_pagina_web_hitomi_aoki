@@ -1,17 +1,16 @@
 /**Separacion de responsabilidad */
 
   
+function isValidNumber(n){
+  let r = true
+  if (isNaN(n) || typeof n == 'boolean'    
+  || array.isArray(n)  ||  n == '' || n == null) {
+   r = false
+  }
+  return true   
+}
 
-    function isvalidNumber(n){
-        r = true
-        if (isNaN(n) || typeof n == 'boolean'    
-        || array.isArray(n)  ||  ) {
-         r = false
-        }
-        return true   
-    }
-
-  
+ 
 function codificarEdad(edad){
     let i = 3
     if (){
