@@ -42,7 +42,7 @@ x = x * 2 // asignación por expresiones
 
 let a = 31 // global
 console.log('variable global', a)
-
+let b = 67
 ///////////////////////////////////////////
 
 function prueba() {
@@ -51,13 +51,13 @@ function prueba() {
 
   console.log('z vale', z)
   var z = 7
- if (true) {
-  let a = 78 // local al bloque 
-  var z  = 23 
-  console.log('variable local al bloque', a)
-  console.log(b)
- }
- console.log (z) 
+  if (true) {
+     let a = 78 // local al bloque 
+     var z  = 23 
+     console.log('variable local al bloque', a)
+     console.log(b)
+   }
+ 
 }
 
 prueba()
@@ -79,6 +79,8 @@ console.log(user)
 //user = 34 -> Error
 user.log(user)
 
+//hoisting de funciones declaradas y variables var (solo la declaración)
+
 function izar() {
     var z
     console.log('Izado')
@@ -86,7 +88,7 @@ function izar() {
     var z = 7   
 }
 
-//hoisting de funciones declaradas y variables var (solo la declaración)
+
 /*lo que pasa realmente
 function izar() {
     var z
@@ -101,7 +103,7 @@ function izar() {
 
  // Casting a string
  let n = 23
- let msj = 'Juan tiene' + n // 'Juan tiene 23'
+ let msg = 'Juan tiene' + n // 'Juan tiene 23'
 console.log(typeof n)
 
 // Casting a number
@@ -120,7 +122,7 @@ w = 0
 w = NaN
 w = ''
 
-//True
+//Truly
 w = true
 w = 23
 w = -34

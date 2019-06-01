@@ -6,7 +6,7 @@
 
 
  /**
-  * @description Función que calcula si una expresión 
+  * @description Función que comprueba si una expresión 
   *              es convertible a un número valido
   *              rechazando objects,arrays,boolean,null
   *              undefined,'' y string no númericos
@@ -17,51 +17,51 @@
    function isValidNumber(n){
     let r = true
     if (isNaN(n) || typeof n == 'boolean'    
-    || array.isArray(n)  ||  n == '' || n == null) {
-     r = false
+    || Array.isArray(n)  ||  n === '' || n === null) {
+        r = false
     }
-    return true   
+    return r   
 }
 
     
   /**
    * 
    * @param {number} : n
-   * @return {void} 
+   * @return {boolean} 
    */
    function isEntero(n = 0) {
-    return (parseInt(n))   === parseFloat(n) 
+    return (parseInt(n)   === parseFloat(n)) 
    }
 
   
   /**
-   * @description Función que muestra si un número es par 
-   *              Puede devolver -2, -1, true,false
+   * @description Función que calcula si un número es par 
+   *              Puede devolver: -2, -1, true,false
    * @param {number} : n
-   * @return {boolean} 
+   * @return {*} 
+   * 
    */
 
-
-  function esPar(n = 0) {
+  function esPar(n) {
     let r = true
-    if (isValidNumber) {
+    if (!isValidNumber(n)) {
      // Excepción: n no es un número   
     } else if (!isEntero(n)){
      // Excepción: n no es un entero
-    } else if((n%2)){  
-     r = false     
+    } else if(n%2){  
+     r = false    
     }
     return r
   }
 
-  let x = 1
+  /*let x = 1
   console.log(!(n%2) )
   x = 2
   console.log(!(n%2) )
   x = 3
   console.log(!(n%2) )
   x = 4
-  console.log(!(n%2) )
+  console.log(!(n%2) )*/
 
   /**
    * @description Función que muestra si un número es par o impar
@@ -77,12 +77,14 @@
        ` n no es un entero`
    ]
    let i =  Number (esPar(n)) // -2 -1, 0, 1
-   if (1< 0) {
+   if (1< 0) { // código de error
     i = -i + 1 // -1 -> 2 // -2 -> 3
      }
+     console.log(mensajes[i])
    }
- console.log(mensajes[i])  
-  function probar() {
+   
+  function probar()
+    {
      let x
      x = 1
      x = 2
@@ -94,9 +96,8 @@
      x = 'Pepe'
      x = '56'
      mostrar(x) 
-  }
+     }
 
-
-   probar()
+probar()
 
 
