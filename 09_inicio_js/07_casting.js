@@ -11,14 +11,15 @@ z = x * y //durante de la operación Number(y)
 x = '5'
 z = x * y
 
-console.log(z,typeof z) // number
+console.log(z,typeof z) //6//number
 console.log(x,typeof x) // string
 console.log(y,typeof y) // string
 
 /* sobrecarga del símbolo +
 +3
 "Hola" + "Pepa"
-2+2 */
+2+2 
+*/
 
 let saludo = "Hola" + "Pepa"
 
@@ -27,10 +28,9 @@ console.log(w,typeof w)
 
 x = 23
 y = '20'
- w = x + y // da '2320'
- w = w * 1
+w = x + y // da '2320'
+w = w * 1
 console.log(w,typeof w)
-
 
 /**
  * Símbolos lógicos de JS
@@ -43,20 +43,7 @@ console.log(w,typeof w)
   
 function sumar (a = 0, b = 0) {
     return a + b 
-    } 
-
-function isvalidNumber(n){
-    r = true
-    if (isNaN(n) || typeof n == 'boolean'    
-    || array.isarr(n) ) {
-     r = false
-    }
-    return true   
-}
-
-
-
-
+ } 
 
 
 function sumar (a = 0, b = 0) {  // una opcíon sería añadir el valor 0 en a y b
@@ -77,7 +64,7 @@ function sumar (a = 0, b = 0) {  // una opcíon sería añadir el valor 0 en a y
 
   console.log( sumar())
   console.log( sumar(undefined,undefined))
-  console.log( sumar(4))
+  console.log( sumar(5))
   console.log( sumar(2,2))
   console.log( sumar(2,0))
   console.log( sumar(0,2))
@@ -89,5 +76,5 @@ function sumar (a = 0, b = 0) {  // una opcíon sería añadir el valor 0 en a y
   console.log( sumar(2,false)) //false(boolean) se convierte a 0 (en casting)
   console.log( sumar(true,false))
   console.log( sumar({},{}))
-  console.log( sumar([23,56],[5,6]))
   console.log( sumar([],[]))
+  console.log( sumar([23,56],[78,23]))
