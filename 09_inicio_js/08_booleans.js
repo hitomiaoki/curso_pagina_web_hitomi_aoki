@@ -1,6 +1,7 @@
+let x = 34
+/* x = -5 */
 
-
-console.log()
+console.log(x >= 0)
 
 
 if (x  >= 0) {
@@ -31,17 +32,16 @@ w = []
 
 if (w) {
  // if (boolean(w)) {
-    console.log ('Positivo')
+    console.log ('Verdadero')
     }else {
-     console.log ('Negativo')   
+     console.log ('Falso')   
     }
 
 
-
-
  /*let k
+ k = 34
  k = '46'
- k = '34,'Pepe'
+ k = '34 Pepe'
  k = true
  k = false
  k = undefined
@@ -50,8 +50,27 @@ if (w) {
  k = [4,8]
  console.log( Number(k))*/
 
+ 
+ /*
+ let k
 
- let q
+ k = 34
+ k = '46'
+ k = '34 Pepe'
+ k = true
+ k = false
+ k = undefined
+ k = []
+ k = [4,8]
+ k = {}
+ 
+ console.log(k,'string', String(k))
+ */
+
+
+ let q = 5
+ q = undefined
+ q = 0
 
  //if (q != 0) {
  if (q) {    
@@ -64,19 +83,18 @@ if (w) {
  if (q == 0) {    
     console.log('q es exactamente 0')
  }
-let a = a
-let b = 'b'
 
- console.log('a == b')
- console.log('a == b')
+ let a = 4
+ let b = '4'
 
-
+ console.log(a == b) // true
+ console.log(a === b) // false
 
  let nota = 0
 
-   if(!nota) {
-   //if(nota != true){
-  // if(nota != 0) {
+ if(!nota) {
+//if(nota != true){
+// if(nota != 0) {
   console.log('has sacado la nota miníma') 
 }
 
@@ -84,40 +102,37 @@ let b = 'b'
 let b1 = boolean(nota) 
 b1 = !!nota
 
-let edad = 18
-
-
 
 function comprobarEdad(edad){
-let codigo
-let mensaje = {
-   'Eres menor de edad':
+let i = 3
+let mensaje = [
+   'Eres menor de edad',
    'Eres joven',
-   'Empienza a tener cuidado':
+   'Empienza a tener cuidado',
    'Lo siento por ti'
-}
+]
 if (edad < 18) {
   i = 0
-console.log( `Con ${edad} años`,'Eres menor de edad')
 } else if (edad < 35) {
   i = 1
-   console.log(`Con ${edad} años`,'Eres joven')
+ 
 } else if (edad < 50) {
   i = 2
-   console.log(`Con ${edad} años`,'Empienza a tener cuidado')
-}else  {
+   
+} /*else  {
    i = 3
-   console.log(`Con ${edad} años`,'Lo siento por ti')
+   
+}*/
+console.log(`Con ${edad} años`,mensajes[i])
 }
-console.log(`Con ${edad} años`,'mensaje[i]')
-}
 
+/* let e = 53
+comprobarEdad(e) */
 
-
-
+/** Separación de responsabilidades*/
+ 
 function codificarEdad(edad){
-   let i
-   }
+   let i = 3
    if (edad < 18) {
      i = 0
 
@@ -126,20 +141,20 @@ function codificarEdad(edad){
       
    } else if (edad < 50) {
      i = 2
-     
-   }else  {
-      i = 3
-
    }
    return i
-  {
-
-function responderEdad(edad){
-   let codigo
-   let mensaje = {
-      'Eres menor de edad':
-      'Eres joven',
-      'Empienza a tener cuidado':
-      'Lo siento por ti'
-   }
 }
+
+function responderSegunEdad(edad){
+   let mensaje = [
+      'Eres menor de edad',
+      'Eres joven',
+      'Empienza a tener cuidado',
+      'Lo siento por ti'
+   ]
+}
+console.log(`Con ${edad} años`,
+        mensajes[codificarEdad])
+
+let e = 53
+responderSegunEdad(e)
