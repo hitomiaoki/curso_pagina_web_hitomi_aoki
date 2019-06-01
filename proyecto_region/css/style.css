@@ -1,13 +1,29 @@
 
 body{
-margin:0;    
+margin:0;
+font-family: 'Abel', sans-serif;    
 }
+
+
+.content_wrapper{
+    margin:1rem;
+}
+
+
 
 .main-header {
 background-color:brown;
+font-family: 'Ropa Sans', sans-serif;
 padding:0.8rem;
 }
 
+
+.main-header p {
+    font-size: 1.33rem;
+    font-weight: bold;
+    margin-top: -1rem; 
+    
+   }
 
 .main-header nav {
 margin-left: 1rem;
@@ -23,9 +39,69 @@ padding:0;
  display:inline-block;   
 }
 
+.main_header  nav a{
+
+    color:inherit;
+    text-decoration: none;
+    display:block;
+    padding:0.8rem;  
+ 
+    }
+
+
+  footer a{
+   color: rgb(202, 185, 163);   
+  }
+   
 
 .main-footer {
  background-color: brown;
  text-align:center;
  padding: 1rem;   
+}
+
+
+.main-footer p {
+    font-size: 1.10rem;
+    font-weight: bold;
+    margin-top: -1rem; 
+    
+   }
+
+
+.main-footer aside ul{
+    
+    list-style-type: none;  
+    margin: 0;
+    padding: 0;
+   }
+
+  .main-footer aside li {
+
+  display: inline-block;
+  }
+
+  .main-footer aside a{
+
+  color:inherit;
+  text-decoration: none;
+  display:block;
+  padding:0.8rem 0.2rem ;  
+
+  }
+
+   
+  ul{
+    list-style: circle;
+   }
+
+
+   .form_control{
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid gray;
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
 }
