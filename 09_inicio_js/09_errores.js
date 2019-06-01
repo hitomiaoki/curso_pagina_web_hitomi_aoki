@@ -4,61 +4,62 @@
 function isValidNumber(n){
   let r = true
   if (isNaN(n) || typeof n == 'boolean'    
-  || array.isArray(n)  ||  n == '' || n == null) {
+  || array.isArray(n)  ||  n === '' || n === null) {
    r = false
   }
-  return true   
+  return r   
 }
 
  
 function codificarEdad(edad){
     let i = 3
-    if (){
-
-    else if ( edad < = 18) {
-      i = -1   
-    }
- 
+    if (!isValidNumber(edad)){
+      i = -2
+    }else if ( edad < 18) {
+      i = 0   
+  
     } else if (edad < 35) {
-      i = 0
+      i = 1
        
     } else if (edad < 50) {
-      i = 1
-      
-    }else  {
-       i = 2
- 
+      i = 2
     }
     return i
-   {
+}
 
 
- 
-function responderEdad(edad){
-    let codigo
-    let mensaje = {
-       'Eres menor de edad':
+ function responderSegunEdad(edad){
+    let mensaje = [
+       'Eres menor de edad',
        'Eres joven',
-       'Empienza a tener cuidado':
+       'Empienza a tener cuidado',
        'Lo siento por ti'
-    }
+    ]
 
-    let errores = {
-      'La edad indicada no es  un nùmero ':
-      'El número indicado no es valido '
-    }
+    let errores = [
+      'Error: El número indicado no es válido',
+      'Error: La edad indicada no es un número'
+    ]
     let i = codificarEdad(edad)
     if (i >= 0 && i <= 3) {
       console.log( `Con ${edad} años`, mensaje[i])
     }  else {
-      console.log(errores[-i -1])
-      }
+      console.log(errores[-i-1])
+    }
+}
 
 
-
-
-  
-  e = 34
+function probar() {
+  let e = 2
+  e = 18
+  e = 25
+  e = 35
+  e = 45
+  e = 55
+  e = 65
+  e = 0
+  e = -3
+  e = '34'
   e ='Pepe'
   e = true
   e = false
@@ -70,7 +71,6 @@ function responderEdad(edad){
   e = NaN
  responderSegunEdad(e) 
 
+}
 
-
-  console.log(e, inst)  
-
+probar ()
