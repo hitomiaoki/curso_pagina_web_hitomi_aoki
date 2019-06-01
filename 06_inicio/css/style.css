@@ -1,21 +1,30 @@
-main_header {
- background-color:rgb(red, green, blue);
- color:rgb(red, green, blue);
-  padding: 1rem 0rem 2rem 0rem;
+.main_header {
+   background-color:rgb(64, 151, 173);
+   color:rgb(79, 216, 79);
+   padding: 1rem 0rem 2rem 0rem;
 }
 
-main_header {
-    font-size: 10rem;
-    border: 5rem;
-    
+.main_header p {
+    font-size: 1.33rem;
+    font-weight: bold;
+    margin-top: -1rem; 
    }
    
 
-main_footer {
-    background-color:rgb(red, green, blue);
-    color:rgb(red, green, blue);
-  text-align: center;
-  padding: 1rem;      
+.main_footer {
+    background-color:rgb(64, 151, 173);
+    color:rgb(79, 216, 79);
+    text-align: center;
+    padding: 1rem;      
 }
 
+.h4 {
+display:block;
+margin-block-start:1em;
+margin-block-end:1em;
+font-weight:bold;
+}
 
+.section_footer {
+ border-top: 1px solid grey;
+}
