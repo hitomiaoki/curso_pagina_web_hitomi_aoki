@@ -38,7 +38,7 @@
    * @description Función que calcula si un número es par 
    *              Puede devolver: -2, -1, true,false
    * @param {number} : n
-   * @return {*} 
+   * @return {boolean} 
    * 
    */
 
@@ -76,30 +76,50 @@
        `El número ${n} n no es un entero`,
        ` n no es un entero`
    ]
-   let i =  Number (esPar(n)) // -2 -1, 0, 1
-   if (1< 0) { // código de error
-    i = -i + 1 // -1 -> 2 // -2 -> 3
-     }
+
+   let excepciones = [
+    `El número ${n} n no es un entero`,
+    ` n no es un entero` 
+   ]
+   try {
+    let i =  Number (esPar(n)) //i: 0, 1
+    output = mensajes[i]
+   } catch (error) { // error: -2 -1
+      // i = -error + 1 // -1 -> 2 // -2 -> 3
+     output = excepciones[i]
+   }
      console.log(mensajes[i])
    }
    
-  function probar()
-    {
-     let x
-     x = 1
-     x = 2
-     x = 345
-     x = 98
-     x = 0
-     x = -4
-     x = -5
-     x = 4.3
-     x = -56.7
-     x = 'Pepe'
-     x = '56'
-     mostrar(x) 
-     }
+  
 
-probar()
+  //probar()
 
+
+ 
+ /*
+
+    Gestión de errores
+  const x = 67
+  let z = 45
+  try {
+   // x = 51 // => un throw
+   //throw 'Probando error'
+   z = z + x
+   console.log('z vale', z)
+  } catch(error) {
+   console.log('Disculpa,se ha producido un error')
+   if (error.name){
+    console.log(error.name, error.message)
+   }else {
+     console.log(error) 
+   }
+ 
+   }
+
+}
+ console.log('x vale',x) */
+
+
+module.exports = esPar;
 
