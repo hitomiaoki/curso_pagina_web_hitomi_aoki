@@ -3,8 +3,34 @@
 
 body {
     margin:0;
+    
 }
 
-header {
+header, footer {
     background-color: brown;
+    color:bisque;
+}
+
+main {
+max-height:80hv; 
+}
+
+
+.section_wrapper{
+width:100;
+margin-left: auto;
+margin-right: auto;
+}
+
+.columnas {
+column-count:3;
+/*column-width: 25px;*/
+column-gap: 2rem;
+column-rule: 1px solid maroon;
+column-fill: balance;
+
+}
+
+.columnas p:nth-of-type(1) {
+margin-top:0;
 }
