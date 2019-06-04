@@ -1,5 +1,6 @@
-
-
+* {
+  box-sizing: border-box;
+}
 
 body {
     margin:0;
@@ -12,25 +13,24 @@ header, footer {
 }
 
 main {
-max-height:80hv; 
+   max-height:80hv;
+   background-color: antiquewhite; 
 }
 
-
-.section_wrapper{
-width:100;
-margin-left: auto;
-margin-right: auto;
+.colum_wrapper{
+   width:100;
+   margin: 1rem auto;
 }
 
 .columnas {
-column-count:3;
-/*column-width: 25px;*/
-column-gap: 2rem;
-column-rule: 1px solid maroon;
-column-fill: balance;
+  column-count:3;
+  /*column-width: 25px;*/
+  column-gap: 2rem;
+  column-rule: 1px solid maroon;
+  column-fill: balance;
 
 }
 
 .columnas p:nth-of-type(1) {
-margin-top:0;
+    margin-top:0;
 }
