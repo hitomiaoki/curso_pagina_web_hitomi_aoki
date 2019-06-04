@@ -45,10 +45,11 @@
   function esPar(n) {
     let r = true
     if (!isValidNumber(n)) {
-     // Excepción: n no es un número   
+        // Excepción: n no es un número
+        return -2   
     } else if (!isEntero(n)){
-     // Excepción: n no es un entero
-       return -1
+        // Excepción: n no es un entero
+        return -1
     } else if (n%2) {  
      r = false    
     }
@@ -75,11 +76,11 @@
        `El número ${n} es impar`,
        `El número ${n} es par`,
        `El número ${n} n no es un entero`,
-       ` n no es un entero`
+       `${n} n no es un entero`
    ]
-   let i =  Number (esPar(n)) // -2 -1, 0, 1
-   if (1< 0) { // código de error
-    i = -i + 1 // -1 -> 2 // -2 -> 3
+   let i =  Number(esPar(n)) // -2 -1, 0, 1
+   if (i< 0) { // código de error
+     i = -i + 1 // -1 -> 2 // -2 -> 3
      }
      console.log(mensajes[i])
    }
