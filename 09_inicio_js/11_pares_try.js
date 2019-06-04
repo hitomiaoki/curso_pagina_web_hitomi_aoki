@@ -45,9 +45,11 @@
   function esPar(n) {
     let r = true
     if (!isValidNumber(n)) {
-     // Excepción: n no es un número   
+     // Excepción: n no es un número
+     const error = new Error ( `${n} no es número`)  
     } else if (!isEntero(n)){
      // Excepción: n no es un entero
+     const error = new Error ( ` El número ${n} no es entero`)
     } else if(n%2){  
      r = false    
     }
@@ -70,6 +72,7 @@
    */
 
    function mostrar(n) {
+     let output = ''
      let mensajes = [
        `El número ${n} es impar`,
        `El número ${n} es par`,
@@ -79,23 +82,19 @@
 
    let excepciones = [
     `El número ${n} n no es un entero`,
-    ` n no es un entero` 
+    `${n}  no es un número` 
    ]
    try {
     let i =  Number (esPar(n)) //i: 0, 1
     output = mensajes[i]
    } catch (error) { // error: -2 -1
       // i = -error + 1 // -1 -> 2 // -2 -> 3
-     output = excepciones[i]
+     output = excepciones[error.número]
+    // output = error.mensaje
    }
-     console.log(mensajes[i])
+     console.log(output)
    }
-   
-  
-
-  //probar()
-
-
+    
  
  /*
 
@@ -121,5 +120,7 @@
  console.log('x vale',x) */
 
 
-module.exports = esPar;
+
+exports.esPar = esPar;
+exports.mostrar = mostrar;
 

@@ -1,78 +1,130 @@
 
 
 
+describe('Function isEntero', () => {
+  
+     let f = required('../10_pares')
+     f.esPar()
+    it('should be true if n is 2' , () => {
+      let n = 2
+      expect(f.isEntero(n)).toBeTruthy()
+    });
+
+
+    
+    it('should be false if n is 2.2' , () => {
+      let n = 2.2
+      expect(f.isEntero(n)).toBeFalsy()
+    });
+
+
+    
+    it('should be true if n is -2' , () => {
+      let n = -2
+      expect(f.isEntero(n)).toBeTruthy()
+    });
+
+
+    
+    it('should be false if n is -2.2' , () => {
+      let n = -2.2
+      expect(f.isEntero(n)).toBeTruthy()
+    });
+
+
+     
+    it('should be true if n is 0' , () => {
+     let n = 0
+     expect(f.isEntero(n)).toBeTruthy() 
+    });
+
+    
+       
+    it('should be true if n is "2"' , () => {
+     let n = "2"
+     expect(f.isEntero(n)).toBeTruthy() 
+    });
+
+
+
+
+});
+
+
+
+
+
 describe('Función esPar',() => {
 
-  let esPar = required('../11_pares_try.js')
-  console.log(esPar)
-  let n
-
-  it('should be "par" if n = 0', () => {
-      n = 0
-     expect(esPar(n)).toEqual(true) 
+  let esPar = required('../10_pares')
+  
+  it('should be true if n = 0', () => {
+    let n = 0
+     expect(f.esPar(n)).toBeTruthy() 
   
   })
 
 
-  it('should be "impar" if n = 1', () => {
-      n = 1
-     expect(esPar(n)).toEqual(false) 
+  it('should be false if n = 1', () => {
+   let n =1
+     expect(f.esPar(n)).toBeFalsy() 
   
-  })
+  }) 
 
  
-  it('should be "par" if n = 2', () => {
-       n = 2
-      expect(esPar(n)).toEqual(true) 
-  
-    })
-  
-     
-    it('should be "impar" if n = 11', () => {
-       n = 11
-          expect(esPar(n)).toEqual(false) 
+  it('should be true if n = 2', () => {
       
-        })
+    let n = 2
+    expect(f.esPar.bind(n)).toBeTruthy()
+    })
+    
+     
+    it('should be  false if n = string "11"', () => {
+      let n = '23'
+      expect(f.esPar(n)).toBeFalsy() 
+      })
 
      
-    it('should be "impar" if n = string 23', () => {
-      n = 23
-          expect(esPar(n)).toEqual(false) 
+    it('should be true if n = string "22"', () => {
+      let n = '22'
+      expect(f.esPar.bind(n)).toBeTruthy()  
       
         })
   
-    it('should be "par" if n = string 22', () => {
-       n = 22
-      expect(esPar(n)).toEqual(true) 
+    it('should be false if n = -5', () => {
+     let n = -5
+     expect(f.esPar(n)).toBeFalsy()
   
     })
 
     
-    it('should be "impar" if n = -5', () => {
-       n = -5
-      expect(esPar(n)).toEqual(false) 
+    it('should be true if n = -4', () => {
+     let n = -4
+     expect(f.esPar(n)).toBeTruthy()
+  
+    });
+
+  
+    it('should be -2 if n = "Pepe"', () => {
+     let x = 'Pepe'
+     expect(f.esPar(n)).toBeFalsy() 
   
     })
 
   
-    it('should be "par" if n = -4', () => {
-       n = -4
-      expect(esPar(n)).toEqual(true) 
-  
-    })
-
-  
-  x = 345
-  x = 98
-  x = 0
-  x = -4
-  x = -5
-  x = 4.3
-  x = -56.7
-  x = 'Pepe'
-  x = '56'
+    it('should be -1 if n = 4.3', () => {
+    let x = 4.3
+    expect(f.esPar(n)).toBeFalsy()
  
-   
+   });
+
+ 
+   it('should be -1 if n = -6.7', () => {
+    let x = -56.7
+    expect(f.esPar(n)).toBeFalsy()
+ 
+   });
+
 
 
 

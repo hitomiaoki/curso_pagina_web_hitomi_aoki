@@ -11,7 +11,7 @@
   *              rechazando objects,arrays,boolean,null
   *              undefined,'' y string no númericos
   * @param {any} n
-  * @returns {boolean}
+  * @returns { boolean}
   */
 
    function isValidNumber(n){
@@ -30,7 +30,7 @@
    * @return {boolean} 
    */
    function isEntero(n = 0) {
-    return (parseInt(n)   === parseFloat(n)) 
+      return (parseInt(n)  === parseFloat(n)) 
    }
 
   
@@ -38,7 +38,7 @@
    * @description Función que calcula si un número es par 
    *              Puede devolver: -2, -1, true,false
    * @param {number} : n
-   * @return {*} 
+   * @return {number | boolean} 
    * 
    */
 
@@ -48,7 +48,8 @@
      // Excepción: n no es un número   
     } else if (!isEntero(n)){
      // Excepción: n no es un entero
-    } else if(n%2){  
+       return -1
+    } else if (n%2) {  
      r = false    
     }
     return r
@@ -83,23 +84,9 @@
      console.log(mensajes[i])
    }
    
-  function probar()
-    {
-     let x
-     x = 1
-     x = 2
-     x = 345
-     x = 98
-     x = 0
-     x = -4
-     x = -5
-     x = 4.3
-     x = -56.7
-     x = 'Pepe'
-     x = '56'
-     mostrar(x) 
-     }
 
-probar()
+ exports.isEntero = isEntero
+ exports.esPar = esPar
+ exports.mostrar = mostrar
 
 
