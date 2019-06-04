@@ -1,0 +1,80 @@
+
+body {
+margin:0;
+}
+
+
+
+
+
+header {
+
+min-height: 100vh;
+display: flex;
+justify-content: center; /*horizontal*/
+align-items: center; /*vertical*/
+}
+
+
+header::after {
+content:'';
+display:block;
+height:100%;
+width:100%;
+position:absolute;
+top:0;
+left:0;
+z-index:10;
+opacity: 0.3;
+background-image: url(../assets/321.jpg);
+background-repeat:no-repeat ;
+background-position:center;
+background-size: cover;
+}
+
+
+h1  {
+color:burlywood;
+z-index: 20;
+}
+
+
+.content_wrapper {
+background-repeat:no-repeat;
+background-size: contain;
+background-attachment: fixed;
+margin-left: 4rem;
+margin-right: 4rem;
+
+}
+
+
+nav {
+position: absolute; 
+top:60%; 
+z-index: 30;  
+}
+
+footer {
+    background-color:peru;
+    color:green;
+    text-align: center;
+    padding: 1rem;      
+}
+
+
+.logo {
+ display:block;
+ position:absolute;   
+ opacity: 0.3;
+ top:2rem;
+ right:2rem;
+ width:20%;  
+}
+
+
+.logo img {
+    max-width: 100%;
+    min-width:80px; 
+}
+
