@@ -1,0 +1,76 @@
+
+
+
+@media screen and (min-width: 1000px)
+{
+li {/* Los li son contenedores, para poder fijar desde ellos posiciones*/
+position: relative;
+}
+
+
+/*   el menú principal */
+
+nav ul { /*Cualquier ul dentro de nav */
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+
+nav > ul > li { /* El primer nivel del menú*/
+    float:left;
+    min-width: 7em;
+}
+
+nav a { /* Cualquier a dentro de nav*/
+    color : indianred;
+    text-decoration: none;
+    display : block;
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: brown;
+    border: 1px solid violet;
+    border-radius: 5em;
+    text-align: center;
+}
+nav > ul a:focus,
+nav > ul a:hover
+{ /* Cualquier a dentro de nav*/
+ color: orange; 
+ border-color: white;
+ background-color: maroon;
+}
+
+
+/* ===================== */
+/* = Submenús segundos = */
+/* ======================*/
+
+    li ul li ul {
+      position: absolute;
+      top:0em;
+      left:7em;
+      width:10em;
+    }
+
+
+/* ===================== */
+/* = Contenidos = */
+/* ======================*/
+
+
+     article {
+         float: left;
+         clear: left;
+         margin: 2em;
+     }
+
+     figure {
+       float: left;
+       width: 50%;
+     }
+
+     img {
+       width: 100%;
+     }
+
+}

@@ -1,0 +1,91 @@
+body {
+    margin-left:2em;
+ }
+ 
+ h1{
+     font-size: 3em;
+     text-shadow: 4px 4px 4px rosybrown; 
+ }
+ 
+  li { /* Los li son contenedores, para poder fijar desde ellos posiciones absolutas*/
+    position: relative;
+  }
+
+ /*    El menú principal */
+ 
+ nav {
+    float: left;
+ }
+
+
+ nav ul { /*Cualquier ul dentro de nav*/
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ nav > ul > li { /* El primer nivel del menú*/
+     float:left;
+     clear: both;
+     min-width: 8em;
+ }
+
+ nav a {  /* Cualquier a dentro de nav */
+     display:block;
+     margin:.25em;
+     padding:.5em;
+     background-color: bisque;
+     border: 1px solid violet;
+     border-radius: .5em;
+     text-align: center;
+ }
+ 
+ 
+ nav > ul a:focus { /* Cualquier a dentro de nav */
+     color: orange;
+     border-color:white;
+     background-color: blanchedalmond;
+ 
+ }
+ 
+  nav > ul a:hover {  /* Cualquier a dentro de nav */
+     color: orange;
+     border-color:white;
+     background-color: blanchedalmond;
+     
+  }
+ 
+ 
+ /* Submenús  */
+ 
+ 
+ li ul { /* El segundo nivel del menú oculto*/
+    display: none;
+   }
+ li:hover > ul { /* El segundo nivel del menú se muestra*/
+   display: block;
+   position:absolute; 
+   top:0em;
+   left:8em;
+   width:8em; 
+ }
+ 
+  
+/* ===================== */
+/* = Submenús segundos = */
+/* ======================*/
+
+li ul li ul {
+    position: absolute;
+    top:0em;
+    left:5em;
+    width:10em;
+  }
+
+
+
+ /* ===================== */
+ /* = Contenidos = */
+ /* ======================*/
+ 
+ 
