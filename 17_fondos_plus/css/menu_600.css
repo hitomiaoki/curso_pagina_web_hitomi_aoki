@@ -88,4 +88,17 @@ li ul li ul {
  /* = Contenidos = */
  /* ======================*/
  
- 
+ article {
+  float: left;
+  width: 70%;
+ }
+
+ figure {
+    float: left;
+    clear:right;
+    margin:auto 0;
+ }
+
+ img {
+   width: 100%;
+ }

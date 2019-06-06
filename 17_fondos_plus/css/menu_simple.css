@@ -36,7 +36,7 @@ nav > ul > li { /* El primer nivel del menú*/
 }
 
 
-nav > ul a:focus, nav > ul a:hover { /* El primer nivel del menú*/
+nav > ul a:focus, nav > ul a:hover { /* Cualquier a dentro de nav*/
     color: orange;
     border-color:white;
     background-color: blanchedalmond;

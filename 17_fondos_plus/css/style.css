@@ -32,7 +32,7 @@ background-size: cover;
 
 
 h1  {
-z-index: 20;
+z-index: 30;
 width:fit-content;
 text-align: center;
 padding: 2rem;
@@ -42,10 +42,10 @@ margin:0;
 .logo {
  display:block;
  position:absolute;   
- opacity: 0.3;
  top:2rem;
  right:2rem;
- width:20%;  
+ width:20%;
+ opacity: 0.4;  
 }
 
 
@@ -55,23 +55,46 @@ margin:0;
 }
 
 
-nav {
-    position: absolute; 
-    z-index: 30;
-    top:3rem;  
-    left:3rem;
-    }
+nav a {
+    color:inherit;
+    text-decoration:none; 
+}
     
-
-.content_wrapper {
-background-repeat:no-repeat;
-background-size: contain;
-background-attachment: fixed;
-margin-left: 4rem;
-margin-right: 4rem;
-
+nav ul {
+    list-style-type:none; 
 }
 
+nav.horizontal {
+    display:none;
+}
+
+nav.icon,
+nav.horizontal {
+    position: absolute;
+    top:3rem;
+    left:3rem;
+    z-index:30;
+}
+
+nav.icon {
+ color: brown;
+ font-size: 3rem;
+}
+
+nav.footer {
+    color:brown;
+    background-color:rgb(204, 154, 154);
+    border: 1px solid violet;
+    width: 90%;
+    margin:1rem auto;
+}
+
+
+.content_wrapper {
+margin-left:0.5rem;
+margin-right:0.5rem;
+
+}
 
 footer {
 
@@ -84,10 +107,104 @@ align-items: center;
 }
 
 
+@media screen and (min-width: 500px){
+ 
+  .content-wrapper {
+     margin-left: 2rem;
+     margin-right: 2rem;
+  }
 
-
-@media screen and (min-width: 1000px){
- nav.footer {
- display: flex;
- }   
 }
+
+
+@media screen and (min-width: 650px){
+ 
+    .content-wrapper {
+       margin-left: 3rem;
+       margin-right: 3rem;
+    }
+  
+    nav.footer,
+    nav.icon {
+       display:none;
+    }
+
+    nav.horizontal {
+        display: initial;
+    }
+
+
+
+    nav li {/* Los li son contenedores, para poder fijar desde ellos posiciones*/
+        position: relative;
+        }
+        
+        
+        /*   el menú principal */
+        
+        nav ul { /*Cualquier ul dentro de nav */
+            padding:0;
+            margin:0;
+        }
+        
+        nav > ul > li { /* El primer nivel del menú*/
+            float:left;
+            min-width: 7em;
+        }
+        
+        nav a { /* Cualquier a dentro de nav*/
+            
+            display : block;
+            padding: 0.3em  0.5em ;
+            margin: 0.25em;
+            
+            background-color: rgb(200, 200, 200,0.5);
+            border: 1px solid violet;
+            border-radius: .5em;
+            text-align: center;
+        }
+        nav > ul a:focus,
+        nav > ul a:hover
+        { /* Cualquier a dentro de nav
+         color: orange; */
+         background-color: maroon;
+         border-color: rgb(175, 137, 137);
+         border-color:wheat; 
+         
+        }
+        
+        
+        /* ===================== */
+        /* = Submenús segundos = */
+        /* ======================*/
+        
+            li ul { /* El segundo nivel del menú oculto*/
+             display: none;
+            }
+        
+            li:hover> ul { /* El segundo nivel del menú oculto*/
+                display: initial;
+               }
+           
+
+         
+        /* ===================== */
+        /* = Submenús segundos = */
+        /* ======================*/
+        
+        li ul li ul {
+            position: absolute;
+            top:0em;
+            left:7em;
+            /*width:10em;*/
+          }
+      
+      
+
+
+
+
+
+
+
+  }
