@@ -3,12 +3,55 @@ section{
     margin:3rem;
 }
 
-
-
-.transit {
+div {
     background-color:brown;
     color:beige;
     width: 3rem;
     height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+div.transit {
+    
+    transition-property: all;
+    transition-duration: 6s;
+    transition-delay: 2s;
+    transition-timing-function: cubic-bezier(1,-0.9,0,1.4);
     }
+
+    p.boton:hover+div {
+        color:brown;
+        background-color:beige;
+        width: 6rem;
+        height: 6rem;
+        font-size: 3rem;
+    }
+
+
+    
+    div.transform {
+    
+    transition-property: all;
+    transition-duration: 6s;
+    transition-timing-function: linear;
+    }
+
+    p.btn-escalar:hover+div {
+     transform: scale(2);
+    }
+    
+    p.btn-rotar:hover+div {
+        transform: rotate(80deg);
+    }
+
+    p.btn-inclinar:hover+div {
+     transform:skew(10deg);
+    }
+
+    p.btn-trasladar:hover+div {
+        transform:translateX(20rem)
+       }
+   
