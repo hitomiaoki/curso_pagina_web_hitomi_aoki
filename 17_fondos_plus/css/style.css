@@ -168,14 +168,14 @@ align-items: center;
         { /* Cualquier a dentro de nav
          color: orange; */
          background-color: maroon;
-         border-color: rgb(175, 137, 137);
+         color: rgb(175, 137, 137);
          border-color:wheat; 
          
         }
         
         
         /* ===================== */
-        /* = Submenús segundos = */
+        /* = Submenús = */
         /* ======================*/
         
             li ul { /* El segundo nivel del menú oculto*/
