@@ -11,7 +11,7 @@
     
     
     header {
-    color:brown;
+    color:rgb(88, 189, 207);
     position: relative;
     min-height: 100vh;
     display:flex;
@@ -99,8 +99,8 @@
 
   nav.footer {
     color:brown;
-    background-color: rgb(200, 200, 200,0.5);
-    border: 1px solid rgb(230, 180, 230);
+    background-color: rgba(90, 67, 67, 0.76);
+    border: 1px solid #ba89a8;
     width: 80%;
     margin:1rem auto;
     padding-left:2rem;
@@ -121,7 +121,7 @@
   footer {
     min-height: 10vh;
     background-color:brown;
-    color:burlywood;
+    color:bisque;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -131,8 +131,8 @@
 @media screen and (min-width: 500px){
  
   .content-wrapper {
-     margin-left: 3rem;
-     margin-right: 3rem;
+     margin-left: 2rem;
+     margin-right: 2rem;
   }
 
 }
@@ -161,14 +161,14 @@
     nav ul {
        padding:0;
        margin:0;
-       background-color:brown; 
+       background-color:rgba(214, 186, 186, 0.2); 
        display:flex;
     }
 
      nav a { /* Cualquier a dentro de nav*/
             
             display : block;
-            padding: 0.3em  0.5em ;
+            padding: 0.3em  0.7em;
             /*margin: 0.25em;
              border-radius: .5em;
             
@@ -178,6 +178,17 @@
             font-weight: bold;
       }
 
+      nav a {       
+      transition:
+      color 1s,
+      background-color 1s;  
+    }
+
+     nav>ul a:focus,
+       nav > ul a:hover { 
+     background-color: brown;
+     color: #fc6;
+    }
       
      nav.horizontal>ul>li {
       display: flex;
