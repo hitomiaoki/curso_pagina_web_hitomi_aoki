@@ -1,0 +1,28 @@
+
+body {
+margin:0;
+background-color: antiquewhite;
+}
+
+header {
+background-color: brown;
+color:beige;
+min-height: 30vh;
+display:flex;
+justify-content: center;
+ align-items: center;
+}
+
+
+section.grid {
+ min-height:70vh;
+ display: flex;
+}
+
+
+section.grid div {
+font-size: 4rem;
+padding: 1rem;
+background-color:maroon;
+margin:0.5rem;
+}
