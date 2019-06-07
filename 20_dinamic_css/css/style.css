@@ -1,28 +1,44 @@
 
-section{
-    margin:3rem;
-}
-
-div {
-    background-color:brown;
-    color:beige;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-div.transit {
-    
-    transition-property: all;
-    transition-duration: 6s;
-    transition-delay: 2s;
-    transition-timing-function: cubic-bezier(1,-0.9,0,1.4);
+    section{
+      margin:3rem;
     }
 
-    p.boton:hover+div {
+    div {
+       background-color:brown;
+       color:beige;
+       width: 3rem;
+       height: 3rem;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+    }
+
+
+   /*.defer p:hover+div
+ Solo el hermano adyacente
+ */
+    
+
+    .defer p:hover~div {  /*  */
+       background-color:darkblue;
+   }
+
+    section.transit 
+
+
+
+
+    section.div.transit {
+    
+       transition-property: all;
+       transition-duration: 6s;
+       transition-delay: 2s;
+       transition-timing-function: cubic-bezier(1,-0.9,0,1.4);
+    }
+
+
+    section.transit p.boton:hover+div {
         color:brown;
         background-color:beige;
         width: 6rem;
@@ -34,24 +50,51 @@ div.transit {
     
     div.transform {
     
-    transition-property: all;
-    transition-duration: 6s;
-    transition-timing-function: linear;
+       transition-property: all;
+       transition-duration: 6s;
+       transition-timing-function: linear;
     }
 
     p.btn-escalar:hover+div {
-     transform: scale(2);
+       transform-origin: right;
+       transform: scale(2)
     }
     
     p.btn-rotar:hover+div {
-        transform: rotate(80deg);
+       transform-origin:left;
+       transform: rotate(80deg);
     }
 
     p.btn-inclinar:hover+div {
-     transform:skew(10deg);
+       transform:skew(10deg);
     }
 
     p.btn-trasladar:hover+div {
-        transform:translateX(20rem)
-       }
+        transform:translateX(-20rem)
+    }
    
+   /***** Botones *****/
+
+    button {
+      color: maroon;
+      font-size: 2rem;
+    }
+
+    button img ,
+    button embed {
+        width: 1.8rem;
+        vertical-align: middle;
+        color: brown;
+   }
+
+
+   section.tresD {
+       perspective:500px;
+   }
+
+   
+   p.btn-3D:hover+div {
+    transform:translateZ(-3rem);
+    transform: translateX(3rem);
+}
+
