@@ -11,10 +11,14 @@ font-family: 'Abel', sans-serif;
 
 
 
+
 .main-header {
-background-color:brown;
+
 font-family: 'Ropa Sans', sans-serif;
 padding:0.8rem;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 
@@ -57,7 +61,10 @@ padding:0;
 .main-footer {
  background-color: brown;
  text-align:center;
- padding: 1rem;   
+ padding: 3rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;   
 }
 
 
