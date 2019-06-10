@@ -1,0 +1,248 @@
+ :root{
+ --color-letra:rgb(223, 182, 132);
+ --color-fondo:brown;
+ --color-aquamarine-fondo:aquamarine;
+ --color-gray-border:rgb(155, 148, 148);
+
+
+ --font-family: 'Noto Sans KR', sans-serif;
+ --font-family: 'Noto Sans KR', sans-serif;
+ --font-family: 'Archivo Narrow', sans-serif;
+ --size-title:calc(var(--size-small) * 3);
+ --size-subtitle:calc(var(--size-small) * 2);
+ --size-title-section:1.2rem;
+ --title-article:1rem;
+ --size-base:calc(14rem/16);
+ --size-small:calc(12rem/16);
+ --margin-vertical:1.5rem;
+ --margin-lateral:2rem;
+ --margin-párrafo:1rem;
+  
+ 
+ }
+
+*
+ {
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+  body {
+ 
+  line-height:1; 
+  font-family: var(--font-main);
+  font-size:var(--size-base);
+  display: grid;
+  grid-template-columns:  2fr 1fr;
+  grid-template-rows: 2fr auto auto 1fr;
+  grid-template-areas:
+     "header header"
+     "main main"
+     "aside aside"
+     "footer footer";
+  }
+
+
+  /********************************
+           ESTILOS  DE  HEADER
+  *********************************/
+
+
+.header {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    font-family:var(--font-family);
+    font-weight:bold;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-left: 5rem;
+    text-align:center;
+    grid-area: header;
+}
+
+ .header-h1 {
+ margin-bottom:0.5rem;
+ margin-top: 0.5rem;
+ font-size:var(--size-title)
+ 
+ }
+
+
+ .header p { 
+  font-size: var(--size-subtitle); 
+ }
+
+
+
+/*******************************
+     ESTILOS  DE FOOTER
+********************************/
+
+
+ .footer {
+
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    font-size:var(--size-small);
+    margin-bottom: 1rem;
+    margin-top:1rem;
+    text-align: center;
+    margin-top: 1rem;
+    padding:2rem;
+    grid-area: footer;
+    
+    }
+    
+    
+    .footer address {
+    font-style: normal;
+    
+    }
+    
+    .footer a {
+    color:inherit;
+    }
+
+    .footer p {
+    font-size:var(--size-main);
+    }
+
+
+/************************
+     ESTILOS  DEl MAIN
+************************/
+
+
+main, aside {
+    margin-right:var(--margin-lateral);
+    margin-left:var(--margin-vertical);
+    
+}
+
+main {
+  grid-area: main;
+}
+aside {
+  grid-area:aside;
+  margin-bottom: var(--margin-vertical)
+}
+
+.publi {
+background-image: url(../assets/havana.club--tributo2019-foto-archivo.jpg);
+}
+main h2,
+aside h2 {
+    font-size: var(--size-title-section);
+    font-weight: bold;
+    margin-bottom:calc(var(--margin-vertical)/2);
+    margin-top:calc(var(--margin-vertical)/2);
+}
+
+main h3 {
+    font-size: var(--size-title-section);
+    font-weight: bold;
+    margin-bottom:calc(var(--margin-vertical)/2);
+    margin-top:calc(var(--margin-vertical)/2);
+
+  
+}
+
+main p {
+    margin-bottom:var(--margin-párrafo);
+    margin-top:var(--margin-párrafo);
+}
+
+
+/******************************************
+        Estilos de las secciones 
+******************************************/
+section {
+    margin-top:var(--margin-vertical);
+    margin-bottom:var(--margin-vertical);
+}
+
+section>header{
+    color:var(--color-fondo);
+    background-color:var(--color-letra);
+    padding:0.3rem;
+    margin-bottom: var(--margin-párrafo);
+}
+
+section article{
+ padding:1rem;
+ background-color:var(--color-aquamarine-fondo);
+ border:1px solid var(--color-gray-border);   
+}
+
+/*
+*Estilo del aside
+*/
+.publi {
+  width: 50%;
+  height: 20vh;
+  background-image: url(../assets/00113358000407____1__640x640.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.enano {
+  transform: scale(0);
+}
+
+
+/*@media screen and (min-device-width:600px)*/
+
+@media screen and (min-width:600px) {
+    
+    
+
+    body {
+        grid-template-columns: 4fr 1fr;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "aside aside"
+        "footer footer";   
+    }
+
+   aside, aside {
+       margin-right: calc (var(--margin-lateral) / 2);
+       margin-left: calc (var(--margin-lateral) / 2);
+   }
+
+
+
+}
+
+
+
+@media screen and (min-width:800px) {
+section.grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-column-gap: 0.5rem;
+  grid-template-areas:
+  
+   "header header header"
+   "coll coll coll";
+  }
+
+ section>header {
+     grid-area: header;
+     text-align:center;
+  }
+
+
+  
+}
+
+ 
