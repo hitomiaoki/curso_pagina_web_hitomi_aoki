@@ -4,16 +4,18 @@
   "description": "curso web",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/:css/ --no-source-map"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hitomiaoki/curso_pagina_web_hitomi_aoki.git"
   },
   "keywords": [
-    "html",
-    "css",
-    "Javascript"
+    "HTML5",
+    "CSS3",
+    "WEB",
+    "JS"
   ],
   "author": "Hitomi",
   "license": "ISC",
@@ -24,6 +26,9 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "dialog-polyfill": "^0.5.0",
-    "normalize.css": "^8.0.1"
+    "holderjs": "^2.9.6",
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.15.0"
   }
 }

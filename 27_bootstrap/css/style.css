@@ -1,9 +1,5 @@
 
 :root {
-    --color-letra:rgb(223, 182, 132);
-    --color-fondo:brown;
-    --color-aquamarine-fondo:aquamarine;
-    --color-gray-border:rgb(155, 148, 148);
     --font-main: 'Noto Sans KR', sans-serif;
     --font-title: 'Archivo Narrow', sans-serif;
 }
@@ -15,17 +11,11 @@ font-family: var(--font-main);
 
 
 
-header{
+.header-font{
  font-family: var(--font-title);
- background-color:var(--color-fondo);
- color:var(--color-letra);
- padding-top: 1.5rem;
- padding-bottom: 1.5rem;
 }
 
-footer{
-    background-color:var(--color-fondo);
-    color:var(--color-letra);
+.main-footer{
     min-height: 10vh;
 }
 
