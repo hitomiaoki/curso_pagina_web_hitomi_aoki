@@ -9,23 +9,172 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
- 
- <header class="header-font text-color-letra text-color-fondo pt-4 pb-4">
+ <header class="header-font text-color-letra text-color-fondo pt-4 pb-4 position-fixed fixed-top">
 <div class="container">
-   <div class="row justify-content-center align-items-center">
-    <div class="col-xs-1-12">
+   <div class="row justify-content-center">
+    <div class="col-xs">
  <h1>Uso de Bootstrap</h1>   
     </div>   
-   </div>  
+   </div>
+   <div class="row">
+    <div class="col-6">
+   <ul class="nav justify-content-center">
+       <li class="nav-item">
+           <a class="nav-link text-letra" href="#">Home</a>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link text-letra" href="#">Clientes</a>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link text-letra" href="#">Contactos</a>
+       </li>
+   </ul>
+  </div>
+  <div class="col-6">
+  <ul class="nav nav-tabs nav-stacked">
+    <li class="nav-item">
+      <a href="#usos" class="nav-link active">Uso</a>
+    </li>
+    <li class="nav-item">
+      <a href="#samples" class="nav-link">Ejemplos</a>
+    </li>
+    <li class="nav-item disabled">
+      <a href="#componentes" class="nav-link">Componentes</a>
+    </li>
+  </ul>
+  </div>
+  <div class="col-12">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a href="#" class="nav-link active">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Action</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Another link</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link disabled">Disabled</a>
+    </li>
+  </ul>
+  <div class="row">
+
+  </div>
+  </div>
+ </header>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-12">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" id="navId">
+    <li class="nav-item">
+      <a href="#tab1Id" class="nav-link active">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#tab2Id">Action</a>
+        <a class="dropdown-item" href="#tab3Id">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#tab4Id">Action</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="#tab5Id" class="nav-link">Another link</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link disabled">Disabled</a>
+    </li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content min-vh-100">
+    <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
+    <div class="pl-5 pt-5">
+         <h3>Uno</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias officiis nam doloremque adipisci odio atque iusto esse, ad delectus sed natus quasi voluptatibus aperiam quos? Voluptatibus tenetur qui eum hic?</p>
+          <p>Facere amet, natus officiis voluptates repudiandae neque expedita cupiditate omnis nesciunt temporibus atque excepturi quia? Atque sit obcaecati facilis, reprehenderit maxime ab quasi dignissimos quibusdam quam necessitatibus magni incidunt dolores.</p>
+          <p>Ipsam delectus ea eaque dolor sed suscipit odit ut doloremque nobis dolores, possimus facere, saepe nisi dolore modi vel id voluptatem sint ducimus debitis dicta? Impedit rerum vero eligendi temporibus!</p>
+     </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab2Id" role="tabpanel">
+        <div class="pl-5 pt-5">
+            <h3>Dos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias officiis nam doloremque adipisci odio atque iusto esse, ad delectus sed natus quasi voluptatibus aperiam quos? Voluptatibus tenetur qui eum hic?</p>
+            <p>Facere amet, natus officiis voluptates repudiandae neque expedita cupiditate omnis nesciunt temporibus atque excepturi quia? Atque sit obcaecati facilis, reprehenderit maxime ab quasi dignissimos quibusdam quam necessitatibus magni incidunt dolores.</p>
+            <p>Ipsam delectus ea eaque dolor sed suscipit odit ut doloremque nobis dolores, possimus facere, saepe nisi dolore modi vel id voluptatem sint ducimus debitis dicta? Impedit rerum vero eligendi temporibus!</p>
+      </div>
+    </div> 
+
+    <div class="tab-pane fade" id="tab3Id" role="tabpanel">
+        <div class="pl-5 pt-5">
+             <h3>Tres</h3>
+        </div>
+      </div>  
+
+    <div class="tab-pane fade" id="tab4Id" role="tabpanel">
+        <div class="pl-5 pt-5">
+            <h3>Cuatro</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias officiis nam doloremque adipisci odio atque iusto esse, ad delectus sed natus quasi voluptatibus aperiam quos? Voluptatibus tenetur qui eum hic?</p>
+            <p>Facere amet, natus officiis voluptates repudiandae neque expedita cupiditate omnis nesciunt temporibus atque excepturi quia? Atque sit obcaecati facilis, reprehenderit maxime ab quasi dignissimos quibusdam quam necessitatibus magni incidunt dolores.</p>
+            <p>Ipsam delectus ea eaque dolor sed suscipit odit ut doloremque nobis dolores, possimus facere, saepe nisi dolore modi vel id voluptatem sint ducimus debitis dicta? Impedit rerum vero eligendi temporibus!</p>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab5Id" role="tabpanel">
+        <div class="pl-5 pt-5">
+           <h3>Cinco</h3>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+<div class="row">
+   <div class="col-12">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="#">Curso Web</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="#">Action 1</a>
+                      <a class="dropdown-item" href="#">Action 2</a>
+                  </div>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </div>
+  </nav>
+   </div>
  </div>
- </header> 
- <div class="container">
- <main class="row justify-content-center">
+ <div class="row">
   <section class="col-xs-12 col-lg-8 order-lg-1 mt-4 mb-4">
    <h2>Uso de Bootstrap</h2>
    <div class="row">
@@ -34,14 +183,13 @@
    <p>Laboriosam delectus eos natus sequi, dolores nam earum adipisci dicta eveniet. Placeat, tempora. Deserunt dolores officiis esse cumque maiores necessitatibus soluta ipsa aliquid! Eos enim odio aperiam culpa. Dolores, totam.</p>
    </div>
    <div class="col-xl">
-  <img class="img-fluid" src="https://via.placeholder.com/500x350" alt="placeholder imagen">
+  <img class="img-fluid rounded-pill float-none float-md-left float-lg-none mr-5 order-2" src="https://via.placeholder.com/500x350" alt="placeholder imagen">
   <p class="mt-xs-5 mt-mb-0 mt-lg-5 order-1">Aperiam obcaecati totam tempore quibusdam quos sunt praesentium, neque nam omnis ad sed officiis maxime amet eos. Error sed quod unde quae, id incidunt facere, repellat a nam et iure.</p>
-   
-   </div>
-   
+  </div>
+</div> 
   </section>
-  <section class="col-xs-12 col-lg-8 order-lg-3 mt-4 mb-4">
-    <h2>Uso de Bootstrap</h2>
+  <section id="samples" class="col-xs-12 col-lg-8 order-lg-3 mt-4 mb-4">
+    <h2>Ejemplos de Bootstrap</h2>
     <table class="table table-bordered">
             <caption>Porcentaje de uso de los navegadores web en distintos años</caption>
             <tr>
@@ -147,18 +295,18 @@
             </tr>
           </table>
   </section>
-  <section class="col-xs-12 col-lg-8  order-lg-4 mt-4 mb-4">
+  <section id="components" class="col-xs-12 col-lg-8 order-lg-4 mt-4 mb-4" id="componentes">
    <div class="jumbotron">
      <h2 class="display-4">Componentes</h2>
-     <p class="lead">Ejemplo de Jumbotron texts</p>
+     <p class="lead">Ejemplo de Jumbotron text</p>
      <hr class="my-2">
      <p>More info</p>
      <p class="lead">
        <a class="btn btn-primary btn-lg" href="#componentes" role="button">Jumbo action name</a>
      </p>
    </div>
-    <div class="row">
-   <div class="card">
+    <div class="row mt-5">
+   <div class="card cold-4">
      <div class="card-header">
        Header
      </div>
@@ -191,7 +339,7 @@
    </div>
 
    <div class="row">
-   <div id="carouselId" class="carousel slide col-10" data-ride="carousel">
+   <div id="carouselId" class="carousel slide col-12" data-ride="carousel">
      <ol class="carousel-indicators">
        <li data-target="#carouselId" data-slide-to="0" class="active"></li>
        <li data-target="#carouselId" data-slide-to="1"></li>
@@ -199,13 +347,13 @@
      </ol>
      <div class="carousel-inner" role="listbox">
        <div class="carousel-item active">
-         <img data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide">
+         <img class="img-fluid"  data-src="holder.js/900x500/auto/?text=Hola&theme=sky" alt="First slide">
        </div>
        <div class="carousel-item">
-         <img data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide">
+         <img class="img-fluid"  data-src="holder.js/900x500/auto/?text=Presentación&theme=lava" alt="Second slide">
        </div>
        <div class="carousel-item">
-         <img data-src="holder.js/900x500/auto/#666:#444/text:Third slide" alt="Third slide">
+         <img class="img-fluid"  data-src="holder.js/900x500/auto/?text=Despedida&theme=social" alt="Third slide">
        </div>
      </div>
      <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
@@ -218,9 +366,9 @@
      </a>
    </div>
    </div>
-   <div class="row">
-   
-   </div>
+   <div class="row mt-5">
+   <div class="col-6">
+   b4-ca
   </section>
   <aside class="col-xs-12 col-lg-4  order-lg-2 mt-4 mb-4">
    <h2>Otros frameworks CSS</h2>
@@ -258,9 +406,9 @@
   </aside>
  </main>    
  </div>
- <footer class="main-footer">
+ <footer class="min-vh-10 text-letra bg-fondo d-flex align-items-center">
  <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
      <div class="col-xs-12">
   <address class="mb-0"> Hitomi Aoki </address>   
      </div>   
@@ -271,7 +419,13 @@
  <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
  <script src="../node_modules/holderjs/holder.js"></script>
  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
- 
- 
+  <script>
+  $('#navId a').on('click', function (e) {
+    e.preventDefault()
+    console.dir($(this))
+    $(this).tab('show')
+  })
+  
+ </script>
 </body>
 </html>

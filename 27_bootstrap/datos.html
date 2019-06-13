@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <header class="header-font text-color-letra text-color-fondo pt-4 pb-4">
+                <div class="container">
+                   <div class="row justify-content-center">
+                    <div class="col-xs">
+                 <h1>Uso de Bootstrap</h1>   
+                    </div>   
+                   </div>
+                   <div class="row">
+                    <div class="col">
+                   <ul class="nav justify-content-center">
+                       <li class="nav-item">
+                           <a class="nav-link text-letra" href="#">Home</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link text-letra" href="#">Clientes</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link text-letra" href="#">Contactos</a>
+                 </li>
+             </ul>
+        </div>
+    </header>
+  <div class="container">
+      <main class="row">
+     <section class="col">
+     <div class="jumbotron">
+      <h2 class="display-3">Datos</h2>
+      <p class="lead">Formulario</p>
+      </div>  
+   <div class="container">
+       <form>
+           <fieldset class="form-group row">
+               <legend class="col-form-legend col-12">Datos de Usuario</legend>       
+           <div class="form-group row">
+               <label for="inputName" class="col-6 col-form-label">Nombre</label>
+               <div class="col-8 col-lg-4 ">
+                   <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+
+                 <label for="inputApellido" class="col-4 col-form-label">Apellido</label>
+               <div class="col-sm-1-12">
+                   <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+               </div>
+               <div class="form-group row">
+                    <label for="Password" class="col-4">Password</label>
+                        <input type="password" class="form-control" name="Password" id="password" placeholder="">
+               </div>
+               </div>
+                </div>
+           </fieldset>
+           <div class="form-group row">
+               <div class="offset-sm-2 col-sm-10">
+                   <button type="submit" class="btn btn-primary">Action</button>
+               </div>
+           </div>
+       </form>
+   </div>
+    <footer class="min-vh-10 text-letra bg-fondo d-flex align-items-center">
+        <div class="container">
+           <div class="row">
+            <div class="col-xs-12">
+         <address class="mb-0"> Hitomi Aoki </address>   
+            </div>   
+           </div>  
+           </div>
+        </footer> 
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+        <script src="../node_modules/holderjs/holder.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>     
+   </body>
+</html>

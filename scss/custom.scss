@@ -5,7 +5,14 @@ $theme_color: (
  
 );
 
-$font-base:'Lato',sans-serif;
+$font-base:'Oswald', sans-serif;
 
+.header-font {
+  font-family:'Comfortaa', cursive;
+}
+
+.min-vh-10 {
+ min-height: 10vh;
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

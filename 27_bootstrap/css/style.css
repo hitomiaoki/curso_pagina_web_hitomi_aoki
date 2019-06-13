@@ -1,24 +1,5 @@
 
-:root {
-    --font-main: 'Noto Sans KR', sans-serif;
-    --font-title: 'Archivo Narrow', sans-serif;
-}
-
 body {
-font-family: var(--font-main);
+    position: relative;
 }
 
-
-
-
-.header-font{
- font-family: var(--font-title);
-}
-
-.main-footer{
-    min-height: 10vh;
-}
-
-.main-footer address {
-    margin-bottom: 0;
-}
