@@ -1,5 +1,5 @@
 
-$theme_color: (
+$theme_color:(
 "letra": bisque,
 "fondo":brown,
  
@@ -15,4 +15,4 @@ $font-base:'Oswald', sans-serif;
  min-height: 10vh;
 }
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
