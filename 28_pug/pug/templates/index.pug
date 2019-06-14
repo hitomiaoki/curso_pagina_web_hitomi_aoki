@@ -1,17 +1,95 @@
+//Esto es un comentario
+       esto sigue siendo comentario  
+
+//- esto es un comentario de pug
+     más comentario
+
+-const page    = 2
+-let   titulo  = 'Hola Pug'
+-const charset = 'utf-8'
+-const empresa = 'Colegio <b> Tajamar </b>'
+-const aPaises = [{nombre:'España', id: 'es', description:'bla bla bla' }, {nombre: 'Francia', id:'fr',description:'Ble ble ble'},   {nombre: 'Italia', id:'it', description:'Bli bli bli'},]         
+-const aMenu = [{nombre:'Inicio' id:'inicio'},{nombre:'Clientes' id:'clientes', description:'Bla bla bla'},{nombre:'Parthers' id:'parthers', description:'Bla bla bla'},{nombre:'Porfolio' id:'portafolio'},{nombre:'Nosotros'  id:'nosotros'}]                                                            
+-const aMenuP = [{nombre:'Paginas Web' id 'web', description: 'bla bla bla' },{nombre:'MobileAPPs' id:'MobileAPPs',description:'Bla bla bla'},{nombre:'IX/UI' id:'IX',description:'Bla bla bla'}, ] 
+
+
+-let x = 5
+-x = x*x
+
+
+// Mixin
+mixin itemMenu(item)
+    li
+       a(href="#"+item.toLowerCase()  title=item.description) #{item.nombre}
+
+mixin inputGroup(inputName)
+        .form-group
+         label(for=inputName.toLowerCase ()) #{inputName}:
+         block
+         p.error(hidden) Aquí irán los errores
+
+
 doctype
-html(lang= language)
+html(lang=language)
     head
-        meta(charset='utf-8')
-        title Hola Pug
+        meta(charset=charset)
+        title #{titulo}
+        link(rel="stylesheet", href="./css/style.css")
     body
-         header
-           h1 Hola Pug
-         section
-            p. 
+         //comentario
+         header#main-header.main-header
+           //- -if (page == 1) {
+           //-  h1= titulo
+           //-  -} else {
+           //-  h1 #{titulo} - Continuación 
+           //- -}
+            
+           nav.main-header
+                ul
+                   each item in aMenu
+                    +itemMenu(item)
+         main
+           section
+               p. 
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ipsum fuga ut expedita suscipit sequi ab repudiandae corporis iste.  
                 Doloribus, <strong> sit nam quaerat voluptatum maxime libero </strong> , accusantium dignissimos modi labore.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate reprehenderit mollitia cumque laborum enim commodi, excepturi exercitationem architecto dolor, minus esse vitae recusandae eum amet animi nulla quibusdam tenetur.
-            p
-               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi nihil doloremque debitis quasi sequi perferendis alias error at, repellat sunt beatae pariatur suscipit dolore. Quia fuga quibusdam eos repellat corporis?   
-         footer
-            address Hitomi Aoki
+               p
+               div.info Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi nihil doloremque debitis quasi sequi perferendis alias error at, repellat sunt beatae pariatur suscipit dolore. Quia fuga quibusdam eos repellat corporis?  
+           figure
+              img(src="https://via.placeholder.com/500x350", alt="placeholder")
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eius minima possimus consectetur nulla ipsa voluptate corporis dolorem! Possimus veniam ullam iste, voluptatibus aut distinctio eos dolorem totam nesciunt ut.
+    section#cliente
+         
+      form(action="")
+         select(name="pais")
+                -for (i = 0; i < aPaises.length; i++) {
+                -let item = aPaises[i]
+                option(value=item.id title=item.description)  #{item.nombre}
+                 -}
+    section#portafolio 
+          header
+             h2 Portafolio
+             nav
+                ul
+
+             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quos perspiciatis tempora enim fugit doloremque deserunt hic illo dolor? Quisquam dolore ex totam voluptas necessitatibus illo deserunt vero non eligendi.
+             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quidem ad odio nam quia sit adipisci rerum ipsum, inventore dolorem eveniet cum, in laborum culpa accusamus cupiditate nihil, unde rem?
+    section##{aMenu[4].id}
+           header 
+               h2=aMenu[4].nombre
+               p=aMenu[4].description
+               h3 Formulario de contactos
+               form(action="")
+                 +inputGroup('Nombre')
+                       input(type="text", name='nombre')
+                 +inputGroup('Email')
+                       input(type="email", name="email")
+                 +inputGroup('Password')
+                       input(type="password", name="password")
+                  +inputGroup('Comentarios')
+                      textarea(name="comentarios", cols="30", rows="10")
+     footer(class="main-footer")
+         address &copy;  Hitomi Aoki
+         div
+         small!= empresa
