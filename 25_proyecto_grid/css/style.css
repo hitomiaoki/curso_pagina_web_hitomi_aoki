@@ -3,7 +3,7 @@
 
 *
  {
-    box-sizing: border-box;
+  box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -11,7 +11,6 @@
 	font: inherit;
 	vertical-align: baseline;
 }
-
 
 
   body {
@@ -151,7 +150,7 @@ section article{
 */
 .publi {
   width: 100%;
-  height: 20vh;
+  height: 35vh;
   background-image: url(../assets/00113358000407____1__640x640.jpg);
   background-repeat: no-repeat;
   background-position: right;
@@ -168,10 +167,8 @@ section article{
 
 @media screen and (min-width:600px) {
     
-    
-
     body {
-        grid-template-columns: 4fr 1fr;
+
         grid-template-areas:
         "header header"
         "main main"
@@ -188,9 +185,17 @@ section article{
 
 }
 
-
+.publi {
+ background-image: url(../assets/havana.club--tributo2019-foto-archivo.jpg);
+ background-size: contain;
+}
 
 @media screen and (min-width:800px) {
+
+body {
+  grid-template-columns:4fr 1fr;
+}
+
 section.grid {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -199,13 +204,24 @@ section.grid {
   grid-template-areas:
   
    "header header header"
-   "coll coll coll";
+   "col1 col2 col3";
   }
 
  section>header {
      grid-area: header;
      text-align:center;
   }
+section>article:nth-of-type(1) {
+    grid-area: col1;
+}
+
+section>article:nth-of-type(2) {
+    grid-area: col2;
+}
+
+section>article:nth-of-type(3) {
+    grid-area: col3;
+}
 
 
   
