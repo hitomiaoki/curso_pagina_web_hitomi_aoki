@@ -90,13 +90,4 @@ footer a{
     list-style: circle;
    }
  
-    
-.form_control{
-  display: block;
-  width: 100%;
-  border:none;
-  border-bottom: 1px solid gray;
-  padding-top: 0.7rem;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
-}
+ 
