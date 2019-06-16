@@ -25,48 +25,61 @@
         </ul>
       </nav>
     </header>
-    <div class="content_wrapper">
+      <main class="content_wrapper"> 
+    <section>
       <header>
       <h2>Eventos</h2>
       </header>
-   <section>
+     
      <h3>Sapporo Beer Museum</h3>
-  </section>
-   <section>
-     <h3>Chitose and Lake Shikotsu Ice Festival</h3>
-   </section>   
- <section>
+   <h3>Festival Valle del Infierno</h3>  
+  <h3>Chitose and Lake Shikotsu Ice Festival</h3>
    <h3>Hakodate Christmas Fantasy</h3>
- </section>
- <section>
+ 
    <h3>Otaru Snow Light Path Festival</h3>
- </section> 
-<section>
+ 
   <h3>Asahikawa Winter Festival</h3>
-</section>
-<section>
+
  <h3>YOSAKOI Soran Festival</h3> 
 </section>
 
-<h2>Contacto</h2>
-
-<div>
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-  
-    <input type="submit" value="Submit">
+<h2>contacto</h2>
+<section class="formulario"> 
+ <form action="https://jsonplaceholder.typicode.com/users" name="complete-post" method="POST">
+  <fieldset id="datos_personales">
+    <label for="userName" class="form_label">Nombre del usuario</label>
+    <input type="text"  name="userName" id="userName" class="form_control"  placeholder="Nombre y apellidos">
+    <label for="email" class="form_label">Correo</label>
+    <input type="email" name="email" id="email"  placeholder="Correo electrónico" value="@hotmail.com">
+    <label for="number" class="form_label">Número telefónico</label>
+    <input type="number" name="number" id="number"  placeholder="Número telefónico">
+    <label for="info" class="form_label">Información</label>
+    <textarea name="info" id="info" rows="5" placeholder="Más información" class="form_control"></textarea>
+  </fieldset>
+   <button type="submit">Enviar</button>
+   <button type="submit">Borrar</button>
   </form>
-</div>
+</section>
+</main>
+<a href="#inicio" rel="tag" title="inicio"><i class="fas fa-arrow-up"></i></a>
+<footer class="main-footer">
+  <address>
+      <div id="hcard-Hitomi-Aoki" class="card">
+          <span class="fn n">
+             <span class="given-name">Hitomi</span>
+             <span class="additional-name"></span>
+             <span class="family-name">Aoki</span>
+          </span>
+     <a rel="author" href="mailto://hitomiyuki97@hotmail.com"> hitomiyuki97@hotmail.com</a>
+     </div>
+    <p><small> © Tajamar</small></p>
+  </address>
+    <aside>
+      <ul>
+        <li> <a href="https://github.com/hitomiaoki" target="blank" rel="author" title="github"> <i
+              class="fab fa-github-square"></i> </a> </li>
+      </ul>
+ </aside>
+ </footer>
 </body>
 </html>
