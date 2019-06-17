@@ -1,0 +1,13 @@
+extends ../partials/layout.pug 
+
+block variables
+    -const page = 5
+    -const tituloPagina = noticias
+
+block main 
+      block  main       
+       section#(aMenu[page-1].id})
+           header 
+               h2=aMenu[4].nombre
+               p=aMenu[4].description
+            h3 Noticia de prensa sobre nosotros 

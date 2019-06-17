@@ -1,0 +1,48 @@
+.main-header,
+.main-footer {
+background-color: maroon;
+color:wheat;
+}
+
+.main-header h1 {
+  padding :0.6 2rem;
+}
+
+.main-menu ul {
+  margin:0;
+  padding: 0;
+  list-style: none;
+  display:flex;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color:bisque;
+  display:block;
+  padding:1rem;
+}
+
+.form-group {
+     padding: 1rem;
+
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea{                  
+   display:block;
+   width: 100%;
+    
+}
+
+.form-group input,
+.form-group textarea{                  
+   border: none;
+   border-bottom: 1px solid darkorange;
+    
+}
+
+nav ul {
+  margin:0;
+  
+}

@@ -1,0 +1,22 @@
+extends ./layout.pug
+
+block variables
+-const page = 3
+-const titulopagina = 'portfolio'
+-const aMenuP = [{nombre:'Paginas Web' id 'web', description: 'bla bla bla' },{nombre:'Mobile Apps' id:'apps',description:'Bla bla bla'},{nombre:'UX/UI' id:'ux',description:'Bla bla bla'}] 
+
+
+block  main
+       section#porfolio
+            header
+                h2 Porfolio  
+                nav
+                    ul
+                        each item in aMenuP
+                             +itemMenu(item) 
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quos perspiciatis tempora enim fugit doloremque deserunt hic illo dolor? Quisquam dolore ex totam voluptas necessitatibus illo deserunt vero non eligendi.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quidem ad odio nam quia sit adipisci rerum ipsum, inventore dolorem eveniet cum, in laborum culpa accusamus cupiditate nihil, unde rem?
+   
+       
+
+
