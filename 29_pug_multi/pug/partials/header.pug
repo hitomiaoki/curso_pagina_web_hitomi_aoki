@@ -1,0 +1,15 @@
+-const aMenu = [{nombre:'Inicio' id:'index', description:'Bla bla bla'},{nombre:'Clientes' id:'clientes', description:'Bla bla bla'},{nombre:'Porfolio' id:'porfolio'},{nombre:'Parthers' id:'parthers', description:'Bla bla bla'} {nombre:'Acerca de' id:'acerca', description:Bla bla bla}]                                                            
+header#main-header.main-header
+       //- -if (page == 1) {
+       //-  h1= titulo
+       //-  -} else {
+       //-  h1 #{titulo} - Continuación 
+       //- -}    
+       if (page == 1)
+           h1= titulo
+        else 
+           h1 #{titulo} - #{tituloPagina}
+        nav.main-header
+            ul
+                each item, index in aMenu
+                    +itemMenu(item,index)
