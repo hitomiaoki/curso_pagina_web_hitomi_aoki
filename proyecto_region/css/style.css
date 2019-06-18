@@ -2,7 +2,8 @@
 body{
    margin:0;
    font-family: 'Abel', sans-serif;
-    
+   background-color: aliceblue;
+  
 }
 
 .content_wrapper{
@@ -133,6 +134,8 @@ img {
   
 .formulario {
    width: 50%;
+   margin-left: 10rem;
+   margin-right: 10rem;
 }
 
 
