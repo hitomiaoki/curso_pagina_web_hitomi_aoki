@@ -40,11 +40,11 @@ body{
 .main-header nav li {
     display:inline-block;
     padding: 14px 16px; 
-
+    margin-right: 2rem;
 }
 
 .main-header li a:hover {
-    background-color: rgba(207, 170, 128, 0.747);
+  color: rgba(223, 130, 24, 0.911);
   
   }
 
@@ -53,13 +53,14 @@ body{
     color:inherit;
     text-decoration: none;
     display:block;
-    
+    margin-left: 2rem;
    
 }
 
 
+
 h1 {
-    text-align: center;
+    margin-left: 20rem;
 }
 
 
@@ -141,12 +142,8 @@ img {
     background-color: #77B546;
     color: aliceblue;
 }
-  
-.formulario {
-   width: 50%;
-   margin-left: 10rem;
-   margin-right: 10rem;
-}
+ 
+
 
 
 .placeholder {
@@ -161,6 +158,7 @@ img {
 .form_label {
    display: block;
    margin-top:1rem;
+   color:rgb(131, 177, 197);
 }
 
 fieldset {
