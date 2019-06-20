@@ -175,5 +175,120 @@ section button {
     margin-bottom: 2rem;
 }
 
+.letra {
+ margin-left: 18rem;
+}
+.titulo {
+ margin-left: 18rem;   
+}
 
+video {
+margin-left: 18rem;
+
+}
+
+
+@media screen and (min-width:500px) {
+
+   
+
+    img {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        
+      }
+
+  
+  .letra {
+    margin-left: 18rem;
+   }
+   .titulo {
+    margin-left: 18rem;   
+   }
+    
+video {
+    margin-left: 10rem;
+    width: 60%;
+    }
+
+
+}
+
+
+
+
+
+
+@media screen and (min-width:720px) {
+
+   
+
+    img {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45%;
+        
+      }
+
+  
+  .letra {
+    margin-left: 18rem;
+   }
+   .titulo {
+    margin-left: 18rem;   
+   }
+    
+video {
+    margin-left: 10rem;
+    width: 60%;
+    }
+
+
+}
+
+
+
+
+
+@media screen and (min-width:800px) {
+  
+    
+    .letra {
+    margin-left: 18rem;
+     }
+     .titulo {
+      margin-left: 18rem;   
+     }  
+
+
+ 
+    img {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        
+      }
+
+  
+    
+video {
+    margin-left: 5rem;
+    margin-right: 6rem;
+    }
+
+
+}
   
