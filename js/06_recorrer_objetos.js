@@ -1,0 +1,57 @@
+/**
+ * @description recorre un objeto a tantos niveles como contenga
+ *              y crea un string con la informacion
+ * @param (object) obj
+ * @returns (string)
+ */
+
+function objectToString(obj = {}) {
+     let cadena = ``
+     for (let key in obj) {
+         if (obj.hasOwnProperty(key)) {
+             const value = obj[key];
+             if( typeof value == 'object') 
+             {
+                 cadena +=
+                 `${key}: ${objectToString(value)}`
+
+              } else {
+                  if (!isNaN(key)) {
+                      key++
+                 }
+
+             }
+             cadena += `
+             ${key}: ${value}` 
+            }
+      }
+   return `${cadena}` 
+}
+
+
+
+
+let p1 = {
+    nombre:'Pepe',
+    edad: 33,
+    direccion:{
+        calle:'c/ Pez',
+        numero:'24',
+        ciudad:'Cádiz',
+        pais:'España',
+
+    },
+    aficiones: ['pintar','musica','montañismo'],
+    isAlumno:true
+}
+
+
+let p2 = {
+    nombre:'Rosa',
+    edad: 35,
+    isAlumna:true
+}
+let cadena = objectToString(p2)
+console.log(cadena)
+
+
