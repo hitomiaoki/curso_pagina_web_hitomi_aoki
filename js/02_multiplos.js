@@ -35,12 +35,12 @@ console.log(acumulador, contador)
  */
 
   function isMultiplo (m = 0, n = 0) {
-    if (isNaN(n) || isNaN(n)) {
-         throw new Error('parametros no numericos')  
+    if (isNaN(m) || isNaN(n)) {
+         throw new Error('Parametros no numericos')  
     }
     let r = true
-    if (n%m) {  // n%m !=0)
-        r = false  
+    if (m%n) {  // m%n != 0)
+         r = false  
     }
     return r 
  }
@@ -52,14 +52,11 @@ console.log(acumulador, contador)
  *  @param {array} aDatos
  *  @returns {array}
  */
-
- 
-
 function extraerMultiplos(n = 0, aDatos = []) {
     let r = []
     for (let i = 0; i < aDatos.length; i++) {
-         const item = aDatos[i];
-         if(isMultiplo(item),n) {
+        const item = aDatos[i];
+        if(isMultiplo(item),n) {
            // r[r.length] = item
            r.push(item)
          }
@@ -80,15 +77,14 @@ function monstarMultiplos(n, aDatos) {
     console.clear()
     console.log(`Los multiplos de ${n}`)
     console.log(`en el array ${aDatos} son:` )
-    console.log( extraerMultiplos(n,aDatos))
+    console.log(extraerMultiplos(n,aDatos))
 }
 
 module.exports = {};
 module.exports.isMultiplo = isMultiplo
 module.exports.extraerMultiplos = extraerMultiplos
 
-
 {
-  let aDatos = [1,2,3,4,5,6,7,8,9]
-  mostrarMultiplos(2, aDatos)
+  let misDatos = [1,2,3,4,5,6,7,8,9]
+  mostrarMultiplos(2, misDatos)
 }
