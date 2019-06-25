@@ -10,8 +10,6 @@ for ($i = 0; $i < $limite; $i++) {
      if($acumulador + ($i*$i) > $maximo) {
        break
      }
-   $acumulador =+ ($i*$i)
+   $acumulador += ($i*$i)
 }
-echo $acumulador.','.contador
-
-?>
+echo $acumulador.','.$contador
