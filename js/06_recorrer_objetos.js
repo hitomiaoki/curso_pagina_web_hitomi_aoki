@@ -9,27 +9,33 @@ function objectToString(obj = {}) {
      let cadena = ``
      for (let key in obj) {
          if (obj.hasOwnProperty(key)) {
-             const value = obj[key];
+             const value = obj[key]
              if( typeof value == 'object') 
              {
-                 cadena +=
-                 `${key}: ${objectToString(value)}`
+                 cadena += `
+                 ${key}: ${objectToString(value)}`
 
               } else {
                   if (!isNaN(key)) {
                       key++
                  }
-
-             }
-             cadena += `
-             ${key}: ${value}` 
-            }
+                cadena += `
+               - ${key}: ${value}`
+             }   
+         }
       }
-   return `${cadena}` 
+   return `${cadena}
+   ` 
 }
 
 
-
+let p2 = {
+    nombre:'Rosa',
+    edad: 35,
+    isAlumna:true
+}
+let cadena = objectToString(p2)
+console.log(cadena)
 
 let p1 = {
     nombre:'Pepe',
@@ -45,13 +51,6 @@ let p1 = {
     isAlumno:true
 }
 
-
-let p2 = {
-    nombre:'Rosa',
-    edad: 35,
-    isAlumna:true
-}
-let cadena = objectToString(p2)
+cadena = objectToString(p1)
 console.log(cadena)
-
 
