@@ -1,8 +1,8 @@
 /**
  * @description recorre un objeto a tantos niveles como contenga
  *              y crea un string con la informacion
- * @param (object) obj
- * @returns (string)
+ * @param {object} obj
+ * @returns {string}
  */
 
 function objectToString(obj = {}) {
@@ -10,7 +10,8 @@ function objectToString(obj = {}) {
      for (let key in obj) {
          if (obj.hasOwnProperty(key)) {
              const value = obj[key]
-             if( typeof value == 'object') 
+             if( typeof value == 'object')
+            // && !Array.isArray(value) 
              {
                  cadena += `
                  ${key}: ${objectToString(value)}`
@@ -27,7 +28,6 @@ function objectToString(obj = {}) {
    return `${cadena}
    ` 
 }
-
 
 let p2 = {
     nombre:'Rosa',
