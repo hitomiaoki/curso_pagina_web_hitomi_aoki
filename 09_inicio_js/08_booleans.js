@@ -41,7 +41,7 @@ if (w) {
  /*let k
  k = 34
  k = '46'
- k = '34 Pepe'
+ k = '34 Pepes'
  k = true
  k = false
  k = undefined
@@ -56,7 +56,6 @@ if (w) {
 
  k = 34
  k = '46'
- k = '34 Pepe'
  k = true
  k = false
  k = undefined
@@ -154,7 +153,7 @@ function responderSegunEdad(edad){
    ]
 }
 console.log(`Con ${edad} años`,
-        mensajes[codificarEdad])
+        mensajes[codificarEdad(edad)])
 
 let e = 53
 responderSegunEdad(e)
