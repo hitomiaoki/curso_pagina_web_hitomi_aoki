@@ -45,8 +45,8 @@ let v = 45
 function ejemplo (){
     let v = 6 
     if (true) {
-    let v = 3
-    console.log(v)
+        let v = 3
+        console.log(v)
  }
   console.log(v)
  
