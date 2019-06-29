@@ -5,63 +5,71 @@
 
 
 let a = 2
-let b = a//asignación de valor
-console.log('al crear b',a,b)
+let b = a  // aisgnación de Valor 
+console.log('Al crear b', a, b)
 b = b * b
 a = a / 2
-console.log('valor de',b) //4
-console.log('valor de',a) //1
+console.log('Valor de b', b) // 4
+console.log('Valor de a', a) // 1
 
 b = a
-console.log('valor de b',b)
+console.log('Valor de b', b) 
 
-// valores referenciados
-// objects (array)
- 
-let p1 = {nombre :'Pepe', edad : 34}
-let p2 = p1 // Asignación de referencia
+
+// Valores referenciados
+
+let p1 = {nombre : 'Pepe', edad: 34}
+let p2 = p1 // asignación de referencia
 p1.nombre = 'Juan'
-console.log(p1) // Juan  // un objeto en 2 referencias
-console.log(p2) // Juan
+console.log(p1) //
+console.log(p2)
 
 
-let  a1 = {nombre :'Raquel', edad : 34}
-let  a2 = {nombre :'María', edad : 34}
-let  a3 = {nombre :'Juan', edad : 34}
+let a1 = {nombre : 'Raquel', edad: 34, saldo : 1000}
+let a2 = {nombre : 'Maria', edad: 34, saldo: 1200}
+let a3 = {nombre : 'Juan', edad: 34 , saldo: 1300}
 
 
-
-function inscribirmal(){
+function inscribirMal() {
     a1.curso = 'JS'
 }
 
-function inscribirEnJS(alumno){
-  if (alumno){
-      alumno.curso  = 'JS'     
-  }
- 
+function inscribirEnJS(alumno) {
+    if (alumno) {
+        alumno.curso = 'JS'
+    }
 }
 
-inscribirEnJS(a1,a2,a3) // paso por referencia
+
+function inscribir(alumno, curso = 'JS') {
+    if (alumno) {
+        alumno.curso = curso
+    }
+}
+
+
+/* inscribirEnJS(a1) // paso por referencia
 inscribirEnJS(a2)
-inscribirEnJS(a3)
+inscribirEnJS(a3) */
+
+inscribir(a1, 'HTML') // paso por referencia
+inscribir(a2)
+inscribir(a3)
+
 console.log(a1)
 console.log(a2)
 console.log(a3)
 
-
-/*let saldo = 1000
-saldo = saldo * 2
-function inscribirmal(){
-saldo = saldo * 2
-}*/
-
-let saldo = 1000
-
-function invertir(x) {
-    x = x * 2
-    return x
+function invertir(x = 0) {
+    let z = Math.random()
+    let rendimiento =  (x * z) / 10
+    return (x + rendimiento).toFixed(2)
 }
 
-saldo = invertir(saldo) //un paso de un valor
-console.log(saldo)
+a1.saldoNew = invertir(a1.saldo) // Paso por valor
+a2.saldoNew = invertir(a2.saldo) // Paso por valor
+a3.saldoNew  = invertir(a3.saldo) // Paso por valor
+console.log(a1)
+console.log(a2)
+console.log(a3)
+
