@@ -20,11 +20,10 @@ const b = 6
 }*/
 
 
-
 if (true) {
-  const c = 7  
-  console.log(b)//6
-  //console-log(c)//7
+    const c = 7  
+    console.log(b)//6
+    //console.log(c)//7
 }
 
 console.log(b)//6
@@ -43,16 +42,18 @@ const persona = {nombre:'Pepe' , edad:'22'}
 datos[datos.length] =63
 datos.push(43)
 
-// datos = 6
+// datos = 3 // Error
 // datos = []
 // datos [22,10,36,63,43]
 
 
 persona.altura = 178
 persona.edad = 23
+persona.nombre = ''
+delete persona.nombre
+persona.nombre = ''
 //persona.nombre = '' //Solo aparecería nombre, no valor
 //delete persona.nombre //Borrar nombre y el valor
-
 
 
 // persona = 178 ERROR
@@ -64,5 +65,4 @@ console.log(datos)
 // console.log(persona.nombre)
 console.log (persona)
 
-/////////// LOS ARRAY SON DINÁMICOS
 
