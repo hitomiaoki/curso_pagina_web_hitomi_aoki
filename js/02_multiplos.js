@@ -4,7 +4,7 @@
 
 let limite = 10
 let acumulador = 0
-let maximo = 200
+let maximo = 100
 let contador = 0
 for (let i = 0; i < limite; i++) {
      contador = i 
@@ -15,16 +15,13 @@ for (let i = 0; i < limite; i++) {
    acumulador =+ (i*i)
 }
 console.log(acumulador, contador)
-
-
-/** JSDoc
+{/** JSDoc
  *  Saber si un número es multiplo de tres,
  *  Seleccionar en una array los que lo sean  y guardarlos en otro array 
  *  mostrarlo por pantalla
  * 
  */
-
-
+}
 
 /** function isMultiplo
  *  @descripcion devuelve true si un numero m es multiplo de n
@@ -33,18 +30,16 @@ console.log(acumulador, contador)
  *  @return {boolean}
  * 
  */
-
   function isMultiplo (m = 0, n = 0) {
     if (isNaN(m) || isNaN(n)) {
          throw new Error('Parametros no numericos')  
     }
     let r = true
-    if (m%n) {  // m%n != 0)
+    if (m%n) { // m%n != 0)
          r = false  
     }
     return r 
  }
-
 
 /** function extraerMultiplos
  *  @description extraer de un array los multiplos de n
@@ -59,12 +54,10 @@ function extraerMultiplos(n = 0, aDatos = []) {
         if(isMultiplo(item),n) {
            // r[r.length] = item
            r.push(item)
-         }
-      
+       }
     }
     return r
 }
-
 
 
 /** funcion mostrarMultiplos
