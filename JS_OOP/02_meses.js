@@ -1,48 +1,83 @@
-  let(aMeses,aMesesAleman) = require('./02_data.js')
-
-
+  let {aMeses, aMesesAleman, aMesesIngles} = require('./02_data.js')
 
 function eligeArray(key) {
     let r
     switch (key) {
+        case 'español': 
         case 'es': 
            r = aMeses       
            break;
+        case 'aleman':
         case 'ger':
            r = aMesesAleman
            break;
+        case 'ingles':
+        case 'íngles':
         case 'en':
            r = aMesesIngles
            break;   
         default:
+             throw new Error('Código de idioma incorrecto')
     }
-   
+    return r
+}
+
+function elegirIdioma(key) {
+    let r
+    switch (key) {
+      case 'es':
+        r = 'español'
+        break;
+      case 'ger':
+        r = 'aleman'
+        break;
+      case 'en':
+        r = 'inglés'
+        break;
+        default:
+        r = key
+    } 
+    return r
 }
 
 
-
-function aMeses() {  
-     console.log(m)
-
+function prepararMeses(id1, id2) {  
+     
+     let meses1 = elegirArray(id1)
+     let meses2 = elegirArray(id2)
 
      if (meses1.length > meses2.length) {
-         
-     } else {
-         
+         throw new Error('Falta un mes del segundo idioma') 
+     } else if (meses1.length < meses2.length) {
+         throw new Error ('Falta un mes dl primer idioma')
      }
 
-    let aMeses = {}
-   
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        
+    let oMeses = {}
+    for (let i = 0; i < meses1.length; i++) {
+        const item = meses1[i];
+        oMeses[item] = meses2[i]
     }
-
-
+    return oMeses
 }
 
 
+function mostrarParesMeses(id1, id2) {
 
-function mostrarParesMeses() {
-  let   
+   let oMeses = prepararMeses(id1, id2)
+   let texto = ``
+   let ids = [elegirIdioma(id1, id2)]
+   for(const mes in oMeses) {
+       const rad = oMeses[mes];
+       texto += `El mes ${mes} en ${ids[0]}, se dice ${trad} en ${ids[1]}\n`
+   }
+   console.log(texto) 
 }
+
+try {
+    //Elige dos entre 'es', 'ger', 'en'
+    mostrarParesMeses('aleman','en')
+} catch (e) {
+    console.error('Lo sentimos')
+    console.error(e.message)
+}
+console.log('Gracias por venir')
