@@ -81,6 +81,8 @@ user.log(user)
 
 //hoisting de funciones declaradas y variables var (solo la declaración)
 
+izar()
+
 function izar() {
     var z
     console.log('Izado')
