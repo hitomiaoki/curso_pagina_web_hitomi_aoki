@@ -27,10 +27,7 @@
 */
 
 let x = 34 // declaración = inicialización
-let y = suma 
 
-suma(3,4)
-y(2,5)
 //....
 //....
 x = 45 // asignación
@@ -86,6 +83,8 @@ user.log(user)
 
 //hoisting de funciones declaradas y variables var (solo la declaración)
 
+izar()
+
 function izar() {
     var z
     console.log('Izado')
@@ -120,7 +119,7 @@ let incremento = indice * 0.10
 
 let tipo = 'indefinido'
 let sueldo = 23 * tipo
-let datoRaro = 23 / 0
+let datoRaro = -23 / 0
 
 console.log('sueldo: ', sueldo)
 console.log('datoRaro: ', datoRaro)
@@ -164,6 +163,7 @@ int r = x%y // 1
 
 parseInt(7/3) // 2 
 7%3 // 1
+9%3 //0
 
 // Operadores de asignación 
 
@@ -181,15 +181,14 @@ x = 86
 // Identidad
 (x === '86') // false
 
-// Otros > <  >= <=
+// Otros > < >= <=
 
-// Negación
+// Negación !
 
 x = 86
 
 
 // No igualdad 
-
 (x != '86') // false
 
 // No identidad
