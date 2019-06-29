@@ -1,6 +1,6 @@
 // Si estamos en Java, C## , PHP ...
 // Los objetos dependen de clases
-//class Persona {}
+//class Persona {.....}
 //p1 = new Persona()
 //p2 = new Persona()
 
@@ -40,7 +40,7 @@ console.log(p1.aficiones[0])
 
 
 let prop = 'profesion'
-p2[prop] = 'escritura'
+p2[prop] = 'escritora'
 console.log(p2[prop])
 
 for (const key in p2) {
@@ -55,7 +55,12 @@ console.log('Mostrar' + p1)
 
 for (const key in p1) {
     const value = p1[key];
-    console.log(`La propiedad ${key}  vale ${value}` )
-        
-    
+    console.log(`La propiedad ${key}  vale ${value}`)          
+}
+
+let aDatos = ['perro', 'gato', 'caballo', 'ornitorrinco']
+
+for (const i in aDatos) {
+     const value = aDatos[i];
+     console.log(`La propiedad ${i} vale ${value}`)             
 }
