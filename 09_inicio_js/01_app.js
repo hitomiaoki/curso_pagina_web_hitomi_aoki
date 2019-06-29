@@ -30,31 +30,23 @@ let a
 console.log(a)
 console.log(typeof a)// undefined
 a = 2
-
 console.log(a)
 console.log(typeof a)// number
-a = 23
-
+a = 25
 console.log(a)
 console.log(typeof a)
-a = 'Pepe' //"Pepe"
- 
+a = 'Pepe' //"Pepe" 
 console.log(a)
 console.log(typeof a)//string
-
 a = false
 console.log(a)
 console.log(typeof a) //boolean
 a = {nombre:'Pepe', edad:27}
-
 console.log(a)
 console.log(typeof a)//Object
-a = [1,2,3]
-
-
+a = [1 ,2 , 3]
 console.log(a)
 console.log(typeof a)//Object
-
 a = [
 
     {nombre:'Pepe', edad:20}, 
@@ -64,21 +56,24 @@ a = [
     {nombre:'Elena', edad:27}
 
 ]
-
 console.log(a)
 console.log(typeof a)//Object
 
 
-// Uso normal de datos y variable
+// Uso normal de datos y variables
 
 let precio = 45.60 //number
 let producto ='Gafas' //string
 
 let precioPrevio = precio
-
 precio = precio * 1.06
-
 console.log(precioPrevio, precio) //crear una sentencia
 
 
-//arrive una lista indexada
+let person = {
+    nombreCompleto : {
+        nombre: 'Pepe',
+        apellido1: 'Pérez',
+        apellido2: 'López'
+    }
+}
