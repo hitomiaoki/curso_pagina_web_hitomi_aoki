@@ -1,7 +1,6 @@
 const obj = new Object()
 
 const pulga = 123
-
 let garrapata
 
 const animal1 = {
@@ -10,8 +9,7 @@ const animal1 = {
     raza : 'perro',
     parasitos: [pulga,garrapata]
 }
-
-animal2 = []
+const animal2 = []
 
 const persona1 = {
     nombre: 'Pepe',
