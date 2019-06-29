@@ -54,11 +54,8 @@ saludar()
 
 
 /**
- *función suma
+ *Función sumar
  * @description recibe 2 parámetros y devuelve la suma de ambos
- * recibe 2 parámetros
- * devuelve la suma de ambos
- * 
  * @param {number}
  * @param {number}
  * @returns {number}
@@ -72,43 +69,19 @@ saludar()
    return a + b
 }
 
-/**
- *función mostrar
- * @description Recibe un texto y lo saca por pantalla
- * @param {string / number}
- * @returns {void}
- * 
- * función interfaz
- */
- function mostrar (mensaje = '') {
-  console.log(mensaje)   
 
- }
-
-
-/**
- * @param {number} a
- * @param {number} b
- * @returns {number}
- */
-
-   function dividir(a = 0, b = 1) {
-   return  a / b
-     
-  }
-
- 
-  /**
+  /** Función restar
    *@description {number} recibe 2 parámetros y devuelve la resta de ambos
    *@param {number} a
    *@param {number} b
    *@returns {number}
    */
 
-   function resta(a = 0, b = 0) {
-   return a - b
-     
-  }
+  function resta(a = 0, b = 0) {
+    return a - b
+      
+   }
+
 
   /**
    *@param {number} a
@@ -122,34 +95,51 @@ saludar()
     return a * b
       
    }
-  
+
+
+/**
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
+ */
+
+function dividir(a = 0, b = 1) {
+  return  a / b
+    
+ }
+
+
+/** Función Mostrar
+ * @description Recibe un texto y lo saca por pantalla
+ * @param {string / number}
+ * @returns {void}
+ * 
+ * función interfaz
+ */
+ function mostrar (cadena = '') {
+  console.log(cadena)   
+
+ }
+
 
   function probar() {
  
-    let x = 9
-    let y = 8
-
-
+     let x = 2
+     let y = 3
      mostrar(suma(x,y))
      mostrar(suma(x))
      mostrar(suma(undefined,y))
      mostrar(suma())
      mostrar()
-
-     mostrar(division(4,2))
-     mostrar(division(x))
-     mostrar(division())
-     mostrar(division(undefined,2))
-     mostrar()
-
-
-     mostrar(multiplicar(x,y))
-     mostrar(multiplicar(y))
-     mostrar(multiplicar(undefined,y))
-     mostrar(multiplicar(x,'Pepe'))
-     mostrar()
-
      mostrar(resta(x,y))
+     mostrar(multiplicar(x,y))
+     mostrar(multiplicar(x,'Pepe'))
+     x = 4
+     y = 2
+     mostrar(dividir(x, y))
+     mostrar(dividir(x))
+     mostrar(dividir(undefined,2))
+    
   }
 
    probar() 
