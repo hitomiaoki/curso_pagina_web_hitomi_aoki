@@ -16,7 +16,7 @@ let b = 9
 if (true){
 
 //una variable un *ámbito local* a la función
-    var z = 6
+    var z = 4
 // una variable de *ámbito local* al bloque if
     let w = 7
 
@@ -30,8 +30,9 @@ console.log('Desde el if',w) // 7 //local
 console.log('Desde la función',a) // 2 //local
 console.log('Desde la función',b) // 9 //local
 //console.log('Desde el if',w) // 7 // local- da error porque la variable esta dentro de la función if (true)
-console.log('Desde el if',z)
+console.log('Desde la función',z) // 4
 }
+
 prueba()
 
 // c = 3 daría un error debido el use strict
@@ -42,6 +43,7 @@ console.log ('Desde el programa',a) // 4 //local d
 let v = 45
 
 function ejemplo (){
+    let v = 6 
     if (true) {
     let v = 3
     console.log(v)
@@ -53,7 +55,7 @@ function ejemplo (){
 console.log(v)
 
 function sample () {
-//console.log (v)  
+     //console.log (v)  
 }
 
 ejemplo()
