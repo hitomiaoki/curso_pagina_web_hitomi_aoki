@@ -5,7 +5,7 @@
  /** sumaRaices
   * @param {number} a 
   * @param {number} b 
-  * @description {number}
+  * @returns {number}
   */
 
 
@@ -14,7 +14,7 @@ function sumaRaices(a = 0, b = 0) {
     return r
 }
 
-/* Asignacion de funciones */ 
+/* Asignación de funciones */ 
 
 let x = {}
 let user = {user: 'pepe', edad:33}
@@ -26,19 +26,19 @@ console.log(sumaRaices(6, 7))
 console.log(restaRaices(6,7))
 
 
-/* ES6: Asignacion de funciones ARROW o  */ 
+/* ES6: Asignacion de funciones ARROW o lambda */ 
 
-/*let productoRaices = function (a = 0, b = 0)  {
+/*let productoRaices = function (a =0, b =0) {
     let r = Math.sqrt(a) * Math.sqrt(b)
 }*/
 
-/*let productoRaices = (a = 0, b = 0) => {
+/*let productoRaices = (a =0, b =0) => {
     let r = Math.sqrt(a) * Math.sqrt(b)
-}*/
+}
+*/
 
+let productoRaices = (a =0, b =0) =>  Math.sqrt(a) * Math.sqrt(b)
 
-let productoRaices = (a = 0, b = 0) =>  Math.sqrt(a) * Math.sqrt(b)
-
-let mediaMal = a => Math.sqrt(a)//2
+let mediaRaiz = a => Math.sqrt(a)/2
 
    
