@@ -67,7 +67,7 @@ function mostrarParesMeses(id1, id2) {
    let texto = ``
    let ids = [elegirIdioma(id1, id2)]
    for(const mes in oMeses) {
-       const rad = oMeses[mes];
+       const trad = oMeses[mes];
        texto += `El mes ${mes} en ${ids[0]}, se dice ${trad} en ${ids[1]}\n`
    }
    console.log(texto) 
