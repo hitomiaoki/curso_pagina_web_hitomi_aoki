@@ -1,5 +1,8 @@
 'use strict'
 
+let intl = require('intl')
+require('intl/locale-data/jsonp/es.js');
+
 let version = 'ES6'
 
 let cadena = "Esto no es buena práctica"
@@ -53,4 +56,4 @@ for (let i = 0; i < cadena.length; i++) {
  console.log(numero.toExponential())
  console.log(numero)
  numero = 23.7865432
- console.log(numero.toLocaleString)
+ console.log(numero.toLocaleString('es',  { style: 'currency', currency: 'EUR' }))
