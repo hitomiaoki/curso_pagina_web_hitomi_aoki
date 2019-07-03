@@ -1,6 +1,11 @@
 
 let ob = {} // new Object()
 let aDatos = [2, 8, 9, 76] // new Array()
+//aDatos[aDatos.length] = 67
+//aDatos[aDatos.length] = 56
+aDatos.push(87)
+
+aDatos[100] = 9
 
 /** Funcion randomArray                        
  * @description  Función que devuelven un array de n nùmeros aleatorios
