@@ -1,20 +1,30 @@
 
+/** funcion isPalindromo
+ * @description : comprobar si in string es palindromo
+ * @param {string} cadena 
+ * @returns {boolean}
+ */
 
 
-
-function isPalindromo(cadena) {
-  
-const aPalin = ['Ateo poco poeta','Ana lleva al oso la avellana']
-
-for (let i = 0; i < aPalin.length; i++) {
-    const item = aPalin[i];
-  if (cadena.split  == item.split) {
-    return true  
-  }
-  return false
+const isPalindromo = (cadena = '') => {
+   let r = false
+   const cadenaSinEspacios = cadena.split(' ').join('').toLowerCase()
+   //console.log(cadenaSinEspacios)
+   const cadenaInversa = cadenaSinEspacios.reverse.split('').reverse().join('')
+   //console.log(cadenaInversa) para comprobar
+   if (cadenaSinEspacios  === cadenaInversa) {
+      r = true  
+   }
+  return r
 }    
 
-
+const isPaliShort = (cadena = '') => {
+      sinEspacios = cadena.split(' ').join('').toLowerCase()
+      return sinEspacios ===
+         sinEspacios.split('').reverse().join('') ? true : false
 }
 
-console.log(aPalin)
+
+module.exports = {}
+module.exports.isPalindromo = isPalindromo
+module.exports.isPaliShort = isPaliShort
