@@ -50,9 +50,9 @@ console.log(fecha)
 console.log(fecha.getMonth())
 console.log(fecha.getDay())
 
+fecha.setDate()
 
 // set | setters
-fecha.setDate()
 
 
 
