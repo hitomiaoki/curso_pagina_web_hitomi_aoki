@@ -35,13 +35,13 @@ console.log(String(randomArray(65)))
 /** Funcion formatoDni
  * @description dar formato número al DNI
  * @param {number | string} dni
- * @returns {string}
+ * @returns {number}
  * 
  */
 
  function formatoDni(dni) {
     if(typeof dni === 'number') {
-        return r
+        return dni
     }
     let cadenaDNI = ''
     for (let i = 0; i < dni.length; i++) {
