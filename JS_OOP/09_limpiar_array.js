@@ -10,10 +10,10 @@
 
 function limpliarArray(letra = '', aNombres = []) {
     const datos = aNombres.slice()
-    for (let i = 0; i < aNombres.length; i++) {
-        const item = aNombres[i];  
+    for (let i = 0; i < datos.length; i++) {
+        const item = datos[i];  
     if (item[0].toLowerCase() === letra.toLowerCase()) {
-        aNombres.splice(i, 1)
+        datos.splice(i, 1)
         i--
       } 
 
@@ -21,10 +21,10 @@ function limpliarArray(letra = '', aNombres = []) {
     return datos
 }
 
-let i = 'r'
+let l = 'r'
 let aUsuarios = ['rosa', 'raquel', 'elena', 'marta','ramon', 'maria', 'roberto']
 
-console.log(limpliarArray('letra',aUsuarios))
+console.log(limpliarArray('l',aUsuarios))
 console.log(aUsuarios)
 
 
@@ -32,7 +32,7 @@ console.log(aUsuarios)
 
 function algo(h) {
     h = h * h
-    return h 
+    return h // 16
 }
 
 let z = 4
