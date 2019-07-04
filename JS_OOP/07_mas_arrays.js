@@ -15,7 +15,7 @@ const aNumbers = [32, 3, 2, 21, 56, 5, 9]
 // creamos un clon de array
 const aNumbersOriginal = aNumbers.slice()
 
-aNumbers.sort((a,b) => b-a)
+aNumbers.sort( (a,b) => a-b)
 console.log(aNumbers)
 console.log(aNumbersOriginal.reverse())
 console.log(aNumbersOriginal)
@@ -24,7 +24,7 @@ console.log(aNumbersOriginal)
 let nombres = ['Luis','Rosa','Juan','Sofia','Julia','Ramon']
 
 
-// Fraccionar array : inmutable
+// Fraccionar arrays : inmutable
 let seleccion = nombres.slice(1, 3)
 console.log(seleccion)
 console.log(nombres)
@@ -43,10 +43,10 @@ console.log(nombres)
 // splice para añadir
 
 let paises = ['francia', 'italia', 'hungria', 'holanda']
-console.log(paises.splice(2,0, 'españa'))
+console.log(paises.splice(2, 0, 'españa' ))
 console.log(paises)
 
-// Pilas y calas
+// Pilas y colas
 
 // PILA -> stack Filo 
 //(push)la ultima posicion en quien entra) -Importante-
@@ -59,6 +59,9 @@ console.log(paises)
 
 // COLAS -> heap FIFO 
 //(unshift) inserta un nuevo elementos al principio
+//(shift) elimina el primer elemento del array y devuelve dicho elemento
 
 paises.unshift('croacia')
-console.log
+console.log(paises)
+paises.shift()
+console.log(paises)
