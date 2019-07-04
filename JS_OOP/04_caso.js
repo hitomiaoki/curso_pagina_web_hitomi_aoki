@@ -13,9 +13,9 @@
 
  function comprobarCaso(cadena = '') {
      let r = 2
-     if ( cadena == cadena.toUpperCase()) { // eres solo mayusculas
+     if ( cadena === cadena.toUpperCase() ) { // eres solo mayusculas
          r = 0
-     } else if (cadena == cadena.toLowerCase) { // eres solo minusculas
+     } else if (cadena === cadena.toLowerCase() ) { // eres solo minusculas
          r = 1
      }
      return r
