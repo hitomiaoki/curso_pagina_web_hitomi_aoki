@@ -13,7 +13,7 @@ describe('comprobarCaso', () => {
     });
 
     
-    it('should be 2 if all min', () => {
+    it('should be 2 if MAY & min', () => {
         const cadena = 'Hola Pepe'
         expect(comprobarCaso(cadena)).toEqual(2);
     });
@@ -31,7 +31,7 @@ describe('mostrarComprobacionCaso', () => {
        expect(console.log).toHaveBeenCalledWith('solo mayusculas');
     });
 
-    it('should be - solo minisculas- if all min', () => {
+    it('should be - solo minisculas - if all min', () => {
         const cadena = 'hola amigo' 
         console.log = jasmine.createSpy("log")
         mostrarComprobacionCaso(cadena)
