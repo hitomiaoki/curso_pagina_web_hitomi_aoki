@@ -31,7 +31,7 @@ const otro = {
 }
 
 //algo.call()
-algo.apply(otro) // this 
+algo.apply(otro) // this el objeto que "toma prestada" la función
 
 
 console.log('---------------------------------------------')
@@ -42,8 +42,8 @@ persona.saludar = function () {
     console.log(`Hola soy ${this.nombre}`)
 }
 persona.saludar()
-//setTimeout(persona.saludar, 2000)
-//setTimeout(persona.saludar.bind(persona), 2000)
+setTimeout(persona.saludar, 2000)
+setTimeout(persona.saludar.bind(persona), 2000)
 
 console.log('-----------------------------------------------')
 
@@ -55,8 +55,6 @@ persona.saludarArrow = () => {
 }
 
 persona.saludarArrow()
-
-
 
  algoArrow = () => {
     console.log(this)
