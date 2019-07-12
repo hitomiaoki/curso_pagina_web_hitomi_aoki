@@ -4,19 +4,29 @@ let {Factorial} = require('../30_factorial.js')
 
 describe('El factorial de un número (factorial)', () => {
   
- it('should be 1 if n = 0', () => {
-     let n = 0
-     expect(factorial(n)).toBe(1)
+ it('0! should be 1', () => {
+    
+     let f = new Factorial(0)
+     expect(f.factorial).toBe(1)
  });
 
- it('should be 2 if n = 2', () => {
-   let n = 2
-   expect(factorial(n)).toBe(2)
+
+ it('1! should be 1', () => {
+ 
+   let f =  new Factorial(1)
+   expect(f.factorial).toBe(1)
 });
 
-it('should be 1 if n = 5', () => {
-   let n = 5
-   expect(factorial(n)).toBe(120)
+
+ it('2! should be  2', () => {
+  
+   let f = new Factorial(2)
+   expect(f.factorial).toBe(2)
+});
+
+it('!5 should be  5', () => {
+   let f =  new Factorial(5)
+   expect(f.factorial).toBe(120) 
 });
 
 it('should throw error  if n = -5', () => {
