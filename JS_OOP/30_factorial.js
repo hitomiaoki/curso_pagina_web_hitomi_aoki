@@ -1,70 +1,51 @@
 
 
-/**
- * 1- Funcion boolean que comprueba
- *  que un valor puede ser tratado como numero
- * 
- * 2-  Funcion que comprueba que es un numero valido 
- * para poder calcular un factorial
- *   
- * 
- * 3-  Funcion que calcula el factorial de un numero
- * en caso de valores no valido, genera un error
- * 
- * 
- * 4-Funcion que muestra (renderiza) los resultados por pantalla
- *   al menos para las 2 primeras, realizar tasts unitaria
- */
+const {isEntero, isValidNumber} = require('./30_helper.js')
 
+module.exports = class Factorial {
 
+   constructor(n) {
+      this.n = n
+      this.factorial = 1
+      if(this.preparar()) {
+         this.calcular()
+      }
+   }
 
-
-function isValidNumber(n) {
-
-let r = false
- if (isNaN(n) || typeof n == 'boolean'
- || array.isArray(n)  || n === '' || n === null) {
-  r = false 
- }
- return r
-
-}
-
-
-
-function comprobar (i) {
-  let i = 3
-  if(('')) {
-    i = -2
-
-  } else if('') {
-    i = 0
-  } else if('') {
-    i = 1
-  } else if('') {
-    i = 2
+    preparar() {
+      if( !isValidNumber(this.n)) {
+        throw new Error('El parametro no es un número')
+    } else if (!isEntero(this.n)) {
+       throw new Error('El parametro no es un entero')
+    } else if (this.n < 0){
+         throw new Error('El parametro es negativo')
+    } else {
+       return true
+      }
   }
+
+   calcular() {
+     if (this.n > 1) {
+   
+       for (this.n = 2; i <= this.n; i++) {
+           this.factorial *= i
+        }
+      }
+  }
+   
+
+
+  calcularAtras() {
+
+    if(this.n > 1) {
+   
+      for (let i = n; i >= 2; i--) {
+       this.factorial *= i
+
+      }
+   }
+   return r
+   }
 }
 
-function factorialCalcular (n) {
- if (n == 0) {
-   return 1
- }
-}
-
-
-
-
-
-
-function probar() {
-  n = 2
-  n = 3
-  n = 4 
-  n = 5
-  n = 6
-  n = 7
-  n = 8
-}
-
-probar()
+  
