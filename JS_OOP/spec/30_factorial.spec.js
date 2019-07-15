@@ -4,6 +4,11 @@ let {Factorial} = require('../30_factorial.js')
 
 describe('El factorial de un número (factorial)', () => {
   
+  describe('Instancias del objeto factorial', () => {
+     
+  });
+
+
  it('0! should be 1', () => {
     
      let f = new Factorial(0)
@@ -50,5 +55,29 @@ aErrores.forEach((item, i) => {
   })
 
 })
+
+
+describe("Renderizado en console", function ()  {
+  it('', () => {
+    spyOn(console, 'log') 
+    let f = new Factorial(0)
+    f.renderizar()
+    expect(console.log)
+        .toHaveBeenCalledWith(f.mensaje)
+  }); 
+
+
+});
+
+
+describe('Mock Function', () => {
+    let mockFn = jasmine.createSpy()
+    it('Probar iteracion', () => {
+       let aDatos = [1,2,3,4,5]
+       aDatos.forEach( item => (mockFn() ) 
+
+       
+    });
+});
 
 

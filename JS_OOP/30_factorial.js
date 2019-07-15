@@ -7,9 +7,11 @@ module.exports = class Factorial {
    constructor(n) {
       this.n = n
       this.factorial = 1
-      if(this.preparar()) {
-         this.calcular()
-      }
+      this.mensaje = ''        
+      this.prueba = function() {}
+      this.preparar() 
+      this.calcular()
+      
    }
 
     preparar() {
@@ -19,8 +21,8 @@ module.exports = class Factorial {
        throw new Error('El parametro no es un entero')
     } else if (this.n < 0){
          throw new Error('El parametro es negativo')
-    } else {
-       return true
+    } else if (this.n < 170) {
+         throw new Error('')
       }
   }
 
