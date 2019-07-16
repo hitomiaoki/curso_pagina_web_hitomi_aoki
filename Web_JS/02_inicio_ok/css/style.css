@@ -1,0 +1,55 @@
+
+
+
+body {
+    margin:0;
+}
+
+
+header {
+  background-color: maroon; 
+  color:burlywood;
+  padding: 0.8rem 0rem 0.5rem 1rem;  
+  
+}
+
+
+main {
+    margin:2rem;
+    min-height: 3rem;
+}
+
+
+
+footer {
+    background-color: maroon;
+    color: burlywood;
+    padding: 3rem 4rem;
+}
+
+.container div {
+    margin : 1rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+.btn-super {
+    background-color: brown;
+    color:bisque;
+    border:1rem;
+    padding: 0.5rem;
+   
+    
+    
+}
+.output {
+    background-color: rgb(177, 209, 236) ;
+    color:coral;
+    margin:0.6rem;
+    padding: 1rem;
+
+    
+}

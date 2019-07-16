@@ -1,0 +1,40 @@
+
+
+
+body {
+    margin:0;
+}
+
+
+header {
+  background-color: maroon; 
+  color:burlywood;
+  padding: 0.8rem 0rem 0.5rem 1rem;  
+  
+}
+
+
+main {
+    margin:2rem;
+    min-height: 3rem;
+}
+
+
+footer {
+    background-color: maroon;
+    color: burlywood;
+    padding: 3rem 4rem;
+}
+
+
+.btn:hover {
+    cursor: pointer;
+}
+.btn {
+    margin-left:3rem;
+}
+
+.btn btn-super {
+    margin: 3rem;
+    color: brown;
+}
