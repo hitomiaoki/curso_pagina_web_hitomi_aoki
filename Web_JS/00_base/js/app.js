@@ -1,5 +1,1 @@
 console.log('Cargando app')
-console.dir('Cargando app')
-console.error('Cargando app')
-console.info('Cargando app')
-console.table()

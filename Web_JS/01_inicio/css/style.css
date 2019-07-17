@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+ }
 
 
 body {
@@ -9,32 +11,51 @@ body {
 header {
   background-color: maroon; 
   color:burlywood;
-  padding: 0.8rem 0rem 0.5rem 1rem;  
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 
 
 main {
     margin:2rem;
-    min-height: 3rem;
+    min-height: 60vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
-footer {
-    background-color: maroon;
-    color: burlywood;
-    padding: 3rem 4rem;
+
+.container div {
+    margin: 1rem;
 }
 
 
 .btn:hover {
     cursor: pointer;
 }
-.btn {
-    margin-left:3rem;
+
+
+.btn-super {
+    background-color: brown;
+    color:antiquewhite;
+    padding: 2rem 2.5rem;
+    border: 2px solid coral;
 }
 
-.btn btn-super {
-    margin: 3rem;
-    color: brown;
+
+footer {
+    background-color: maroon;
+    color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
