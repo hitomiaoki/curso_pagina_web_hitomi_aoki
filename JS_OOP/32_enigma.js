@@ -15,36 +15,58 @@
  * 
  */
 
-   
-
- function descriptacion(n) {
  
-    if (n) {
-     
-     let = []   
-     let c = 2
-     let a = 0
-     let s = 12
-     let a = 0
-    
-     let = [ 'casa']
-
-     for (let i = 0; i <2; i++) {    
-     }
-
-    }
-
- try {
-  console.log(descriptacion)   
- } catch (error) {
-    console.log(error.message) 
- }
+ 
 
 
- }
+  class enigma {
+      constructor() {
+         this.clave = 0
+         this.cadena = ''
+         this.criptoCadena = ''
+      }
 
 
 
- function encriptacion () {
+       encriptar (cadena, clave) {
+          this.criptoCadena = ''
+          this.cadena = cadena
+          this.clave = clave
+         
+        /*  this.arrayCodificado =
+          this.cadena.split('').map(letra => {
+               this.arrayCodificado.push( String.fromCharCode(letra.charCodeAt(0) + this.clave)
+                ).join('')     
+         });*/
 
- }
+         let aCadena = this.cadena.split('')
+         for (const letra of aCadena) {
+         
+           const numLetraCodificada = letracharCodeAt(0) + this.clave
+           const letraCodificada =  String.fromCharCode(numLetraCodificada)
+           this.criptoCadena += letraCodificada     
+           }
+
+         }
+ 
+      descriptar(cadena, clave) {
+          this.criptoCadena = cadena
+          this.clave = clave 
+          let aCadena = this.criptoCadena.split('')
+          for (const letra of aCadena) {
+         
+            const numLetraCodificada = letracharCodeAt(0) - this.clave
+            const letraCodificada =  String.fromCharCode(numLetraCodificada)
+            this.criptoCadena += letraCodificada     
+            }
+      }
+
+   }
+       
+ 
+    let cadena = 'Hola Pepe'
+    enigma = new Enigma()
+    enigma.encriptar(cadena, 3)
+    console.log(enigma.criptoCadena)
+    enigma.descriptar(enigma.criptoCadena, 3)
+    console.log(enigma.cadena)
