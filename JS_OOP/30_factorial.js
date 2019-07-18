@@ -9,12 +9,12 @@ module.exports = class Factorial {
       this.factorial = 1
       this.mensaje = ''        
       this.prueba = function() {}
-      this.preparar() 
-      this.calcular()
+      this._preparar() 
+      this._calcular()
       
    }
 
-    preparar() {
+    _preparar() {
       if( !isValidNumber(this.n)) {
         throw new Error('El parametro no es un número')
     } else if (!isEntero(this.n)) {
@@ -22,11 +22,11 @@ module.exports = class Factorial {
     } else if (this.n < 0){
          throw new Error('El parametro es negativo')
     } else if (this.n < 170) {
-         throw new Error('')
+         throw new Error('Potencia de cálculo sobrepasada')
       }
   }
 
-   calcular() {
+   _calcular() {
      if (this.n > 1) {
    
        for (this.n = 2; i <= this.n; i++) {
@@ -37,17 +37,28 @@ module.exports = class Factorial {
    
 
 
-  calcularAtras() {
+  _calcularAtras() {
 
     if(this.n > 1) {
    
       for (let i = n; i >= 2; i--) {
        this.factorial *= i
 
-      }
+       }
+     }
    }
-   return r
-   }
+
+   renderizar() {
+      let cadenaF = (this.factorial < 1e20)
+          ? this.factorial.toLocaleString()
+          : this.factorial.toExponential()
+      this.mensaje =
+   ` El factorial de ${this.n}
+     es ${cadenaF}`
+        console.log(this.mensaje)
+    }
+
+
 }
 
   

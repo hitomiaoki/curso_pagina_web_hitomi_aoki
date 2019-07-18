@@ -17,12 +17,26 @@ const Factorial = require('./30_factorial.js')
  *   al menos para las 2 primeras, realizar tasts unitaria
  */
 
-
+ const f_1 = new Factorial(1)
+ 
  const n = 21
  const f_21 = new Factorial(n)
- console.log(f_21)
+ f_21.renderizar()
+
+try {
+    const e = 'Pepe'
+    const f_Pepe = new Factorial(e)
+    f_Pepe.renderizar()
+}  catch(error) {
+    console.log(error.message)
+}
+
+ new Factorial(70).renderizar()
+ new Factorial(170).renderizar()
 
 
- const n = ''
- const f_21 = new Factorial(n)
- console .log(f_21)
+ try {
+     new Factorial(171).renderizar() 
+ } catch (error) {
+     console.log(error.message)
+ }

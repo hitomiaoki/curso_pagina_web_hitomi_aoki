@@ -15,16 +15,16 @@ module.exports = class helper {
 
      static isValidNumber(n) {
 
-     let r = false
-     if (isNaN(n) 
-     || typeof n == 'boolean'
-     ||  n === ''
-     || typeof n == 'object' )
-     // || array.isArray(n) || n === null
-     {
-       r = false 
-     }
-     return r
+        let r = false
+        if ( isNaN(n) 
+        || typeof n == 'boolean'
+        ||  n === ''
+        || typeof n == 'object' )
+        // || array.isArray(n) || n === null
+       {
+        r = false 
+      }
+      return r
     
     }
     

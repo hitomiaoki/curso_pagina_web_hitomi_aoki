@@ -24,7 +24,7 @@ describe('Es operable como número', () => {
 });
 
 
-describe('Es entero (isEntero', () => {
+describe('Es entero (isEntero)', () => {
     
     
     const aEnteros = [2, -2, 0, '2', '-2']
