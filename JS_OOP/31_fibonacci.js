@@ -1,6 +1,5 @@
 
-/**
- * calcula fibonacci
+/**calcularFibonacci
  * mostrar en pantalla utilizar white de la serie Fibonacci
  *  @param {number} limite
  *  @returns {array}
@@ -9,27 +8,20 @@
  */
 
 
-
-// const serieFibonacci = [ 0, 1, 1, 3, 5, 8]
-
-
-
 function calcularFibonacci (limite) {
     if (limite < 1) {
-        return []
+        throw new Error('Límite no válido')
     }
     let i = 0
     let j = 1
-    let aFibo = [0, 1]
+    let aFibo = [i, j]
    do {
-     aFibo.push()
-       
-   } while (condition);
-  return aFibo
+     aFibo.push(i+j)
+      i = j
+      j = aFibo[aFibo.length-1] 
+   } while ((i+j)  <= limite );
+   return aFibo
 }
-
-
-
 
 
 let limite = 10
