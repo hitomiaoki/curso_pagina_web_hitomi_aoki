@@ -6,9 +6,9 @@ function Factura(
     empresa = {},
     cliente = {},
     items = [{}],
-    numFactura,
-    tipoIVA,
-    formaPago,
+    numFactura = '',
+    tipoIVA  = '',
+    formaPago = '',
     fecha = new Date()) {
   this.empresa = empresa
   this.cliente = cliente
@@ -36,9 +36,11 @@ function Item (descripcion, precioU ) {
 
 }
 
-function Compra (item)
-
-
+function Compra(item, cantidad = 0) {
+    this.descripcion = item.descripcion
+    this.precioU = item.precioU
+    this.cantidad = cantidad
+}
 
 function Direccion(calle,num,poblacion,pais) {
     this.calle = calle
@@ -49,9 +51,6 @@ function Direccion(calle,num,poblacion,pais) {
 Direccion.prototype.toString= function()  {
     return `${this.calle} ${this.num}  ${this.poblacion}  ${pais}`
 }
-
-
-
 
 
 
@@ -112,7 +111,7 @@ Factura.prototype.prepararFactura = function() {
     Importe Total ..............................${importe.total
         .toLocaleString('es', {style: 'currency', currency: 'EUR'})}
     Forma de Pago ..............................${this.formaPago}
-    Madrid, ${fechaEsp(this.fecha)}
+    Madrid, ${fechaEspañola(this.fecha)}
     ______________________________________________________________
 `
    return factura
@@ -124,7 +123,7 @@ Factura.prototype.render = function() {
 
 Factura.prototype.resumir = function() {
     console.log(
-   `Factura: ${this.numFactura}`     
+   `Factura: ${this.numFactura}: : ${this.calcularImporte().total}`     
     )
 }
 
@@ -132,4 +131,5 @@ module.exports = {}
 module.exports.Factura = Factura
 module.exports.Empresa = Empresa
 module.exports.Item = Item
+module.exports.Compra = Compra
 module.exports.Direccion = Direccion

@@ -1,26 +1,41 @@
+const {Compra, Factura} = require('./23_modelos.js')
+const {jeco, alberto, pepita} = require('./23_empresas.js')
+const {productos, revistas} = require('./23_productos.js')
 
-const {} = require('./23_modelos.js')
-const {} = require('./23_empresas.js')
-const {} = require('./23_productos.js')      
-
-
-
-
-
-const items = [
-new Items('COTMAN acuarela tubo 8 ml',  3 ,  12 ),
-new Items('VAN GOGH óleo 60 ml', 5 ,  20) ,
-new Items('Bloc acuarela Guarro 240 grs', 25 ,  4 ),
-new Items('Bloc para óleo Rembrandt',  10 ,  8 )
-], 
+const items1 =  [[0, 12], [1, 12], [2, 8], [3, 11]] 
+    .map(a => new Compra(productos[a[0]], a[1]))
 
 const factura_12 = new Factura(
- empresa,cliente1, items,'000000012',
-0.04,'Contado',new Date()
+
+    jeco, alberto, items1, '000000012',
+    0.04, 'Contado', new Date()
 )
 
 
-Factura.render()
+factura_12.render()
+
+const items2 = [[0, 20], [2, 12], [3, 21]]
+.map(a => new Compra(productos[a[0]], a[1]))
+
+
+const factura_13 = new Factura(
+    tuata, pepita, items2, '000000013',
+    0.04, 'Transferencia', new Date()
+)
+
+factura_13.render()
+
+new Factura (
+    alberto, pepita,
+    [new Compra(revistas[0], 12), new Compra(revistas[1], 6), 
+    new Compra(revistas[2], 17)], '000000014', 0.04, 
+    'Efectivo', new Date()
+).render()
+
+
+
+
+
 
 
 
