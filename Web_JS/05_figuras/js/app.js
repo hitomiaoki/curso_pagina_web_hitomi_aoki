@@ -1,8 +1,8 @@
+import {Triangulo, Circulo, Cuadrado } from "./modelos.js";
 
-
+export function app() {
       console.log('Cargando app') 
       // Nodos del DOM
-
       const aBotones = document.querySelectorAll('.btn')
       const aInputs = document.querySelectorAll('.input')  
       const aOutputs = document.querySelectorAll('.output')
@@ -11,37 +11,21 @@
       aBotones.forEach(btn => btn.addEventListener('Click',
       onBtnClick));    
     
-      //  Manejadores de eventos
+      //  Manejadores y otros métodos
 
       function onBtnClick (ev) {
          switch (ev.target.id) {
              case 'triangulo': 
+             new Triangulo(aInputs[0].value, aInputs[1].value)
+             .render(aOutputs[0].value)
                    break;
-    
             case 'cuadrado':
+                    new Cuadrado(aInputs[2].value, aInputs[1].value)
                     break;
-
             case 'circulo':
+                    new Circulo(aInputs[3].value, aInputs[2].value)
                     break;
      }
   }
 
-/*function cuadrado(area, base, altura) {
-    this.area = area
-    this.base = base
-    this.altura = altura 
 }
-area(base * altura)
-
-
-function Circulo(radio) {
-    let pi = Math.PI
-    radio = radio * radio 
-    
-}
-
-
-function triangulo(lado) {
-    
-}*/
-
