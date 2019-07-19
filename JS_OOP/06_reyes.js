@@ -28,7 +28,7 @@ function  mostrarIsRey(nombre) {
 //mostrarIsRey('Fernando')
 //mostrarIsRey('Federico')
 
-console.log(aReyes.indexOf('Fernando'))
+console.log(aReyes.indexOf('Fernando'.toUpperCase()))
 console.log(aReyes.indexOf('Amadeo'))
 console.log(aReyes.indexOf('Federico'))
 
