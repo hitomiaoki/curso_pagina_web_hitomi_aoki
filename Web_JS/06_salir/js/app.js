@@ -11,12 +11,14 @@ export function app() {
 
     function onClick() {
         let url = 'https://www.google.com/'
-        let msg =
-         
          handler = setTimeout(() => {
           location.assign(url)   
-         }, 2000)  
+         }, 4000)  
         dlgCancelar.showModal()
+        let i = 4000
+        setInterval( () => {
+            console.log(i -= 100)
+        }, 100)
        
     }
 
