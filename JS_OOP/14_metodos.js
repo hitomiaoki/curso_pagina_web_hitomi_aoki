@@ -15,7 +15,7 @@ const o = {
         }
        
     },  
-    isConocido: function (otro) {
+    _isConocido: function (otro) {
         return this.conocidos.some( 
             item => item.toLowerCase() === otro.toLowerCase())
     }
@@ -26,3 +26,4 @@ o.mostrarID()
 o.saludar('Juan')
 o.saludar()
 o.saludar('Pepi')
+console.log(o._isConocido('Julio'))
