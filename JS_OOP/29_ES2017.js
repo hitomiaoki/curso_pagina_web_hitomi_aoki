@@ -1,11 +1,7 @@
 /**
- * 
+ * ES2017 (ES8): async / await
  * 
  */
-
-
-
-
 
 
 const respuestas = [
