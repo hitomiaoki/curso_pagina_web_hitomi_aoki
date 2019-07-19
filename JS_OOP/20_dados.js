@@ -1,7 +1,7 @@
 
 // Como se haria SI existieran ambitos privado / público
 
-const dado = {
+/* dado = {
     _valor: null,
     set: function() { 
         this._valor = parseInt(Math.random()*6) +1
@@ -13,14 +13,14 @@ for (let i = 0; i < 20; i++) {
     dado.set()
     // dado._valor = 6 // No debo
     console.log(dado.get())
-} 
+} */
 
 // get = leer un valor privado
 // set = establecer un valor privado
 
 
 
-/* function Dado () {
+ function Dado () {
     let _valor = null
     this.lanzar = function() {
         _valor = parseInt(Math.random()*6) +1
@@ -32,7 +32,7 @@ for (let i = 0; i < 20; i++) {
     dado.lanzar()
     dado._valor = 6
 }
- */
+ 
 
  // ES5 (2005) JavaScript Accessors (Getters and Setters) 
 
