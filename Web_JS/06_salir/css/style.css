@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: maroon;
+    background-color: rgb(10, 126, 97);
     color:beige;
     min-height: 20vh;
     display: flex;
@@ -20,6 +20,10 @@ main {
     min-height: 60vh;
 }
 
+section {
+  padding: 2rem;
+}
+
 dialog {
     background-color: bisque;
     color:maroon;
@@ -29,12 +33,25 @@ dialog {
 
 dialog div{
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
+
+.out-wrapper {
+  text-align: center;
+  padding: 1rem;
+}
+
+section.cronos output {
+  border: 1px solid maroon;
+  padding: 0.4rem 2rem;
+}
+
 
 
 footer {
     min-height: 10vh;
-    background-color: maroon;
+    background-color: rgb(9, 114, 88);
     color: bisque;
     display: flex;
     justify-content: center;

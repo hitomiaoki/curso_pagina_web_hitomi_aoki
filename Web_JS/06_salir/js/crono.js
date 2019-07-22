@@ -1,5 +1,5 @@
 
-export class crono {
+export class Crono {
      constructor()  {
          this.isOn = false
          this.time = 0
@@ -19,8 +19,8 @@ export class crono {
                     this.pause()
                     this.aBotones[0].textContent = 'Play'
                 } else {
-                  this.play()  
-                  this.aBotones[0].textContent = 'Pause'
+                    this.play()  
+                    this.aBotones[0].textContent = 'Pause'
                 }
                break;
                 this.isOn = !this.isOn
