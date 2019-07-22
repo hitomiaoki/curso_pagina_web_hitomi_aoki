@@ -3,7 +3,7 @@
 
 let handler = setTimeout( ()  => {
     console.log('Hola')
-}, 2000)
+}, 2500)
 
 setTimeout( () => {
     clearTimeout(handler)
