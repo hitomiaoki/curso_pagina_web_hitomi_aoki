@@ -1,0 +1,33 @@
+*{
+ box-sizing: border-box;
+}
+
+body {
+  margin:0;  
+}
+
+header {
+    background-color:rgb(14, 120, 134);
+    color:antiquewhite;
+    min-height: 20vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+  margin: 2rem;
+  min-height: 60vh;
+}
+
+
+
+
+footer {
+    min-height: 10vh;
+    background-color: rgb(14, 120, 134);
+    color:azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
