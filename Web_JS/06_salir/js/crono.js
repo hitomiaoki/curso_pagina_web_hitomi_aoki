@@ -1,20 +1,37 @@
 
 export class Crono {
-     constructor()  {
+     constructor(id = 0, nodo)  {
+         this.id = id
          this.isOn = false
          this.time = 0
          this.handle = 0
+         this.crearCrono(nodo)
          this.aBotones = document.querySelectorAll('.cronos button')
          this.output = document.querySelector('.cronos output')
+         console.log(this)
          this.aBotones.forEach(btn => btn.addEventListener(
              'click', this.onClickBnt.bind(this)
          ))
             
      }
 
+   crearCrono(nodo) {
+       let el = document.createElement('div')
+       el.className = 'cronos'
+       el.setAttribute('id', `crono-${this.id}`)
+       el.innerHTML = `Crono ${this.id}
+       <output>0 : 0 : 0</output>
+       <button id="btn-toggle-${this.id}">Play</button>
+       <button id="btn-reset-${this.id}">Reset</button>`
+       console.log(el)  
+       nodo.appendChild(el)
+   }
+
+
+
    onClickBnt(ev) {
        switch (ev.target.id) {
-           case 'btn-toggle':
+           case `btn-toggle-${this.id}`:
                 if (this.isOn) {
                     this.pause()
                     this.aBotones[0].textContent = 'Play'
@@ -22,8 +39,8 @@ export class Crono {
                     this.play()  
                     this.aBotones[0].textContent = 'Pause'
                 }
-               break;
-                this.isOn = !this.isOn
+               this.isOn = !this.isOn
+               break;     
            default: // btn-reset
                this.reset()
                break;
@@ -33,9 +50,9 @@ export class Crono {
 
  play() {
     this.handle = setInterval(() => {
-         this.time += 1
+         this.time += 10
          this.render()
-   }, 1000)
+   }, 10)
  }
 
  pause() {
@@ -49,10 +66,12 @@ reset() {
 
  render() {
     let minutos = parseInt(this.time / (1000 * 60)) 
-    let segundos = parseInt((this.time % (1000 * 60)) / 1000)
-    let centesimas = parseInt(((this.time % (1000 * 60)) % 1000) / 10)
-    this.output.value = this.time
-    // `${minutos} : ${segundos} : ${centesimas}  `
+    let milesimasRestantes = this.time % (1000 * 60)
+    let segundos = parseInt(milesimasRestantes / 1000)
+    milesimasRestantes = milesimasRestantes % 1000
+    let centesimas = parseInt(milesimasRestantes / 10)
+    this.output.value = 
+     `${minutos} : ${segundos} : ${centesimas} `
  }
 
 }
