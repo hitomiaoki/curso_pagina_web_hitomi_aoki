@@ -26,7 +26,7 @@
     function onClick(ev) {
         switch (ev.target.textContent) {
             case 'Iniciar':
-                  localStorage('visitas', 0)
+                  localStorage.setItem('visitas', 0)
                   location.reload()
                 break;
             case 'eliminar':
