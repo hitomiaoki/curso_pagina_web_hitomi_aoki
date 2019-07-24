@@ -16,6 +16,7 @@
 
      
        let numVisitas = getCookie('visitas');
+       console.log(numVisitas)
        if (numVisitas !== '') {
            setCookie("visitas", ++numVisitas, 5)
        }

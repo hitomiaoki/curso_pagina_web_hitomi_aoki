@@ -3,11 +3,11 @@ export function setCookie(cName = '', cValue, exDays = 0) {
     let d = new Date();
     d.setTime(d.getTime() + (exDays*24*60*60*1000));
     let expires = "expires=" + d.toUTCString();
-    document.cookie = `${cName} + ${cValue}:${expires}:path/`
+    document.cookie = `${cName}=${cValue};${expires};path/`
 }
 
 
-export function getCookie(cName) {
+export function getCookie(cName = '') {
    let name = cName + "=";
    let decodedCookie = decodeURIComponent(document.cookie);
    let cArray = decodedCookie.split(',');
@@ -21,7 +21,7 @@ export function getCookie(cName) {
 
    })
        return r;
-    }
+}
    
        
 
