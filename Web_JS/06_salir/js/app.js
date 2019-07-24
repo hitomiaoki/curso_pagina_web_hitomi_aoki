@@ -10,7 +10,6 @@ export function app() {
     let wrapperCronos = document.querySelector(".wrapper-cronos")
     let inPlayer = document.querySelector('#in-player')
     let btnInscribir = document.querySelector('#btn-inscribir')
-
     let handlerSalir
     let handlerInterval
 
@@ -20,8 +19,8 @@ export function app() {
 
      
     let aCronos = []
-    if (localStorage.getItem('player')) {
-       aCronos = JSON.parse(localStorage.getItem())     
+    if (localStorage.getItem('players')) {
+       aCronos = JSON.parse(localStorage.getItem('players'))     
     }
     checkArray()
     
@@ -29,11 +28,10 @@ export function app() {
        wrapperCronos.innerHTML = ''
        aCronos.forEach( idCrono => { 
          new Crono(idCrono, wrapperCronos)
-      })  
+      }) 
+        // wrapperCronos.innerHTML += `<p>Creados los cronómetros</p>`
     }
    
-    // wrapperCronos.innerHTML += `<p>Creados los cronómetros</p>`
-
    
 
     function onClick() {
@@ -58,7 +56,7 @@ export function app() {
        let player = inPlayer.value
        if (player) {
            aCronos.push(player)
-           localStorage.setItem('players', JSON )
+           localStorage.setItem('players', JSON.stringify(aCronos) )
            inPlayer.value = ''
            console.log(aCronos)
        } 

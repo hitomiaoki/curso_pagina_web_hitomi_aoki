@@ -6,8 +6,9 @@ export class Crono {
          this.time = 0
          this.handle = 0
          this.crearCrono(nodo)
-         this.aBotones = document.querySelectorAll('.cronos button')
-         this.output = document.querySelector('.cronos output')
+         this.aBotones = document.querySelectorAll(`#crono-${this.id} button`)
+         this.btnToggle = document.querySelector(`#btn-toggle-${this.id}`)
+         this.output = document.querySelector(`#crono-${this.id} output`)
          console.log(this)
          this.aBotones.forEach(btn => btn.addEventListener(
              'click', this.onClickBnt.bind(this)
@@ -49,7 +50,7 @@ export class Crono {
 
 
  play() {
-    this.handle = setInterval(() => {
+    this.handle = setInterval( () => {
          this.time += 10
          this.render()
    }, 10)
