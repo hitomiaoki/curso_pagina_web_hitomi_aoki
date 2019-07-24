@@ -44,6 +44,16 @@ main {
     background: brown;
 }
 
+.form-group {
+    width: 80%;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .form-group input {
     width: 90%;
     background-color: inherit;
