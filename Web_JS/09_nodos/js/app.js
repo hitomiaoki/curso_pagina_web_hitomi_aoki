@@ -38,7 +38,58 @@ export function app() {
               counter++   
          } else 
         /*ev.target.parentElement.parentElement.parentElement.outerHTML =  `<p> Opps!!, No existo </p>` */  
-        lista.outerHTML = 'Opps!!, No existo'
+        lista.outerHTML = `<p> Opps!!, No existo </p>`
      }
     
+
+   {
+
+     document.getElementsByTagName('p')
+     document.querySelectorAll('p')
+
+     document.getElementsByName('user')
+     document.querySelectorAll('[name = user]')
+
+     document.getElementsByClassName('clase1')
+     document.querySelectorAll('.clase1')
+
+     document.getElementById('idl')
+     document.querySelector('#idl')
+
+
+   }
+
+
+   {
+     
+     // Creando nodos
+     let origen = document.querySelector('.addNodos div')
+     console.dir(origen)
+     let txtHTML = '<p> Creando desde JS </p>'
+     origen.innerHTML = txtHTML
+
+     let html = document.createElement('p')
+     let content = document.createTextNode('Creando desde JS como nodo')
+     html.appendChild(content)
+
+     
+
+     console.log(html)
+     console.dir(html)
+     origen.appendChild(html)
+
+     let aside = document.createElement('aside')
+     aside.innerHTML = '<h2> Más info </h2>'
+     // ....
+    aside.innerHTML += '<p> Aquí va la info </p>'
+    
+    //origen.innerHTML += aside No funciona
+    origen.appendChild(aside)
+
+   }
+
+
+
  }
+
+ 
