@@ -1,60 +1,44 @@
-export function app() {
-    console.log('Cargando app')  
+ export function app() {
+    
+     // Existe un input #in-new
+     // Existe un elemento #out-lista
+
+    let animales = []
+     // ¿Existe estorage? 
+    if(localStorage.getItem('zoo')) {
+        animales = JSON.parse(localStorage.getItem(animales))
+    }
    
-     function prueba() {
-      class Lista extends Array {}
-     let x = new Lista()
-     console.dir(x)
-     let nodo = document.querySelector('#nodos')
-     console.dir( nodo instanceof Element)
-     console.dir( nodo instanceof HTMLElement)
-     console.dir(nodo.children)
-     console.dir(nodo.children instanceof HTMLCollection)
-     console.dir(nodo.children instanceof Array)
-     console.dir(nodo.childNodes)
-     console.dir(nodo.childNodes instanceof NodeList)
-     console.dir(nodo.childNodes instanceof Array)
-     }
-    
-    
-  {
-      
-   //Nodos 
-   let aLista = document.querySelectorAll('lista')
-   let aBoton = document.querySelector('#button')
-   
-    
+    // let animales = (localStorage.getItem(animales))
+    //        localStorage.getItem(animales)
 
-   // Manejadores
-   alista.forEach(enlace => enlace.addEventListener('click', onClickLista)
-     
-    );
-      
-      
 
-    // Funciones
+    // Nodos
+    let inAnimal = document.querySelector('#in-new')
+    let outAnimal = document.querySelector('#out-lista')
 
-    function onClickLista(ev) {
-     
-      switch (ev.target) {
-        case value:
-          
-          break;
-      
-        case value:
-          break;
-      }
+    // Asignación manejador de eventos /seria con un solo manejador/
+    inAnimal.addEventListener('change', addAnimal)
+
+    //Función
+    function addAnimal() {
+         animales.push(inAnimal.value)
+         localStorage.setItem('zoo', JSON.stringify(animales))
+        
     }
 
+    function render() {
 
+        let html = ''
+        html += '<ul>'
+        animales.forEach(item => html += `<li> ${item} </li>`)
+        html += '</ul>'
+        outAnimal.innerHTML = html
     }
 
+}
 
 
 
 
 
-
- }
-
- 
