@@ -14,11 +14,21 @@
     <h1>JS en la Web</h1>
   </header>
   <main>
-   <section class="lista">
-     <h2>lista de animales</h2>
-   
-     <button>Añadir lista</button>
-     <output></output>
+   <section>
+     <h2 contenteditable>Lista de animales</h2>
+     <div>
+       <label for="in-new"></label>
+       <input type="text" name="in-new"  id="in-new">
+     </div>
+     <div>
+       <h3>Lista de animales</h3>
+       <div id="out-lista"></div>
+     </div>
+     <dialog class="confirmacion">
+       <p>Seguro que quieres borrar el animanillo</p>
+       <button id="btn-si">Si</button>
+       <button id="btn-no">No</button>
+     </dialog>
    </section>
   </main>
   <footer>

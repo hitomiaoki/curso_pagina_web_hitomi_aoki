@@ -20,6 +20,21 @@ main {
     min-height: 60vh;
 }
 
+.btn {
+    cursor: pointer;
+}
+
+li {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.confirmacion {
+    color: maroon;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
 footer {
     min-height: 10vh;
     background-color: maroon;
