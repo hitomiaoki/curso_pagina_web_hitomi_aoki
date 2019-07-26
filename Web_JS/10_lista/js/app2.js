@@ -14,7 +14,7 @@ export class App {
         
         // Definición de manejadores de eventos
         this.inNew.addEventListener('change',
-             this.onChange.bind(this))
+             this.onChangeInput.bind(this))
         
         // Inicialización de un Set,
         // en su caso desde localStorage
@@ -25,13 +25,13 @@ export class App {
         console.log(this)
     }
       
-    render()  {
+    renderOld()  {
         if (!this.setAnimales.size) {
             return
         }
        let txtHtml = ''
        this.setAnimales.forEach( animal => 
-           txtHtml += `<li>${animal}</li>`);
+           txtHtml += `<li>${animal}</li>`)
         console.log(txtHtml)
         let nodoLista = document.createElement('ul')
         nodoLista.innerHTML = txtHtml
@@ -40,7 +40,39 @@ export class App {
             
     }
     
-    onChange() {
+    render() {
+
+        let html = ''
+        html += '<ul>'
+        this.animales.forEach((item, i) => html += 
+            `<li> 
+                <span class = "texto" data-id="${i}">${item}</span>
+                <span class = "btn btn-editar"  data-id="${i}">✍️</span>
+                <span class = "btn btn-borrar"  data-id="${i}">🗑️</span>   
+             </li>`)
+        html += '</ul>'
+        this.outAnimal.innerHTML = html
+
+        this.aBtnBorrar = document.querySelectorAll('·btn-borrar')
+        this.aBtnEditar = document.querySelectorAll('.btn-editar')
+        this.aTextos = document.querySelectorAll('.texto')
+        
+
+        this.aBtnBorrar.forEach(btn => btn.addEventListener('click',
+              this.onBorrar.bind(this)))
+        this.aBtnEditar.forEach(btn => btn.addEventListener('click',
+              this.onEditar.bind(this)))
+        this.aTextos.forEach(txt => txt.addEventListener('blur',
+              this.onChange.bind(this)))
+    }
+
+
+     save() {
+           this.store.set(Array.set(this.setAnimales))
+    }
+
+
+    onChangeInput() {
         if (this.inNew) {
             this.setAnimales.add(this.inNew.value) 
             this.inNew.value = ''
@@ -49,10 +81,26 @@ export class App {
         }
 
     }
-
-    save() {
-        this.store.set(Array.set(this.setAnimales))
+    
+    onBorrar(ev) {
+        this.setAnimales.delete(ev.target.dataset.id)
+        this.save()
+        this.render()
     }
+
+    onEditar(ev) {
+        ev.target.previousElementSibling.contentEditable = true
+    }
+
+    onChange(ev) {
+      ev.target.contentEditable = false
+      let a = [...this.setAnimales]
+      a[a.indexOf(ev.target.dataset.id)] = ev.target.textContent
+      this.setAnimales = new Set(a)
+      this.save()
+      this.render()
+    }
+
 
  }
 

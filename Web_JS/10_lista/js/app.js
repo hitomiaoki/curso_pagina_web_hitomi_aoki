@@ -7,7 +7,7 @@
     // Nodos
     let inAnimal = document.querySelector('#in-new')
     let outAnimal = document.querySelector('#out-lista')
-    let dlConfirmar = document.querySelectorAll('.confirmacion')
+    let dlgConfirmar = document.querySelector('.confirmacion')
     let aDlgBotones = document.querySelectorAll('.confirmacion button')
 
 
@@ -23,6 +23,9 @@
         animales = JSON.parse(localStorage.getItem('zoo'))
         render()
     }
+       
+    // Elemento a Borrar
+     let numBorrar
 
     // let animales = (localStorage.getItem(animales))
     //        localStorage.getItem(animales)
@@ -44,7 +47,7 @@
         html += '<ul>'
         animales.forEach((item, i) => html += 
             `<li> 
-                <span class = "texto" data-id="${i}"> ${item} </span>
+                <span class = "texto" data-id="${i}">${item}</span>
                 <span class = "btn btn-editar"  data-id="${i}">✍️</span>
                 <span class = "btn btn-borrar"  data-id="${i}">🗑️</span>   
              </li>`)
@@ -57,18 +60,21 @@
 
         aBtnBorrar.forEach(btn => btn.addEventListener('click', onBorrar))
         aBtnEditar.forEach(btn => btn.addEventListener('click', onEditar))
-        aTextos.forEach(btn => btn.addEventListener('blur', onChange))
+        aTextos.forEach(txt => txt.addEventListener('blur', onChange))
     }
     function onBorrar(ev) {
-         console.log(ev.target.dataset.id)
-         dlConfirmar.showModal()
+         numBorrar =  ev.target.dataset.id
+         dlgConfirmar.showModal()
     }
 
     function onClickDlg(ev) {
-         animales.splice(ev.target.dataset.id, 1)
-         save()
-         render()
-        }
+        if (ev.target.textContent === 'SI') {
+           animales.splice(numBorrar, 1) 
+           save()
+           render()
+          } 
+          dlgConfirmar.close() 
+    }
 
 
     function onEditar(ev) {
