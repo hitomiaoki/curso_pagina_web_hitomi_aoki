@@ -1,0 +1,42 @@
+*{
+   box-sizing: border-box;
+}
+
+body {
+  margin:0;
+}
+
+header {
+    background-color: maroon;
+    color:beige;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 2rem;
+    min-height: 60vh;
+}
+
+.btn {
+cursor: pointer;
+color: rgb(145, 29, 29);
+}
+
+.boton {
+   padding: 0.4rem 2rem;
+}
+
+
+
+
+footer {
+    min-height: 10vh;
+    background-color: maroon;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
