@@ -20,16 +20,32 @@ main {
     min-height: 60vh;
 }
 
+.oculto {
+    display: none;
+}
+
 .btn {
 cursor: pointer;
 color: rgb(145, 29, 29);
+font-family: cursive;
 }
 
-.boton {
-   padding: 0.4rem 2rem;
+.super-boton {
+   padding: 1rem 2rem;
+   width: 20%;
+   text-align: center;
+   cursor: pointer;
+   color: maroon;
+   border: 1px solid;
+   border-radius: 10px 10px;
+   font-family: cursive;
+   background-color: darkgoldenrod;
 }
 
-
+.hover-boton {
+    transform: scale(1.2);
+    background-color: chocolate; 
+}
 
 
 footer {

@@ -1,7 +1,7 @@
 export function app() {
     console.log('Cargando app')   
     
-    function ejemplo(){
+    function samples(){
     let h2 = document.querySelector('h2')
     h2.id = "h2-01"
     h2.name = "h2-01"
@@ -9,12 +9,15 @@ export function app() {
     console.log(h2.name)
     console.log(h2.getAttribute('title'))
     //h2.className += 'cl4'
-
+    h2.classListadd('cl4')
+    h2.classList.remove('cl2')
+    h2.classList.toggle('cl3')
+    h2.classList.toggle('cl3')
     }
    
 
     // Nodos DOM
-    let aBtn = document.querySelectorAll('.boton')
+    let aBtn = document.querySelectorAll('#art1 .boton')
     let texto = document.querySelector('#texto')
 
     // Asignar manejadores
@@ -28,28 +31,45 @@ export function app() {
        aBtn.forEach(btn => btn.classList.toggle('oculto'))
    }
 
-   
+   /** Segundo article */
+
+   let aOpcionales = document.querySelectorAll('#art2 .opcional')
+   let aBotones = document.querySelectorAll('#art2 .btn')
+
+   aBotones.forEach(btn => btn.addEventListener('click',
+       onClick))
+
+   function onClick() {
+      aOpcionales.forEach(item =>
+           item.classList.toggle('oculto')
+      );
+   }
+
+
    /** Seccion Preguntas */
 
    let aPreguntas = document.querySelectorAll('.p')
+   let aRespuestas = document.querySelectorAll('.respuesta')
    
-   aPreguntas.forEach(btn => btn.addEventListener('click', onClickQ))
+   aPreguntas.forEach(btn => btn.addEventListener('click', 
+   onClickQ))
    
 
-   function  onClickQ(ev) {
-       aRespuestas.forEach(res => res.addEventListener)
+   function onClickQ(ev) {
+       aRespuestas.forEach(res => res.classList.add('oculto'))
+       ev.target.nextElementSibling.classList.toggle('oculto')
    }
 
-   
+
+   /** Seccion Preguntas */
      
-   let abotones = document.querySelector('.boton')
+   let superBoton = document.querySelector('.super-boton')
+   superBoton.addEventListener('mouseover', onMouse)
+   superBoton.addEventListener('mouseout', onMouse)
+   
 
-   abotones.addEventListener('click', onClickP)
-
-   function onClickP(ev) {
-       
-   }
-
-  
+   function onMouse() {
+       superBoton.classList.toggle('hover-boton')
+    }
 
  }
