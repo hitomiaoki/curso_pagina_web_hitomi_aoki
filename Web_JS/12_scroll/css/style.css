@@ -6,7 +6,7 @@ body {
   margin:0;
 }
 
-header {
+body>header {
     background-color: maroon;
     color:beige;
     min-height: 20vh;
@@ -28,6 +28,10 @@ body>header h1 {
     top: 0;
     left: 0;
     right: 0;
+}
+
+.top-sticky {
+   height: 12vh;
 }
 
 nav {
