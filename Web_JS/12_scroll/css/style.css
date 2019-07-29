@@ -7,9 +7,9 @@ body {
 }
 
 body>header {
-    background-color: maroon;
+    background-color: rgb(0, 113, 128);
     color:beige;
-    min-height: 20vh;
+    min-height: 30vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -28,7 +28,15 @@ body>header h1 {
     top: 0;
     left: 0;
     right: 0;
+    padding-bottom: 0.5rem;
 }
+
+.logo {
+    font-size: 5rem;
+    display:inline-block;
+    padding: 1rem;
+}
+
 
 .top-sticky {
    height: 12vh;
@@ -47,17 +55,18 @@ nav ul {
 }
 nav li {
     display:block;
-    padding:0.5rem;
+    padding:0.1rem;
 }
 
 nav a {
     text-decoration: none;
     color:inherit;
+    padding: 0.4rem;
 }
 
 .active {
     background-color: beige;
-    color:maroon;
+    color: rgb(0, 113, 128);
 }
 
 main {
@@ -65,10 +74,33 @@ main {
     min-height: 200vh;
 }
 
+.img-wrapper{
+  max-width: 100%;
+  float: left;
+}
+
+.img-wrapper-left{
+    float: left;
+  }
+
+.img-wrapper-right{
+    float: right;
+}
+
+
+.img-wrapper img{
+  width: 100%;
+   
+}
+
+
+
+
+
 footer {
     min-height: 10vh;
-    background-color: maroon;
-    color: bisque;
+    background-color: rgb(0, 113, 128);
+    color: beige;
     display: flex;
     justify-content: center;
     align-items: center;
