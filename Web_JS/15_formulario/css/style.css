@@ -1,0 +1,84 @@
+*{
+   box-sizing: border-box;
+}
+
+body {
+  margin:0;
+}
+
+header {
+    background-color: maroon;
+    color:beige;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 2rem;
+    min-height: 60vh;
+}
+
+
+footer {
+    min-height: 10vh;
+    background-color: maroon;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_control{
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid gray;
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.radio_wrapper{
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    }
+
+
+
+.placeholder{
+    color: brown;
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }
+
+
+.form_label{
+    display: block;
+    margin-top: 1rem;
+}
+
+fieldset{
+margin-bottom: 0.7rem;
+border-color: rgb(189, 151, 105);
+width: 60%;
+
+
+}
+
+
+
