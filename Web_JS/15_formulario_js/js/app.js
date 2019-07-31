@@ -1,3 +1,5 @@
+import { validacion, validacionFinal } from "./validacion.js";
+
 export function app() {
     console.log('Cargando app') 
     
@@ -15,15 +17,14 @@ export function app() {
     }
    
     let oDatosPretty = {
-        userName: '',
-        userPasswd: '',
-        email: '',
-        cv: '',
-        birthDate: '',
-        info: '',
-        isOk: 'on',
-        curso: '',
-        sitio: '',
+        userName: 'Nombre de Usuario',
+        userPasswd: 'Contraseña',
+        email: 'Correo electrónico',
+        cv: 'Formación',
+        birthDate: 'Fecha de nacimiento',
+        info: 'Más informción',
+        curso: 'Curso',
+        sitio: 'Sitio',
     }
 
 
@@ -41,13 +42,20 @@ export function app() {
     form.addEventListener('submit', onSubmit)
     btnReset.addEventListener('click', onReset)
     aDlgButtons.forEach(btn => btn.addEventListener('click', onClickDlg))
-  
+   
+    validacion()
 
    // Funciones manejadores de eventos
 
   function onSubmit(ev) {
       ev.preventDafault()
       console.log('Iniciando submit')
+
+
+      if(!validacionFinal()) {
+          return
+      }
+
       aFormData.forEach(item => oDatos[item.name] =  item.value)
       aCheckBox.forEach(item => oDatos[item.name] =  item.checked)
       aSelects.forEach(item => oDatos[item.name] =  item.value)
@@ -55,6 +63,31 @@ export function app() {
       renderModal()
    
   }
+
+
+ function nodosValidables(params) {
+     
+      let aNodos = []
+      aFormData.forEach(
+          item => aNodos.push(item)
+    )
+      
+
+      aCheckBox.forEach(
+        item => aNodos.push(item)
+    )
+      
+      aSelects.forEach(
+        item => aNodos.push(item)
+    )
+    aNodos.push(aRadioSitio[0])
+ 
+    return aNodos.filter(item => item.checkValidity())
+     
+ }
+
+
+
   
  function onReset(ev) {}
  
@@ -72,9 +105,11 @@ export function app() {
      for (const key of oDatos) {
             const value = oDatos[key];
             if(key === 'userPassword') {
-            html += `<li>${key} --> *****</li>`    
+            html += `<li>${oDatosPretty[key]} --> *****</li>`    
+            } else if(key === 'isOk'){
+                html += `<li>${oDatosPretty[key]}</li>`    
             } else {
-                html += `<li>${key} --> ${value} </li>`    
+                html += `<li>${oDatosPretty[key]} --> ${value} </li>`    
             }
 
           
@@ -93,9 +128,5 @@ export function app() {
       }
 
     }
-
-
-
-
 
  }
