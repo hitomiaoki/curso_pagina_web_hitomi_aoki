@@ -1,3 +1,6 @@
+
+import { comprobarDNI } from './helper.js'
+
 export function app() {
     console.log('Cargando app') 
     
@@ -5,30 +8,33 @@ export function app() {
     let oDatos = {
         userName: '',
         userPasswd: '',
-        email: '',
+        email: '', 
+        dni: '',
         cv: '',
         birthDate: '',
         info: '',
         isOk: 'on',
         curso: '',
         sitio: '',
+       
     }
    
     let oDatosPretty = {
-        userName: '',
-        userPasswd: '',
-        email: '',
-        cv: '',
-        birthDate: '',
-        info: '',
-        isOk: 'on',
-        curso: '',
-        sitio: '',
+        userName: 'Nombre de Usuario',
+        userPasswd: 'Constraseña',
+        email: 'Correo electrónico',
+        dni: 'D.N.I',
+        cv: 'Formación',
+        birthDate: 'Fecha de nacimiento',
+        info: 'Más información',
+        curso: 'Curso',
+        sitio: 'Sitio',
     }
 
 
     // Nodos del DOM
      let form = document.querySelector('[name="complete-post"]')
+     let btnSubmit = document.querySelector('#btnSubmit')
      let btnReset = document.querySelector('#btnReset')
      let aFormData = document.querySelectorAll('.form_data')
      let aCheckBox = document.querySelectorAll('[type="checkbox"]')
@@ -39,10 +45,10 @@ export function app() {
      
     // Definir manejadores
     form.addEventListener('submit', onSubmit)
+    btnSubmit.addEventListener('click', onClickSubmit)
     btnReset.addEventListener('click', onReset)
     aDlgButtons.forEach(btn => btn.addEventListener('click', onClickDlg))
   
-
    // Funciones manejadores de eventos
 
   function onSubmit(ev) {
@@ -56,13 +62,25 @@ export function app() {
    
   }
   
+
+function onClickSubmit() {
+    aFormData[3].setCustomValidity('')
+    if(!aFormData[3].value) {
+        return
+    } else if(comprobarDNI(aFormData[3].value))  { 
+       aFormData[3].setCustomValidity('Letra  del DNI incorrecta')   
+    }  
+   // console.dir(aFormData[3])
+}
+
+
  function onReset(ev) {}
  
 
  function onClickDlg(ev) {
-     if(ev.target.textContent.toLowerCase() === 'SI') {
+     if(ev.target.textContent.toLowerCase() === 'Si') {
        // Enviar de verdad
-       form.submit()
+        form.submit()
      }
      dlgConfirm.close()
  }
@@ -72,9 +90,11 @@ export function app() {
      for (const key of oDatos) {
             const value = oDatos[key];
             if(key === 'userPassword') {
-            html += `<li>${key} --> *****</li>`    
+            html += `<li>${oDatosPretty[key]} --> *****</li>`    
+            } else if (key === 'isOk'){
+                html += `<li>${oDatosPretty[key]}</li>`    
             } else {
-                html += `<li>${key} --> ${value} </li>`    
+                html += `<li>${oDatosPretty[key]} --> ${value} </li>` 
             }
 
           
@@ -93,9 +113,6 @@ export function app() {
       }
 
     }
-
-
-
 
 
  }

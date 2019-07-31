@@ -81,4 +81,14 @@ width: 60%;
 }
 
 
+.dlg-confirm {
+  color: maroon;
+  background-color: blanchedalmond;
+}
+
+.dlg-confirm ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
