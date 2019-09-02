@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+ }
+
+
+body {
+    margin:0;
+}
+
+
+header {
+  background-color: rgb(123, 175, 175);
+  color:burlywood;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+}
+
+
+main {
+    margin:1rem;
+    min-height: 60vh;
+}
+
+.container div {
+    margin : 1rem;
+}
+
+.btn {
+   cursor: pointer; 
+}
+
+.saludo {
+    margin:2rem;
+    color: brown;
+}
+
+footer {
+    min-height: 10vh;
+    background-color:  rgb(123, 175, 175);
+    color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
