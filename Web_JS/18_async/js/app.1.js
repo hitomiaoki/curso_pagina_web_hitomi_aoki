@@ -31,19 +31,19 @@ export function app() {
     // Función del evento "AJAX"
 
      function leerDatos(http) {
-         if(http.readyState  == 4 && http.status == 200) {
+         /*if(http.readyState  == 4 && http.status == 200) {
             let data = JSON.parse(http.responseText) 
             console.log(data)
             spanSaludo.innerHTML = data.username
-        } else {
-            spanSaludo.innerHTML = ',tenemos un problema de conexión'
+        } else if (http.readyState  == 4) {
+            spanSaludo.innerHTML = ', datos no encontrados'
             //location.assign('./error.html')  
-          }
+          }*/
 
      }
     
        function ajax(metodo,url,callback) {
-            const http = new XMLHttpRequest   
+            const http = new XMLHttpRequest()   
             http.addEventListener('readystatechange', () => {callback (http)})
             http.open(metodo, url)
             http.send()   
