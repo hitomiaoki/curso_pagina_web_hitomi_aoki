@@ -19,7 +19,7 @@ export function app() {
   // Funciones manejadores de evento
     function onClickBorrar(ev) {
         inId.value = ''
-        spanSaludo.innerHTML =  inId.value     
+        spanSaludo.innerHTML =  inNombre.value     
     }
 
     function onClickBuscar(ev) {
@@ -34,9 +34,6 @@ export function app() {
         http.send()        
     }
 
-
-    // Función del evento "AJAX"
-
      function leerDatos(ev) {
          if(http.readyState  == 4 && http.status == 200) {
             let data = JSON.parse(http.responseText) 
@@ -45,10 +42,6 @@ export function app() {
          }
         
      }
-
-
-    // AJAX
-    //INTASCIAR UN TIPO DE OBJETO AJAX
-   
+  
 
 }
