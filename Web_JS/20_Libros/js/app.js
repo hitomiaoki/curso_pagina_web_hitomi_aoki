@@ -1,8 +1,7 @@
+import {LBGOOGLE} from './api.js'
 export function app() {
    console.log('Cargando app')
-   const usersURL = 'https://jsonplaceholder.typicode.com/users'
- 
-
+   
     // NODOS DEL DOM
      let btnBuscar = document.querySelector('#btn-buscar')
      let inClave = document.querySelector('#in-clave')
@@ -11,18 +10,19 @@ export function app() {
 
 
     // Asociación de manejadores de eventos
+     //btnGuardar.onclick = onClickGuardar
     btnBuscar.addEventListener('click', onClickBuscar2017)
     inClave.addEventListener('change', onClickBuscar2017)
     
 
   // Funciones manejadores de evento
 
-    function onClickBuscar() {
+    function onClickBuscar(ev) {
        console.log('onClickBuscar')
        if (!inClave.value) {
          return
        }
-        let url = usersURL + '/' + inId.value
+        let url = LBGOOGLE + '/' + inClave.value
         inClave.value = ''
         fetch(url)
         .then(response => {
@@ -63,13 +63,13 @@ export function app() {
                })
                console.log(data)
                renderData(data)
-        } else {
+         } else {
           throw( new Error(response.status)) 
-        }
-        } catch (error) {
+         }
+      } catch (error) {
           renderError(error)
-        }       
-       
+              
+      }
 
         function renderData(data) {
           let html = ''

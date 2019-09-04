@@ -20,22 +20,34 @@ header {
 
 
 main {
-    margin:1rem;
+    margin:2rem;
     min-height: 60vh;
 }
 
-.container div {
-    margin : 1rem;
+.container  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
 }
 
-.btn {
-   cursor: pointer; 
+.libros {
+    margin: 1rem 0rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: blanchedalmond;
 }
 
-.saludo {
-    margin:2rem;
-    color: brown;
+.autor {
+  color: maroon;
 }
+
+.title {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
 
 footer {
     min-height: 10vh;
