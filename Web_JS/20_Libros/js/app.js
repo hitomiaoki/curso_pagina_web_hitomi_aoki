@@ -5,59 +5,87 @@ export function app() {
 
     // NODOS DEL DOM
      let btnBuscar = document.querySelector('#btn-buscar')
-     let btnBorrar = document.querySelector('#btn-borrar')
-     let inId = document.querySelector('#in-id')
-     let spanSaludo = document.querySelector('#span-saludo')
+     let inClave = document.querySelector('#in-clave')
+     let ulLibros = document.querySelector('#ul-libros')
+     let pError = document.querySelector('#p-error')
 
 
     // Asociación de manejadores de eventos
-    btnBuscar.addEventListener('click', onClickBuscar)
-    btnBorrar.addEventListener('click', onClickBorrar)
+    btnBuscar.addEventListener('click', onClickBuscar2017)
+    inClave.addEventListener('change', onClickBuscar2017)
     
 
   // Funciones manejadores de evento
-    function onClickBorrar(ev) {
-        inId.value = ''
-        spanSaludo.innerHTML =  inId.value     
-    }
 
-    function onClickBuscar(ev) {
+    function onClickBuscar() {
+       console.log('onClickBuscar')
+       if (!inClave.value) {
+         return
+       }
         let url = usersURL + '/' + inId.value
+        inClave.value = ''
         fetch(url)
         .then(response => {
-            
             if (response.status == 200) {
               return response.json()
             }
-            console.log(response)
             throw( new Error(response.status))
         })
         .then( (data) => {  
-            spanSaludo.innerHTML = data.username
+            data = data.items
+            data = data.map(item => {return {title: item.volumeInfo.title,
+                                                      authors: item.volumeInfo.authors  }
+            })
+            console.log(data)
+            renderData(data)
         })
         .catch( (error) => {  
-            spanSaludo.innerHTML = ', datos no encontrados, Error:' + error
+            renderError(error)
         }) 
     
     }
     
     // ES2017
 
-    async function onClickBuscar(ev) {
-        let url = usersURL + '/' + inId.value
-
+    async function onClickBuscar2017() {
+        console.log('onClickBuscar2017')
+        if (!inClave.value) {
+            return
+        }
+        let url = LBGOOGLE+ '/' + inClave.value
         try {
            let response = await fetch(url)
            if (response.status == 200) {
                let data = await response.json()
-                spanSaludo.innerHTML = data.username
+               data = data.items
+               data = data.map(item => {return {title: item.volumeInfo.title,
+                                              authors: item.volumeInfo.authors  }
+               })
+               console.log(data)
+               renderData(data)
         } else {
           throw( new Error(response.status)) 
         }
         } catch (error) {
-          spanSaludo.innerHTML = ', error de conexión: ' + error
+          renderError(error)
         }       
        
+
+        function renderData(data) {
+          let html = ''
+          data.forEach(item =>  html = `
+          <li>
+              <span class="title">${item.title}</span> |
+              <span class="autor">${item.authors}</span>
+          </li>` );
+          ulLibros.innerHTML = html
+  
+      } 
+
+      function renderError(error) {
+        pError.innerHTML = 'error de conexión: ' + error
+    }
+
   }
 
    
