@@ -11,14 +11,14 @@ export function app() {
 
 
     // Asociación de manejadores de eventos
-    btnBuscar.addEventListener('click', onClickBuscar)
+    btnBuscar.addEventListener('click', onClickBuscar2017)
     btnBorrar.addEventListener('click', onClickBorrar)
     
 
   // Funciones manejadores de evento
     function onClickBorrar(ev) {
         inId.value = ''
-        spanSaludo.innerHTML =  inId.value     
+        spanSaludo.innerHTML =  inNombre.value     
     }
 
     function onClickBuscar(ev) {
@@ -27,48 +27,38 @@ export function app() {
         .then(response => {
             
             if (response.status == 200) {
-              return response.json()
+                 return response.json()
             }
-            console.log(response)
             throw( new Error(response.status))
         })
         .then( (data) => {  
             spanSaludo.innerHTML = data.username
         })
         .catch( (error) => {  
-            spanSaludo.innerHTML = ', datos no encontrados, Error:' + error
+            spanSaludo.innerHTML = 
+             ', error de conexión: ' + error
         }) 
     
     }
     
     // ES2017
 
-    async function onClickBuscar(ev) {
+    async function onClickBuscar2017(ev) {
         let url = usersURL + '/' + inId.value
 
         try {
            let response = await fetch(url)
            if (response.status == 200) {
-               let data = await response.json()
+                let data = await response.json()
                 spanSaludo.innerHTML = data.username
         } else {
           throw( new Error(response.status)) 
         }
         } catch (error) {
-          spanSaludo.innerHTML = ', error de conexión: ' + error
+          spanSaludo.innerHTML = 
+           ', error de conexión: ' + error
         }       
        
-  }
-
-   
-
-
-
-
-
-
-
-
-
+     }
 
 }
