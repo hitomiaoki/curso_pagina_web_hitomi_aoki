@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de JS</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+     <script src="./js/bootstrap.js" type="module"></script>
+</head>
+<body>
+        <header>
+          <h1>JS en la Web</h1>
+        </header>
+        <main>
+          <div class="altas">
+            <h2>Nuevo usuarios</h2>
+            <input type="text" name="in-nombre" id="in-nombre" 
+            placeholder="Escribe tu nombre" value=""> 
+            <input type="text" name="in-edad" id="in-edad" 
+            placeholder="Escribe tu edad" value=""> 
+             <button id="btn-add" type="button">Añadir</button>
+            </div> 
+            <div class="Usuarios">
+              <table id="tb-usuarios"></table>
+              <p id="p-error"></p>  
+          </div>
+        </main>
+        <footer>
+            <address>
+            Hitomi Aoki
+           </address>
+        </footer>  
+        <dialog id="dlg-borrar">
+         <h3>Borrar registro</h3>
+        </dialog>
+        <dialog id="dlg-editar">
+        <h3>Editar registro</h3>
+        <div>
+         <label for=""></label>
+        <input type="text" name="in-nombre" id="in-nombre-editar">  
+        </div>
+         <div>
+          <label for=""></label>
+         <input type="text" name="in-edad" id="in-edad-editar" >    
+         </div>
+         <div>
+          <button id="btn-add" type="button">Modificar</button>
+         <button  id="btn-cancelar" type="button" >Cancelar</button> 
+         </div>
+        </dialog>
+
+</body>
+</html>
