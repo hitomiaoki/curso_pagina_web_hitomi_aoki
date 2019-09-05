@@ -1,21 +1,43 @@
 import {USERS} from './api.js'
+
 export function app() {
    console.log('Cargando app')
    let aUsers = []
+   let userActual = {}
    getDatos()
 
     // NODOS DEL DOM
     let aInputs =  document.querySelectorAll('input')
     let btnAdd = document.querySelector('#btn-add')
     let tbUsuarios = document.querySelector('#tb-usuarios')
-    let aBtnEditar = [] // Toman valor
-    let aBtnBorrar = [] // Toman valor
+    let aBtnEditar = [] // Toman valor tras renderizar la tabla
+    let aBtnBorrar = [] // Toman valor tras rrenderizar la tabla
     let dlgBorrar = document.querySelector('#dlg-borrar')
     let dlgEditar = document.querySelector('#dlg-editar')
 
 
+   let nodosBorrar = {
+     nombre: document.querySelector('#out-nombre-editar'),
+     edad: document.querySelector('#in-edad-editar'),
+     confirmar: document.querySelector('#btn-borrar'),
+     cancelar: document.querySelector('#btn-cancel-borrar')
+
+   }
+
+   let nodosEditar = {
+    nombre: document.querySelector('#out-nombre-editar'),
+    edad: document.querySelector('#in-edad-editar'),
+    confirmar: document.querySelector('#btn-update'),
+    cancelar: document.querySelector('#btn-cancel-update')
+
+  }
+
     // Asociación de manejadores de eventos
     btnAdd.addEventListener('click',onClickAdd)
+    nodosBorrar.confirmar.addEventListener('click', onDlgBorrar)
+    nodosBorrar.cancelar.addEventListener('click', onDlgBorrar)
+    nodosEditar.confirmar.addEventListener('click', onDlgEditar)
+    nodosEditar.cancelar.addEventListener('click', onDlgEditar)
 
    // Funciones manejadores de evento
      function onClickAdd() {
@@ -34,11 +56,11 @@ export function app() {
           .then(response => response.json())
           .then (data => {
             if ( data.id > 0) {
-              
+                 getDatos()
             }
-          }
+          })
 
-      )}      
+      }      
            
      
      function onClickEditar(ev) {
