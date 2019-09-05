@@ -1,15 +1,21 @@
-{ "users": [
-     {"id":1, 
-      "nombre" : "Pepe",
-       "edad": 35
-      },
-     {"id":2, 
-      "nombre" : "Ernesto",
-       "edad": 34},
-     {"id":3,
-       "nombre" : "Elena",
-        "edad": 42}
-],
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Pepe",
+      "edad": 35
+    },
+    {
+      "id": 2,
+      "nombre": "Ernesto",
+      "edad": 34
+    },
+    {
+      "id": 3,
+      "nombre": "Elena",
+      "edad": 42
+    } 
+  ],
   "posts": [
     {
       "id": 1,
