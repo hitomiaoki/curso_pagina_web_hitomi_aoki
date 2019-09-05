@@ -4,7 +4,10 @@ export function app() {
    console.log('Cargando app')
    let aUsers = []
    let userActual = {}
-   getDatos()
+   getDatosAwait()
+   let cabecera = new Headers({
+    'Content-Type' : 'application/json'
+})
 
     // NODOS DEL DOM
     let aInputs =  document.querySelectorAll('input')
@@ -46,9 +49,6 @@ export function app() {
               edad:   aInputs[1].value
           }
           console.log(oUser)
-          let cabecera = new Headers({
-              'Content-Type' : 'application/json'
-          })
           fetch(USERS,{
                method: 'POST', 
                headers: cabecera,
@@ -56,42 +56,78 @@ export function app() {
           .then(response => response.json())
           .then (data => {
             if ( data.id > 0) {
-                 getDatos()
+                 getDatosAwait()
             }
           })
 
       }      
-           
-     
-     function onClickEditar(ev) {
-         console.log(ev.target)
-         let id
-         if (ev.target.tagName == 'TD') {
-             id = ev.target.dataset.id     
-         } else {
-           id = ev.target.parentElement.dataset.id
+         
+       function openModal(ev) {
+        let id
+        if (ev.target.tagName == 'TD') {
+            id = ev.target.dataset.id     
+        } else {
+          id = ev.target.parentElement.dataset.id
+       }
+       userActual = aUsers.find(item => item.id == id)
+       if (ev.target.classList.contains('btn-editar') ||
+           ev.target.parentElement.classList.contains('btn-editar') ) {
+           setEditarModal()
+       } else {
+           setBorrarModal()
+
+       }
+
+    }
+
+       function setEditarModal() {
+            nodosEditar.nombre.value = userActual.nombre
+            nodosBorrar.edad.value = userActual.edad
+            dlgBorrar.showModal()
+       }
+
+       function setBorrarModal() {
+           nodosBorrar.nombre.value = userActual.nombre
+           nodosBorrar.edad.value = userActual.edad
+           dlgBorrar.showModal()
+       }
+    
+      function onDlgBorrar(ev) {
+        if (ev.target.id == 'btn-borrar') {
+            let url = USERS + '/' + userActual.id
+             fetch(url, {method: 'DELETE'})
+             .then( response => response.json())
+             .then( () => getDatosAwait())
+             // Borrar
          }
-         dlgEditar.showModal()
-         console.log('Editando', id)
-     }
-
-     function onClickBorrar(ev) {
-      console.log(ev.target)
-      let id
-      if (ev.target.tagName == 'TD') {
-          id = ev.target.dataset.id     
-      } else {
-        id = ev.target.parentElement.dataset.id
+         dlgBorrar.close()
       }
-      dlgBorrar.showModal()
-      console.log('Borrando', id)
-  }
+
+      function onDlgEditar(ev) {
+        if (ev.target.id == 'btn-update') {
+            //Actualizar PUT/ PATCH
+            let oUser = {
+              nombre: nodosEditar.nombre.value,
+              edad: nodosEditar.edad.value
+            }
+            let url = USERS + '/' + userActual.id
+            fetch(url,{
+              method: 'POST', 
+              headers: cabecera,
+              body: JSON.stringify(oUser)})
+         .then(response => response.json())
+         .then (data => {
+                console.log()
+                getDatosAwait()
+           })
+         }
+         dlgEditar.close()
+      }
 
 
-
-   // Otras funciones
+    // Otras funciones
       
-    function getDatos() {
+    async function getDatosAwait() {
       fetch(USERS)
       .then( response => response.json())
       .then( data => {
@@ -101,23 +137,21 @@ export function app() {
     }
 
     function renderData() {
-      let html = ''
-      `
+      let html =` 
       <tr>
            <th>Id</th>
-          <th>Nombre</th> |
+          <th>Nombre</th> 
           <th>Edad</th>
           <th></th>
           <th></th>
       </tr>`
-
       aUsers.forEach(item =>  html = `
       <tr>
           <td>${item.id}</td>
-          <td>${item.nombre}</td> |
+          <td>${item.nombre}</td> 
           <td>${item.edad}</td>
-          <td class = 'boton btn-editar'><i class="fas fa-user-edit"  data-id= "${item.id}"></i></td>
-          <td class = 'boton btn-borrar'><i class="fas fa-trash    data-id= "${item.id}""></i></td>    
+          <td class = 'boton btn-editar' data-id= "${item.id}"><i class="fas fa-user-edit"></i></td>
+          <td class = 'boton btn-borrar' data-id= "${item.id}"><i class="fas fa-trash"></i></td>    
       </tr>` );
       tbUsuarios.innerHTML = html
       actualizarBotones()
@@ -129,17 +163,16 @@ export function app() {
         aBtnEditar = document.querySelectorAll('.btn-editar')
         aBtnBorrar = document.querySelectorAll('.btn-borrar')
         // Asociación de manejadores de eventos
-        aBtnBorrar.forEach
+        aBtnBorrar.forEach(item =>
+             item.addEventListener('click', openModal))
+        aBtnEditar.forEach(item =>
+              item.addEventListener('click', openModal))
+         
      }
-
-
-
-
 
     function renderError(error) {
       pError.innerHTML = 'error de conexión: ' + error
   }
 
-
-
-}
+    }
+       

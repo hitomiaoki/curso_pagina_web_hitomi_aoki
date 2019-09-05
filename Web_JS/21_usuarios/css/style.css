@@ -43,7 +43,7 @@ main {
     margin: 1rem 0rem;
     padding: 1rem;
     font-size: 1.2rem;
-    background-color: blanchedalmond;
+    background-color: rgb(209, 172, 117);
 }
 
 .autor {
@@ -58,7 +58,7 @@ main {
 .boton {
     color: maroon;
     cursor: pointer;
-    margin: 1rem;
+    margin:0 0.5rem;
 }
 
 
