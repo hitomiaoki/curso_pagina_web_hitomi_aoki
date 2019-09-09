@@ -1,50 +1,36 @@
 import{CREGION} from './api.js'
 export function app() {
     console.log('Cargando app')
-    
-    //nodos del DOM
-    let aCont = document.querySelector('#continentes')
-    
-    //asociación de manejadores de eventos
-    
-    
+
+    const countriesList = document.getElementById('countries')
+    const regionList = document.getElementById('region')
+
+    countriesList.addEventListener('change', paisesSelect)
+    regionList.addEventListener('change', regionSelect)
+
+    function paisesSelect(ev) {
+     console.log('paisesSelect')
+     let url = CREGION + '/'  + regionList.Value
+     regionList.value = ''
+     fetch(url)
+     .then(Response => {
+        if (response.status == 200) {
+           return response.json()
+        }
+        throw(new Error(response.status))
+     })
+     
+    }
 
 
-    // funciones de manejadores de eventos
+    function regionSelect(ev) {
+       
+    }
+
+    function renderData(data) {
+       let hml = ''
+    }
+
 }
 
 
-   /*function name(ev) {
-      console.log('')  
-      if(!inpaises.value) {
-      return
-   }
-   let CREGION = + '/' + select.value
-   inpaises.value = ''
-   fetch(url)
-   .then(Response => {
-       if (response.status == 200) {
-          return response.json() 
-       }
-       throw( new Error(response.status))
-   })
-   .then( (data) => {
-       data = data.items
-       data = data.map(item => {return {region: item,
-                                             paises: item   } 
-      })
-    console.log(data)
-    renderdata(data)
-  }) 
-  .catch((error) => {
-      renderError(error)
-  })
-
-
-
-   function renderData(data) {
-      let html = '' 
-   }
-
-
-}*/

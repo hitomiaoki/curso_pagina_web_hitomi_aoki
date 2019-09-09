@@ -16,22 +16,26 @@
     <main>
       <!--2 selects--> 
     <h2>Opciones de paises</h2>
-    <div>
-       <select id="continentes"> 
-     <option value=""></option>
-     <option value="1"> Africa </option>
-     <option value="2"> Americas </option>
-     <option value="3"> Asia </option>
-     <option value="4"> Europe </option>
-     <option value="5"> Oceania </option>
+       <!-- <div>
+       <select id="region"> 
+     <option value="">Selecciona Region</option>
+     <option value="africa"> Africa </option>
+     <option value="americas"> Americas </option>
+     <option value="asia"> Asia </option>
+     <option value="europe"> Europe </option>
+     <option value="oceania"> Oceania </option>
     </select>  
-    </div>
+    </div>-->
 
-    <div class="paises">  
-     <select  id="paises">     
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
+    <div class="form-select">
+      <select id="region-select" name="city">
+        <option value="default">-- Selecciona Region --</option>
+      </select>
+  </div>
+   
+  <div class="form-select">
+    <select id="country-select" name="city">
+      <option value="default">-- Selecciona Paises --</option>
     </select>
   </div>
     </main>

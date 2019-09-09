@@ -29,6 +29,13 @@ margin-left: 5.7rem;
 }
 
 
+.select {
+      font-weight:600;
+      display: inline-block;
+      margin:0 0 0.5em 0;
+      padding: 10px;
+    }
+
 
 footer {
     min-height: 10vh;
