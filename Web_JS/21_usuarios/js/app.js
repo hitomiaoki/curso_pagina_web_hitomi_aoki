@@ -112,12 +112,12 @@ export function app() {
             }
             let url = USERS + '/' + userActual.id
             fetch(url,{
-              method: 'POST', 
+              method: 'PUT', 
               headers: cabecera,
               body: JSON.stringify(oUser)})
          .then(response => response.json())
          .then (data => {
-                console.log()
+                console.log(data)
                 getDatosAwait()
            })
          }
@@ -127,6 +127,17 @@ export function app() {
 
     // Otras funciones
       
+    
+    function getDatos() {
+      fetch(USERS)
+      .then( response => response.json())
+      .then( data => {
+          aUsers = data
+          renderData()
+      })
+  }
+
+
     async function getDatosAwait() {
       fetch(USERS)
       .then( response => response.json())
@@ -145,7 +156,7 @@ export function app() {
           <th></th>
           <th></th>
       </tr>`
-      aUsers.forEach(item =>  html = `
+      aUsers.forEach(item =>  html += `
       <tr>
           <td>${item.id}</td>
           <td>${item.nombre}</td> 
