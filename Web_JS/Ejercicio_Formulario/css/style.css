@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+ margin:0;
+}
+
+header {
+    background-color: rgb(27, 150, 172);
+    color: blanchedalmond;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 2rem;
+    min-height: 60vh;
+}
+
+footer {
+    min-height: 10vh;
+    background-color: rgb(27, 150, 172);
+    color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_control {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(59, 150, 224);
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+
+}
+
+.radio_wrapper{
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+
+.placeholder {
+    color: maroon;
+    background-color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+:placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+}
+
+.form_label{
+    display: block;
+    margin-top: 1rem;
+}
+
+fieldset {
+margin-bottom: 0.7rem;
+border-color: blanchedalmond;
+width: 60%;
+}
+
+.error {
+    color: maroon;
+    font-size: 0.8rem;
+    background-color: blanchedalmond;
+    padding: 1rem;
+}
