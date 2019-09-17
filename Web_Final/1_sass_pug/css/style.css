@@ -1,0 +1,61 @@
+/*Esto es un comentario css*/
+body {
+  margin: 0rem;
+  display: grid;
+  grid-template-rows: 2fr auto auto 1fr;
+}
+
+.main, .main-footer, .main-header {
+  background-color: #eb9c3c;
+  color: #89b7f3;
+  display: flex;
+}
+
+.main-header {
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+main {
+  min-height: 60vh;
+}
+
+section {
+  margin: 2.6rem;
+}
+section header {
+  background-color: #2c7fea;
+  color: #f4cb99;
+}
+section article div div p {
+  color: darkblue;
+}
+section article aside div {
+  color: aqua;
+}
+
+section.samples {
+  margin: 2.6rem;
+}
+section.samples header {
+  background-color: #0c3871;
+  color: white;
+}
+
+p {
+  border: 1px solid darkcyan;
+  padding: 1rem;
+}
+
+.main-footer {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
