@@ -1,6 +1,6 @@
-
 <!-- esto es un comentario
 esto sigue siendo cometario
+
 -->
 <!-- Mixin--><!DOCTYPE html>
 <html lang="es">
@@ -95,29 +95,8 @@ esto sigue siendo cometario
         </div>
       </form>
     </section>
-    <section class="intro">
-        <header>
-            <h2>Instalación y uso de SASS</h2>   
-        </header>
-        <p>Aquí va la sección</p>
-            <ul>
-              <li>Instalación global con npm</li>
-              <li>Uso de compilador</li>
-              <li>Modo --watch</li>
-              <li>Creación de comandos npm</li>
-            </ul>
-    </section> 
-    <section class="sample">
-      <header>
-      <h2>Ejemplo de SASS</h2>
-      </header>
-    </section>
-    </main>
-    <aside>
-      <p>Aquí va el aside</p>
-    </aside>
     <footer class="main-footer">
-      <address>&copy; Hitomi Aoki</address>
+      <address>&copy; Alejandro Cerezo</address>
       <div><small>Colegio <b>Tajamar</b></small></div>
     </footer>
   </body>
