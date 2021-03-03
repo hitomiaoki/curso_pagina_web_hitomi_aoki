@@ -18,7 +18,7 @@
    
   },
   "devDependencies": {
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "sass": "^1.22.12", 
     "parallelshell": "3.0.1",
     "uglify-js": "^3.6.0"
